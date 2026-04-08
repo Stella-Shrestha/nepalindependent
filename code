@@ -1,0 +1,36 @@
+<!-- Slider Wrapper -->
+<div class="relative flex items-center justify-center">
+    <!-- Slider -->
+    <div id="slider" class="relative w-full h-[420px] md:h-[380px] flex items-center justify-center">
+    </div>
+
+    <!-- Prev (large screens only - absolute) -->
+    <button id="prev" class="hidden lg:flex absolute left-4 xl:left-10 top-1/2 -translate-y-1/2 
+        w-14 h-14 rounded-full border border-gray-300 
+        bg-white/90 backdrop-blur shadow-lg items-center justify-center 
+        hover:bg-gray-100 transition z-40">
+        ❮
+    </button>
+
+    <!-- Next (large screens only - absolute) -->
+    <button id="next" class="hidden lg:flex absolute right-4 xl:right-10 top-1/2 -translate-y-1/2 
+        w-14 h-14 rounded-full border border-gray-300 
+        bg-white/90 backdrop-blur shadow-lg items-center justify-center 
+        hover:bg-gray-100 transition z-40">
+        ❯
+    </button>
+</div>
+
+<!-- Mobile Prev/Next buttons (shown below slider on small screens) -->
+<div class="flex lg:hidden justify-center gap-6 mt-4">
+    <button id="prev-mobile" class="w-10 h-10 sm:w-12 sm:h-12
+        rounded-full border border-gray-300 bg-white shadow-lg 
+        flex items-center justify-center hover:bg-gray-100 transition">
+        ❮
+    </button>
+    <button id="next-mobile" class="w-10 h-10 sm:w-12 sm:h-12
+        rounded-full border border-gray-300 bg-white shadow-lg 
+        flex items-center justify-center hover:bg-gray-100 transition">
+        ❯
+    </button>
+</div>

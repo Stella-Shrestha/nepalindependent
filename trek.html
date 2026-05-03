@@ -1,0 +1,151 @@
+jf <search></search>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everest Base Camp Trek</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- inter 200 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header start -->
+    <header
+        class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 flex items-center justify-between gap-36">
+        <div class="flex items-center gap-6 justify-between w-full">
+            <img src="images/Home/logo.png" alt="not found" class="lg:h-[84px] h-[42px] object-contain" />
+
+            <button id="mobile-menu-button"
+                class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
+                aria-expanded="false" aria-controls="mobile-menu" arisa-label="Toggle navigation menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div class="hidden lg:flex gap-8 w-full">
+            <div class="flex items-center gap-4">
+                <i data-lucide="mail" class="bg-black text-white rounded-full h-12 w-12 py-2"></i>
+                <div>
+                    <span class="text-black font-bold text-sm xl:text-base">+info@nepalindependentguide.com</span><br />
+                    <p class="text-xs xl:text-sm">Quick Questions? Email Us</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <i data-lucide="phone" class="bg-black text-white rounded-full h-11 w-11 py-2"></i>
+                <div>
+                    <span class="text-blue-800 font-bold text-sm xl:text-base">+977 9807654321</span><br />
+                    <p class="text-xs xl:text-sm">24hrs customer support</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden absolute left-0 top-full z-50 w-full bg-gray-700 shadow-lg">
+            <div class="mx-auto flex max-w-[1340px] flex-col px-4 md:px-8 py-4 text-white">
+                <a href="#" class="border-b border-white/10 py-3">Home</a>
+                <a href="#aboutus" class="border-b border-white/10 py-3">About Us</a>
+                <a href="#country" class="border-b border-white/10 py-3">Nepal</a>
+                <a href="#dayTours" class="border-b border-white/10 py-3">Day Tours</a>
+                <a href="#testimonials" class="border-b border-white/10 py-3">Testimonials</a>
+                <a href="#blog" class="border-b border-white/10 py-3">Our Blog</a>
+                <a href="#contact" class="py-3">Contact Us</a>
+                <a href="#top-destinations" class="lg:hidden py-3">Top 10 Destinations</a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- nav start -->
+    <nav class="sticky top-0 z-50 hidden lg:flex bg-black py-2 items-center justify-center mb-[120px]">
+        <div class="flex w-full max-w-[1340px] mx-auto items-center justify-between px-4 md:px-8 lg:px-0 gap-4">
+            <ul class="hidden lg:flex gap-16 py-2 font-16 text-white">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#aboutus">About Us</a>
+                </li>
+                <li>
+                    <a href="#country">Nepal</a>
+                </li>
+                <li>
+                    <a href="#dayTours">Day Tours</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Testimonials</a>
+                </li>
+                <li><a href="#blog">Our Blog</a>s</li>
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+            </ul>
+            <div class="hidden lg:flex text-white gap-12 justify-center items-center">
+                <div class="flex gap-3 text-lg">
+                    <i data-lucide="star" class="w-18 h-18"></i>
+                    <h5>Top 10 Treks of Nepal</h5>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main start -->
+
+    <!-- hero section start -->
+    <section class="w-full mb-[52px] ">
+        <div class="w-[1340px] mx-auto">
+            <h1 class="font-bold text-5xl mb-[32px]">Everest Base Camp Trek</h1>
+            <div class="flex flex-col lg:flex-row gap-[32px]">
+                <div class="w-4/6 relative overflow-hidden">
+                    <img src="Images/trek/everestbg.png" class="w-full h-full rounded-[8px] object-cover">
+                    <div
+                        class="flex gap-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 justify-center items-center">
+                        <i data-lucide="arrow-left" class="w-12 h-12 bg-gray-200 py-2 rounded-full"></i>
+                        <i data-lucide="arrow-right" class="w-12 h-12 bg-gray-200 py-2 rounded-full"></i>
+                    </div>
+                </div>
+                <!-- side images -->
+                <div class="flex flex-col lg:w-2/6 gap-[32px]">
+                    <img src="images/trek/img1.png" class="w-full h-full">
+                    <img src="images/trek/img2.png" class="w-full h-full">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- facts start -->
+    <section class="w-full">
+        <div class="w-[1340px] mx-auto bg-[#BCD5F0]/65 p-64 rounded-[12px]">
+            <div class=""></div>
+        </div>
+
+
+    </section>
+    <!-- facts end -->a
+
+
+
+
+
+
+
+
+    <!-- main end -->
+
+
+    <!-- script start  -->
+    <script>   lucide.createIcons();</script>
+    <!-- script end  -->
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-jf <search></search>
+<search></search>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,9 +68,9 @@ jf <search></search>
     <!-- header end -->
 
     <!-- nav start -->
-    <nav class="sticky top-0 z-50 hidden lg:flex bg-black py-2 items-center justify-center mb-[120px]">
+    <nav class="sticky top-0 z-50 hidden lg:flex bg-black py-2 items-center justify-center">
         <div class="flex w-full max-w-[1340px] mx-auto items-center justify-between px-4 md:px-8 lg:px-0 gap-4">
-            <ul class="hidden lg:flex gap-16 py-2 font-16 text-white">
+            <ul class="hidden lg:flex gap-16 py-2 text-16 text-white">
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -100,21 +100,40 @@ jf <search></search>
         </div>
     </nav>
 
+    <!-- subnav start: appears when main navbar scrolls out -->
+    <div id="subnav" class="hidden overflow-auto bg-[#BCD5F0] border-b border-[#F0F3F7]">
+        <div class="max-w-[1340px] mx-auto">
+            <ul class="flex gap-6 py-3 text-sm text-slate-700 px-4 justify-start">
+                <li><a href="#overview" class="hover:text-blue-600">Overview</a></li>
+                <li><a href="#itinerary" class="hover:text-blue-600">Itinerary</a></li>
+                <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+                <li><a href="#departures" class="hover:text-blue-600">Departures</a></li>
+                <li><a href="#routes" class="hover:text-blue-600">Routes</a></li>
+                <li><a href="#videos" class="hover:text-blue-600">Videos</a></li>
+                <li><a href="#reviews" class="hover:text-blue-600">Reviews</a></li>
+                <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- subnav end -->
+
     <!-- hero section start -->
-    <section class="w-full mb-[32px] lg:mb-[52px] ">
-        <div class="max-w-[1340px] w-full mx-auto lg:px-0 px-4">
-            <h1 class="font-bold text-3xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-[36px] mb-[32px]">Everest Base
+    <section id="hero-section" class="bg-[#fff] bg-center bg-no-repeat py-16"
+        style="background-image: url('images/trek/shape.jpeg'); background-position: right top; background-size: auto;">
+        <div class="max-w-[1340px]  w-full mx-auto lg:px-0 px-4">
+            <h1 class="font-bold text-xl md:text-2xl lg:text-4xl font-bold mb-8 md:mb-[16px] mb-[32px] text-black ">
+                Everest Base
                 Camp Trek</h1>
-            <div class="flex flex-col lg:flex-row gap-[32px]">
+            <div class="flex flex-col lg:flex-row gap-[16px]">
                 <div class="w-full lg:w-4/6 relative overflow-hidden">
                     <!-- hero carousel -->
                     <div class="relative overflow-hidden rounded-[8px]">
                         <div class="hero-carousel flex h-full transition-transform duration-500">
-                            <img src="Images/trek/everestbg.png" loading="eager" fetchpriority="high" decoding="async"
+                            <img src="Images/trek/everest1.jpg" loading="eager" fetchpriority="high" decoding="async"
                                 class="min-w-full h-full object-cover">
-                            <img src="images/trek/img1.png" loading="eager" decoding="async"
+                            <img src="images/trek/everest2.jpg" loading="eager" decoding="async"
                                 class="min-w-full h-full object-cover">
-                            <img src="images/trek/img2.png" loading="eager" decoding="async"
+                            <img src="images/trek/everest.jpg" loading="eager" decoding="async"
                                 class="min-w-full h-full object-cover">
                         </div>
                         <div
@@ -131,7 +150,7 @@ jf <search></search>
                     </div>
                 </div>
                 <!-- side images -->
-                <div class="flex flex-col lg:w-2/6 gap-[32px] overflow-hidden hidden lg:flex">
+                <div class="flex flex-col lg:w-2/6 gap-[16px] overflow-hidden hidden lg:flex">
                     <img src="images/trek/img1.png" class="w-full h-full rounded-[8px] object-cover">
                     <img src="images/trek/img2.png" class="w-full h-full rounded-[8px] object-cover">
                 </div>
@@ -150,68 +169,68 @@ jf <search></search>
 
                 <!-- facts start -->
                 <div
-                    class="bg-[#F4F9FE] p-[32px] lg:p-[64px] border border-[#BCD5F0]/60 rounded-[12px] mb-[32px] lg:mb-[52px]">
-                    <div class="grid grid-cols-3 lg:grid-row-3 gap-x-[64px] gap-y-[32px]">
+                    class="bg-[#F4F9FE] p-[32px] lg:p-[32px] border border-[#BCD5F0]/60 rounded-[12px] mb-[32px] lg:mb-[52px]">
+                    <div class="grid grid-cols-3 lg:grid-row-3 gap-x-[32px] gap-y-[32px]">
                         <div class="flex gap-[12px] lg:gap-[16px]">
                             <i data-lucide="clock" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Duration</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Duration</h3>
                                 <p class="text-[12px] lg:text-[14px]">12-14 days</p>
                             </div>
                         </div>
                         <div class="flex gap-[12px] lg:gap-[16px]">
                             <i data-lucide="waypoints" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Start-End Point</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Start-End Point</h3>
                                 <p class="text-[12px] lg:text-[14px]">Kathmandu-Kathmandu</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="utensils" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Meals</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Meals</h3>
                                 <p class="text-[12px] lg:text-[14px]">Breakfast,Lunch & Dinner</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="shield" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Grade</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Grade</h3>
                                 <p class="text-[12px] lg:text-[14px]">Moderate</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="bed-double" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Accommodation</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Accommodation</h3>
                                 <p class="text-[12px] lg:text-[14px]">3/4 Star Hotel</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="cloud-sun-rain" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Best Season</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Best Season</h3>
                                 <p class="text-[12px] lg:text-[14px]">Autumn & Spring</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="mountain" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Max Altitude</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Max Altitude</h3>
                                 <p class="text-[12px] lg:text-[14px]">18,514m</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="users-round" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Group Size</h3>
+                                <h3 class="text-[16px] lg:text-[16px]  text-black font-semibold">Group Size</h3>
                                 <p class="text-[12px] lg:text-[14px]">1-30 Pax</p>
                             </div>
                         </div>
                         <div class="flex gap-[16px]">
                             <i data-lucide="car-front" class="lg:w-6 mt-1 lg:h-6 w-5 h-5"></i>
                             <div class="gap-[16px] flex-col">
-                                <h3 class="text-[16px] lg:text-[20px] font-semibold">Transportation</h3>
+                                <h3 class="text-[16px] lg:text-[16px] text-black font-semibold">Transportation</h3>
                                 <p class="text-[12px] lg:text-[14px]">Private Vehicle</p>
                             </div>
                         </div>
@@ -221,27 +240,16 @@ jf <search></search>
                 <!-- facts end -->
 
                 <!-- overview start -->
-                <div class="mb-[32px] lg:mb-[64px]">
+                <div id="overview" class="mb-[32px] lg:mb-[64px] scroll-mt-24 lg:scroll-mt-28">
                     <!-- Trip Cost Calculator -->
                     <div class="mb-[32px] lg:hidden">
                         <div class="bg-white p-[24px] md:p-[32px] border border-[#E0E0E0] rounded-[12px]">
                             <!-- Title -->
                             <h2 class="font-extrabold text-[24px] md:text-[28px] mb-[24px] flex items-center gap-3">
-                                <i data-lucide="calculator" class="w-8 h-8 text-[#1E40FF]"></i>
-                                Trip Cost Calculator
+                                <i data-lucide="calculator" class="w-8 h-8  text-black text-[#1E40FF]"></i>
+                                Travel Cost Calculator
                             </h2>
 
-                            <!-- Select Trek Dropdown -->
-                            <div class="mb-[24px]">
-                                <label class="block text-[14px] md:text-[16px] font-semibold mb-[12px]">Select
-                                    Trek</label>
-                                <select id="trek-select"
-                                    class="w-full px-4 py-[12px] border border-[#D0D0D0] rounded-[8px] text-[14px] md:text-[16px] bg-white focus:outline-none focus:border-[#1E40FF]">
-                                    <option value="everest">Everest Base Camp Trek (14 Days)</option>
-                                    <option value="kilimanjaro">Kilimanjaro Trek (8 Days)</option>
-                                    <option value="annapurna">Annapurna Circuit (21 Days)</option>
-                                </select>
-                            </div>
 
                             <!-- Group Size Slider -->
                             <div class="mb-[32px]">
@@ -286,7 +294,7 @@ jf <search></search>
                             </div>
 
                             <!-- Cost Summary -->
-                            <div class="bg-[#F4F9FE] p-[24px] rounded-[12px] mb-[32px]">
+                            <div class="rounded-[12px] mb-[32px]">
                                 <div
                                     class="flex justify-between items-center mb-[20px] pb-[20px] border-b border-[#BCD5F0]">
                                     <p class="text-[16px] text-[#666]">Per person</p>
@@ -301,56 +309,12 @@ jf <search></search>
                                 </div>
                             </div>
 
-                            <!-- What's Included / Excluded Accordion -->
-                            <div class="mb-[24px]">
-                                <button type="button" id="included-excluded-btn"
-                                    class="w-full flex justify-between items-center p-[16px] bg-[#F9F9F9] border border-[#E0E0E0] rounded-[8px] hover:bg-[#F0F0F0] text-left">
-                                    <span class="font-semibold text-[16px]">What's Included / Excluded</span>
-                                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
-                                </button>
-                                <div id="included-excluded-content" class="hidden mt-[16px]">
-                                    <div class="grid md:grid-cols-2 gap-[24px]">
-                                        <div>
-                                            <h4 class="font-semibold text-[16px] mb-[12px] text-[#16A34A]">Included</h4>
-                                            <ul class="space-y-[8px] text-[14px] text-[#666]">
-                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span>
-                                                    Professional guides</li>
-                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> All
-                                                    accommodations</li>
-                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> Meals as
-                                                    per itinerary</li>
-                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> Porter
-                                                    services</li>
-                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> Equipment
-                                                    provided</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-[16px] mb-[12px] text-[#DC2626]">Not Included
-                                            </h4>
-                                            <ul class="space-y-[8px] text-[14px] text-[#666]">
-                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span>
-                                                    International flights</li>
-                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Travel
-                                                    insurance</li>
-                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Personal
-                                                    expenses</li>
-                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Tips &
-                                                    gratuities</li>
-                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Optional
-                                                    activities</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Action Buttons -->
                             <div class="flex gap-[12px] flex-col sm:flex-row">
-                                <button type="button" data-modal-target="book"
+                                <a href="booking.html"
                                     class="flex-1 bg-[#1E40FF] text-white px-[18px] py-[12px] rounded-lg hover:bg-[#1530CC] text-[16px] font-medium flex justify-center items-center">
                                     Book Your Trip
-                                </button>
+                                </a>
                                 <button type="button" data-modal-target="inquiry"
                                     class="flex-1 bg-white text-black border border-[#BCD5F0] px-[18px] py-[12px] rounded-lg hover:bg-[#F4F9FE] text-[16px] font-medium flex justify-center items-center">
                                     Send Inquiry
@@ -359,7 +323,8 @@ jf <search></search>
                         </div>
                     </div>
                     <!-- highlights start -->
-                    <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">Hightlights</h2>
+                    <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] text-black lg:mb-[20px]">Hightlights
+                    </h2>
                     <ul role="list"
                         class="marker:text-[#3C6D09] list-disc pl-5 gap-[8px] space-y-3 mb-[40px] text-[12px] lg:text-[16px] leading-[16px] lg:leading-[20px]">
                         <li>Reach Everest Base Camp at the foot of Mount Everest</li>
@@ -415,18 +380,18 @@ jf <search></search>
                 <!-- overview end -->
 
                 <!-- itinerary start -->
-                <div class="mb-[32px] lg:mb-[64px]">
-                    <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">
+                <div id="itinerary" class="mb-[32px] lg:mb-[64px] scroll-mt-24 lg:scroll-mt-28">
+                    <h2 class="font-extrabold text-[20px] text-black lg:text-[24px] mb-[12px] lg:mb-[20px]">
                         Itinerary (14 Days)
                     </h2>
 
-                    <div class="overflow-hidden">
+                    <div class="overflow-hidden flex flex-col gap-1">
 
                         <!-- item1 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg font-normal border-b rounded-b-[10px] bg-white hover:bg-[#F4F9FE] transition">
-                            Day01: Arrival in Kathmandu
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 01 : Arrival in Kathmandu
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -441,9 +406,9 @@ jf <search></search>
 
                         <!-- item2 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day02: Flight to Lukla
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border  border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 02 : Flight to Lukla
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -458,9 +423,9 @@ jf <search></search>
 
                         <!-- item3 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day03: Trek to Namche Bazaar
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border  border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 03 : Trek to Namche Bazaar
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -475,9 +440,9 @@ jf <search></search>
 
                         <!-- item4 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day04: Acclimatization Day in Namche
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border  border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 04 : Acclimatization Day in Namche
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -492,9 +457,9 @@ jf <search></search>
 
                         <!-- item5 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day05: Trek to Tengboche
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 05 : Trek to Tengboche
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -509,9 +474,9 @@ jf <search></search>
 
                         <!-- item6 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day06: Trek to Dingboche
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 06 : Trek to Dingboche
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -526,9 +491,9 @@ jf <search></search>
 
                         <!-- item7 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day07: Acclimatization in Dinboche
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 07 : Acclimatization in Dinboche
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -543,9 +508,9 @@ jf <search></search>
 
                         <!-- item8 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day08: Trek to Lobuche
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 08 : Trek to Lobuche
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -560,9 +525,9 @@ jf <search></search>
 
                         <!-- item9 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day09: Trek to Everest Base Camp & Gorak Shep
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 09 : Trek to Everest Base Camp & Gorak Shep
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -577,9 +542,9 @@ jf <search></search>
 
                         <!-- item10 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day10: Hike to Kala Patthar
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 10 : Hike to Kala Patthar
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -594,9 +559,9 @@ jf <search></search>
 
                         <!-- item11 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day11: Trek to Namche Bazaar
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 11 : Trek to Namche Bazaar
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -611,9 +576,9 @@ jf <search></search>
 
                         <!-- item12 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day12: Trek to Lukla
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 12 : Trek to Lukla
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -628,9 +593,9 @@ jf <search></search>
 
                         <!-- item13 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day13: Fly back to Kathmandy
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 13 : Fly back to Kathmandy
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -645,9 +610,9 @@ jf <search></search>
 
                         <!-- item14 start -->
                         <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base lg:text-lg border-b rounded-b-[10px]  font-normal bg-white hover:bg-[#F4F9FE] transition">
-                            Day14: Departure
-                            <span class="transition-transform duration-300">⌄</span>
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Day 14 : Departure
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
                         <div
@@ -664,12 +629,11 @@ jf <search></search>
                 <!-- itinerary end -->
 
                 <!-- services start -->
-                <div class="mb-[32px] lg:mb-[64px]">
-                    <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">
-                        Services
+                <div id="services" class="mb-[32px] lg:mb-[64px] scroll-mt-24 lg:scroll-mt-28">
+                    <h2 class="font-extrabold text-[20px] lg:text-[24px] text-black mb-[12px] lg:mb-[20px]">
+                        Cost Included
                     </h2>
                     <!-- included start -->
-                    <h4 class="font-medium text-[16px] lg:text-[20px] mb-[16px]">Included</h4>
                     <ul
                         class="gap-[4px] lg:gap-[8px] space-y-3 mb-[20px] text-[12px] lg:text-[16px] leading-[18px] lg:leading-[24px]">
                         <li class="flex items-start gap-[12px]"><i data-lucide="check"
@@ -700,12 +664,13 @@ jf <search></search>
                     <!-- included end -->
 
                     <!-- excluded start -->
-                    <h4 class="font-medium text-[16px] lg:text-[20px] mb-[16px]">Excluded</h4>
+                    <h2 class="font-extrabold text-[20px] lg:text-[24px] text-black mb-[12px] lg:mb-[20px]">
+                        Cost Excluded
+                    </h2>
                     <ul
                         class="gap-[4px] lg:gap-[8px] space-y-3 mb-[40px] text-[12px] lg:text-[16px] leading-[18px] lg:leading-[24px]">
                         <li class="flex items-start gap-[12px]"><i data-lucide="x"
-                                class="text-[#FF0F0F] lg:w- lg:h-6 w-4 h-4 rounded-full"></i>International
-                            airfare</li>
+                                class="text-[#FF0F0F] lg:w-6 lg:h-6 w-4 h-4 rounded-full"></i>International airfare</li>
                         <li class="flex items-start gap-[12px]"><i data-lucide="x"
                                 class="text-[#FF0F0F] lg:w-6 lg:h-6 w-4 h-4 rounded-full"></i>Nepal entry
                             visa fees</li>
@@ -733,27 +698,36 @@ jf <search></search>
                 <!-- services end -->
 
                 <!-- departures start -->
-                <div class="mb-[32px] lg:mb-[64px]">
+                <div id="departures" class="mb-[32px] lg:mb-[64px] scroll-mt-24 lg:scroll-mt-28">
                     <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">
                         Trip Dates
                     </h2>
-                    <div class="bg-[#F0F7FF] rounded-xl border border-[#D1E0FF] p-4 md:p-6 lg:p-[36px]">
+                    <div class="bg-[#FBFBFB] rounded-xl border border-[#E0E0E0] p-4 md:p-6 lg:p-[36px]">
                         <div class="flex flex-col sm:flex-row gap-[12px] rounded-[12px] mb-[28px]">
-                            <button
-                                class="bg-white text-black px-[18px] lg:px-[20px] w-full sm:w-[180px] gap-4 lg:ml-0 py-3 rounded-lg flex justify-between items-center transition shadow">
-                                2026 <span class="transition-transform  justify-end mb-2">⌄</span>
-                            </button>
-                            <button
-                                class="bg-white text-black px-[18px] lg:px-[20px] w-full sm:w-[180px] gap-4 lg:ml-0 py-3 rounded-lg flex justify-between items-center transition shadow">
-                                mth <span class="transition-transform  justify-end mb-2">⌄</span>
-                            </button>
+                            <select
+                                class="bg-white text-black px-[18px] lg:px-[20px] w-full sm:w-[180px] gap-4 lg:ml-0 py-3 rounded-lg flex justify-between items-center transition border border-gray-200 ">
+
+                                <option>2026</option>
+                                <option>2027</option>
+                            </select>
+                            <select
+                                class="bg-white text-black px-[18px] lg:px-[20px] w-full sm:w-[180px] gap-4 lg:ml-0 py-3 rounded-lg flex justify-between items-center transition border border-gray-200 ">
+
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+
+                            </select>
+
                         </div>
 
                         <ul class="space-y-4">
 
                             <!-- item -->
                             <li
-                                class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between border border-gray-200 rounded-xl p-4 md:p-6">
+                                class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-white border border-gray-200 rounded-xl p-4 md:p-6">
 
                                 <div class="md:min-w-[120px]">
                                     <p class="text-xs md:text-sm text-gray-500">Start Date</p>
@@ -768,21 +742,21 @@ jf <search></search>
                                 <div class="md:min-w-[150px]">
                                     <p class="text-xs md:text-sm text-gray-500 mb-2">Trip Status</p>
                                     <button
-                                        class="border border-blue-500 text-blue-600 px-4 py-2 rounded-lg w-full md:w-auto">
+                                        class="border border-blue-500 text-blue-600 px-4 py-2 rounded-lg text-xs w-full md:w-auto">
                                         Join in Group
                                     </button>
                                 </div>
 
-                                <button type="button" data-modal-target="book"
-                                    class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow w-full md:w-auto">
+                                <a href="booking.html"
+                                    class="text-white bg-blue-600  text-blue-600 rounded-lg hover:bg-blue-700 px-5 py-2 rounded-md text-md w-full md:w-auto">
                                     Book Now
-                                </button>
+                                </a>
 
                             </li>
 
                             <!-- item -->
                             <li
-                                class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between border border-gray-200 rounded-xl p-4 md:p-6">
+                                class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-white border border-gray-200 rounded-xl p-4 md:p-6">
 
                                 <div class="md:min-w-[120px]">
                                     <p class="text-xs md:text-sm text-gray-500">Start Date</p>
@@ -797,15 +771,14 @@ jf <search></search>
                                 <div class="md:min-w-[150px]">
                                     <p class="text-xs md:text-sm text-gray-500 mb-2">Trip Status</p>
                                     <button
-                                        class="border border-blue-500 text-blue-600 px-4 py-2 rounded-lg w-full md:w-auto">
+                                        class="border border-blue-500 text-blue-600 px-4 py-2 rounded-lg text-xs w-full md:w-auto">
                                         Join in Group
                                     </button>
                                 </div>
-
-                                <button type="button" data-modal-target="book"
-                                    class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow w-full md:w-auto">
+                                <a href="booking.html"
+                                    class="text-white bg-blue-600  text-blue-600 rounded-lg hover:bg-blue-700 px-5 py-2 rounded-md text-md w-full md:w-auto">
                                     Book Now
-                                </button>
+                                </a>
 
                             </li>
 
@@ -817,7 +790,7 @@ jf <search></search>
                 <!-- departures end -->
 
                 <!-- routes start -->
-                <div class="mb-[32px] lg:mb-[64px]">
+                <div id="routes" class="mb-[32px] lg:mb-[64px] scroll-mt-24 lg:scroll-mt-28">
                     <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">
                         Routes
                     </h2>
@@ -855,20 +828,20 @@ jf <search></search>
 
             <!-- right section start -->
             <div class="lg:w-2/6 ">
-                <div class="sticky top-[40px]">
+                <div class="sticky top-[80px]">
                     <!-- price start-->
                     <div class="hidden lg:block bg-white p-[24px] border border-[#E0E0E0] rounded-[12px] mb-[16px]">
 
                         <!-- Title -->
                         <h2 class="font-extrabold text-[20px] mb-[16px] flex items-center gap-2">
-                            <i data-lucide="calculator" class="w-6 h-6 text-[#1E40FF]"></i>
-                            Trip Cost
+                            <i data-lucide="calculator" class="w-6 h-6 text-black text-[#1E40FF]"></i>
+                            Travel Cost Calculator
                         </h2>
 
                         <!-- Group Size Slider -->
                         <div class="mb-[20px]">
                             <div class="flex items-baseline justify-between mb-[8px]">
-                                <label class="text-[14px] font-semibold">
+                                <label class="text-[14px] font-semibold text-black">
                                     Group Size: <span id="group-size-value-sidebar">2</span>
                                 </label>
                             </div>
@@ -883,9 +856,10 @@ jf <search></search>
 
                         <!-- Group Pricing -->
                         <div class="mb-[20px]">
-                            <h3 class="font-semibold text-[13px] mb-[12px]">Group Pricing</h3>
+                            <h3 class="font-semibold text-[13px] mb-[12px] text-black">Group Pricing</h3>
                             <div class="grid grid-cols-2 gap-3">
-                                <div class="p-[10px] text-center text-center">
+                                <div
+                                    class="p-[10px] text-center border rounded-[6px] pricing-tier-sidebar pricing-tier-1-sidebar">
                                     <p class="text-[11px] text-[#666] mb-[4px]">1 person</p>
                                     <p class="font-semibold text-[14px]">$1550</p>
                                 </div>
@@ -894,12 +868,12 @@ jf <search></search>
                                     <p class="text-[11px] text-[#666] mb-[4px]">2-3 people</p>
                                     <p class="font-semibold text-[14px] text-[#1E40FF]">$1350</p>
                                 </div>
-                                <div class="p-[10px] text-center pricing-tier-sidebar pricing-tier-4-5-sidebar"
+                                <div class="p-[10px] text-center border rounded-[6px] pricing-tier-sidebar pricing-tier-4-5-sidebar"
                                     data-tier="4-5">
                                     <p class="text-[11px] text-[#666] mb-[4px]">4-5</p>
                                     <p class="font-semibold text-[14px]">$1250</p>
                                 </div>
-                                <div class="p-[10px] text-center pricing-tier-sidebar pricing-tier-6-12-sidebar"
+                                <div class="p-[10px] text-center border rounded-[6px] pricing-tier-sidebar pricing-tier-6-12-sidebar"
                                     data-tier="6-12">
                                     <p class="text-[11px] text-[#666] mb-[4px]">6-12</p>
                                     <p class="font-semibold text-[14px]">$1150</p>
@@ -908,9 +882,9 @@ jf <search></search>
                         </div>
 
                         <!-- Cost Summary -->
-                        <div class="bg-[#F4F9FE] p-[16px] rounded-[8px]">
+                        <div class="">
                             <div
-                                class="flex justify-between items-center mb-[12px] pb-[12px] border-b border-[#BCD5F0]">
+                                class="flex justify-between items-center mb-[12px] pb-[12px] border-b border-[#E0E0E0]">
                                 <p class="text-[12px] text-[#666]">Per person</p>
                                 <p class="text-[18px] font-bold">$<span id="per-person-price-sidebar">1350</span></p>
                             </div>
@@ -925,17 +899,18 @@ jf <search></search>
                     <!-- price end -->
 
                     <!-- btn start -->
-                    <button type="button" data-modal-target="book"
+                    <a href="booking.html"
                         class="hidden lg:flex bg-blue-600 w-full mb-[16px] text-white px-[18px] lg:px-6 lg:ml-0  py-3 rounded-lg hover:bg-blue-700 text-[20px] font-medium justify-center items-center transition shadow">
                         Book Your Trip
-                    </button>
+                    </a>
                     <button type="button" data-modal-target="inquiry"
                         class="hidden lg:flex bg-white w-full text-black border border-[#BCD5F0] px-[18px] lg:px-6 lg:ml-0 mb-[32px] py-3 rounded-lg hover:bg-blue-100 text-[20px] font-medium justify-center items-center transition">
                         Send Inquiry
                     </button>
                     <!-- btn end -->
 
-                    <div
+                    <!-- recommended start -->
+                    <!-- <div
                         class="flex flex-col justify-center border border-[#A8A5A5] rounded-[12px] overflow-hidden hidden lg:flex items-center">
                         <p
                             class="bg-gradient-to-r from-[#376903] to-[#83A468] w-full text-white px-[18px] lg:px-6 lg:ml-0 mb-[32px] py-3  rounded-t-lg text-[24px] font-medium flex justify-center items-center transition">
@@ -947,13 +922,12 @@ jf <search></search>
                             <p class="text-[14px] mb-[20px]">Find More Clients Feedback At Tripadvisor</p>
                         </div>
 
-                    </div>
-
+                    </div> -->
+                    <!-- recommended end -->
                 </div>
 
             </div>
 
-            </div>
             <!-- right section end -->
 
         </section>
@@ -962,12 +936,13 @@ jf <search></search>
 
         <section class="w-full mx-auto">
             <!-- videos start -->
-            <section class="py-[52px] lg:py-[100px] bg-[#F0F7FF] px-4 lg:px-0 mb-[64px] lg:mb-[110px]">
+            <div id="videos"
+                class="py-[52px] lg:py-[100px] bg-[#F0F7FF] px-4 lg:px-0 mb-[64px] lg:mb-[110px] scroll-mt-24 lg:scroll-mt-28">
                 <div class="max-w-[1340px] w-full mx-auto">
                     <!-- Header -->
-                    <div class="lg:flex-row md:flex-col justify-between lg:items-center gap-6 mb-12 md:mb-18">
+                    <div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6 mb-12 md:mb-18">
                         <div class="">
-                            <h2 class="text-2xl md:text-4xl lg:text-[56px] font-extrabold mb-2 lg:mb-[16px]">Experience
+                            <h2 class="text-xl md:text-2xl lg:text-4xl font-extrabold mb-2 lg:mb-[16px]">Experience
                                 the Everest Base Camp Journey</h2>
                             <p class="text-gray-500 text-normal lg:text-[16px] mb-4">
                                 Take a glimpse before you take the journey.
@@ -975,80 +950,60 @@ jf <search></search>
                         </div>
 
 
-                        <button
-                            class="bg-blue-600 text-white px-[18px] lg:px-6 py-3 rounded-lg hover:bg-blue-700 flex justify-end items-end transition shadow">
-                            Explore More
-                        </button>
+                        <div class="">
+                            <button
+                                class="bg-blue-600 text-white px-[18px] lg:px-6 py-3 rounded-lg hover:bg-blue-700 flex justify-end items-end transition shadow">
+                                Explore More
+                            </button>
+                        </div>
+
                     </div>
 
                     <div class="flex flex-col lg:flex-row gap-[32px]">
-                        <!-- LEFT BIG CARD -->
-                        <div class="relative rounded-xl w-full lg:w-10/12  overflow-hidden">
-                            <img src="images/Home/hireFemale.png" class="lg:w-full lg:h-full w-full object-cover" />
-
-                            <!-- overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                            </div>
-
-                            <div class="absolute bottom-0 left-0 p-6 text-white bg-gradient-to-t from-black/70 w-full">
-                                <p class="text-sm mb-1">Feb 22, 2026</p>
-                                <h3 class="text-xl font-semibold">
-                                    Watch the Adventure Unfold
-                                </h3>
-                                <p class="text-sm text-gray-200">
-                                    See what it feels like to trek through the Humalayas and stand at the foot of the
-                                    world's highest mountain </p>
+                        <!-- VIDEO 1 -->
+                        <div class="w-full lg:w-1/2">
+                            <div class="rounded-xl overflow-hidden border border-[#E8E8E8] bg-white shadow-sm">
+                                <div class="aspect-video w-full">
+                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/bFy6jTEHlzQ"
+                                        title="Everest Base Camp Journey Video 1"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="p-4 lg:p-5">
+                                    <h3 class="text-[18px] lg:text-[20px] font-semibold mb-1">Everest Base Camp Journey
+                                    </h3>
+                                    <p class="text-[14px] text-gray-500">A closer look at the trail and mountain
+                                        experience.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- right side -->
-                        <div class="flex flex-col gap-6 md:gap-8">
-                            <!-- SMALL CARD 1 -->
-                            <div class="flex flex-col sm:flex-row gap-4 rounded-lg items-start sm:items-center">
-                                <img src="images/Home/chhomrong.png" class="w-full sm:w-2/4 rounded-lg object-cover" />
-                                <div>
-                                    <div class="flex gap-2">
-                                        <i data-lucide="clock" class="text-gray-400 w-5 h-5"></i>
-                                        <p class="text-sm text-gray-400 mb-1">Feb 22, 2026</p>
-                                    </div>
-                                    <h4 class="font-semibold text-xl mb-1"> Watch the Adventure Unfold
-                                    </h4>
-                                    <p class="text-sm text-gray-500">
-                                        See what it feels like to trek through the Humalayas and stand at the foot of
-                                        the
-                                        world's highest mountain
-                                    </p>
+                        <!-- VIDEO 2 -->
+                        <div class="w-full lg:w-1/2">
+                            <div class="rounded-xl overflow-hidden border border-[#E8E8E8] bg-white shadow-sm">
+                                <div class="aspect-video w-full">
+                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/NbY_B3n5jgc"
+                                        title="Everest Base Camp Journey Video 2"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
-                            </div>
-
-                            <!-- SMALL CARD 2 -->
-                            <div class="flex flex-col sm:flex-row gap-4 rounded-lg items-start sm:items-center">
-                                <img src="images/Home/tipping.png" class="w-full sm:w-2/4 rounded-lg object-cover" />
-                                <div>
-                                    <div class="flex gap-2">
-                                        <i data-lucide="clock" class="text-gray-400 w-5 h-5"></i>
-                                        <p class="text-sm text-gray-400 mb-1">Feb 22, 2026</p>
-                                    </div>
-                                    <h4 class="font-semibold text-xl mb-1">
-                                        Tipping Trekking Guides
-                                    </h4>
-                                    <p class="text-sm text-gray-500">
-                                        See what it feels like to trek through the Humalayas and stand at the foot of
-                                        the
-                                        world's highest mountain
-                                    </p>
+                                <div class="p-4 lg:p-5">
+                                    <h3 class="text-[18px] lg:text-[20px] font-semibold mb-1">Himalayan Trek Experience
+                                    </h3>
+                                    <p class="text-[14px] text-gray-500">Watch the route, views, and trekking moments
+                                        before you go.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- videos end -->
 
             <!--review start  -->
-            <div
-                class="max-w-[1340px] w-full mx-auto flex flex-col lg:px-0 px-4 items-center justify-center mb-[110px] px-4">
-                <h2 class="font-extrabold text-2xl md:text-4xl lg:text-[56px] mb-[16px]">Everest Base Camp Trek Review
+            <div id="reviews"
+                class="max-w-[1340px] w-full mx-auto flex flex-col lg:px-0 px-4 items-center justify-center mb-[10px]  px-4">
+                <h2 class="font-extrabold text-xl md:text-2xl lg:text-4xl  mb-[16px]">Everest Base Camp Trek Review
                 </h2>
                 <p class="font-regular text-[16px] mb-[40px]">Hear it from our travelers</p>
 
@@ -1116,11 +1071,12 @@ jf <search></search>
             <!--review end  -->
 
             <!-- Faq start -->
-            <div class="bg-white  w-full mx-auto relative overflow-hidden py-[52px] lg:py-[100px] px-8 mb-0">
+            <div id="faq"
+                class="bg-white  w-full mx-auto relative overflow-hidden py-[52px] lg:py-[100px] px-8 mb-0 scroll-mt-24 lg:scroll-mt-28">
                 <img src="images/trek/FAQ.png"
                     class="absolute md:-bottom-12 md:-left-2 lg:-bottom-52 lg:-left-72 hidden lg:block" />
                 <div class="max-w-3xl mx-auto px-4 lg:px-0 flex flex-col">
-                    <h2 class="text-2xl md:text-4xl lg:text-[56px] font-extrabold mb-[16px]">Frequently Asked Questions
+                    <h2 class="text-xl md:text-2xl lg:text-4xl  font-extrabold mb-[16px]">Frequently Asked Questions
                     </h2>
                     <p class="text-gray-400 mb-10 text-sm font-medium lg:text-[16px]">
                         If you cannot find answer to your question in our FAQ, you can always contact us. We will answer
@@ -1259,7 +1215,7 @@ jf <search></search>
                 <div class="w-full max-w-[1340px] mx-auto px-4 md:px-8">
                     <!-- heading start-->
                     <div class="flex flex-col sm:flex-row justify-start mb-6 items-start sm:items-center gap-4">
-                        <h2 class="text-2xl md:text-4xl lg:text-[48px] font-extrabold mb-4">
+                        <h2 class="text-xl md:text-2xl lg:text-4xl  font-extrabold mb-4">
                             Similar Packages
                         </h2>
                         <!--arrow button -->
@@ -1615,13 +1571,6 @@ jf <search></search>
                 </form>
             </div>
         </div>
-        <!-- booking modals end -->
-
-
-
-
-
-
 
     </main>
     <!-- main end -->
@@ -1711,6 +1660,35 @@ jf <search></search>
                 closeModal('inquiry');
             }
         });
+    </script>
+
+    <script>
+        // Hide main nav and show subnav when hero scrolls out of view
+        (function () {
+            const heroSection = document.getElementById('hero-section');
+            const mainNav = document.querySelector('nav.sticky');
+            const subnav = document.getElementById('subnav');
+
+            if (!heroSection || !mainNav || !subnav) return;
+
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        // hero scrolled out -> hide main nav, show subnav fixed
+                        mainNav.classList.add('hidden');
+                        subnav.classList.remove('hidden');
+                        subnav.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'z-50', 'shadow-sm');
+                    } else {
+                        // hero visible -> show main nav sticky, hide subnav
+                        mainNav.classList.remove('hidden');
+                        subnav.classList.add('hidden');
+                        subnav.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'z-50', 'shadow-sm');
+                    }
+                });
+            }, { root: null, threshold: 0 });
+
+            obs.observe(heroSection);
+        })();
     </script>
 
     <script> document.querySelectorAll(".faq-btn").forEach((btn) => {
@@ -2165,6 +2143,8 @@ jf <search></search>
 
             if (groupSize === 1) {
                 // 1 person - no highlighting
+                document.querySelector('.pricing-tier-1').classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+
             } else if (groupSize <= 3) {
                 document.querySelector('.pricing-tier-2-3').classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
                 document.querySelector('.pricing-tier-2-3 p:last-child').classList.add('text-[#1E40FF]');
@@ -2184,12 +2164,16 @@ jf <search></search>
         // Event listeners
         groupSizeSlider.addEventListener('input', updateCalculator);
 
-        includedExcludedBtn.addEventListener('click', () => {
-            includedExcludedContent.classList.toggle('hidden');
-            const icon = includedExcludedBtn.querySelector('[data-lucide="chevron-down"]');
-            icon.style.transform = includedExcludedContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            icon.style.transition = 'transform 0.3s ease';
-        });
+        if (includedExcludedBtn && includedExcludedContent) {
+            includedExcludedBtn.addEventListener('click', () => {
+                includedExcludedContent.classList.toggle('hidden');
+                const icon = includedExcludedBtn.querySelector('[data-lucide="chevron-down"]');
+                if (icon) {
+                    icon.style.transform = includedExcludedContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+        }
 
         // Initialize calculator
         updateCalculator();
@@ -2218,6 +2202,11 @@ jf <search></search>
 
             if (groupSize === 1) {
                 // 1 person - no highlighting
+                const tier = document.querySelector('.pricing-tier-1-sidebar');
+                if (tier) {
+                    tier.classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                    tier.querySelector('p:last-child').classList.add('text-[#1E40FF]');
+                }
             } else if (groupSize <= 3) {
                 const tier = document.querySelector('.pricing-tier-2-3-sidebar');
                 if (tier) {

@@ -6,6 +6,9 @@ jf <search></search>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everest Base Camp Trek</title>
+    <link rel="preload" as="image" href="Images/trek/everestbg.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/trek/img1.png" />
+    <link rel="preload" as="image" href="images/trek/img2.png" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,11 +109,13 @@ jf <search></search>
                 <div class="w-full lg:w-4/6 relative overflow-hidden">
                     <!-- hero carousel -->
                     <div class="relative overflow-hidden rounded-[8px]">
-                        <div class="hero-carousel flex h-full 
-                        transition-transform duration-500">
-                            <img src="Images/trek/everestbg.png" class="min-w-full min-h-full object-cover">
-                            <img src="images/trek/img1.png" class="min-w-full h-full object-cover">
-                            <img src="images/trek/img2.png" class="min-w-full h-full object-cover">
+                        <div class="hero-carousel flex h-full transition-transform duration-500">
+                            <img src="Images/trek/everestbg.png" loading="eager" fetchpriority="high" decoding="async"
+                                class="min-w-full h-full object-cover">
+                            <img src="images/trek/img1.png" loading="eager" decoding="async"
+                                class="min-w-full h-full object-cover">
+                            <img src="images/trek/img2.png" loading="eager" decoding="async"
+                                class="min-w-full h-full object-cover">
                         </div>
                         <div
                             class="flex gap-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 justify-center items-center">
@@ -217,56 +222,141 @@ jf <search></search>
 
                 <!-- overview start -->
                 <div class="mb-[32px] lg:mb-[64px]">
-                    <!-- price (mobile & tablet) -->
-                    <div class="lg:hidden mb-[32px]">
-                        <div class="bg-[#F4F9FE] p-[24px] border border-[#BCD5F0] rounded-[12px] mb-4">
-                            <h2 class="font-extrabold text-[24px] mb-[12px]">Price</h2>
-                            <p class="flex items-center gap-3 text-lg mb-[24px] font-medium">
-                                <span class="font-light text-[14px] line-through">$1800</span>
-                                <span class="text-[#1E40FF] text-[20px] font-semibold">$1700</span>
-                                <span class="font-regular text-[14px]">per person</span>
-                            </p>
-                            <p class="font-semibold text-[24px] mb-4">Group Price</p>
-                            <table class="w-full border-separate border-spacing-y-2 text-sm">
-                                <tbody>
-                                    <thead>
-                                        <tr class="text-[18px] font-medium">
-                                            <th class="text-left">No. of Travellers</th>
-                                            <th class="text-right">Per Travellers</th>
-                                        </tr>
-                                    </thead>
-                                    <tr class="text-[16px] font-regular">
-                                        <td>1</td>
-                                        <td class="text-right">1700</td>
-                                    </tr>
-                                    <tr class="text-[16px] font-regular">
-                                        <td>2-5</td>
-                                        <td class="text-right">1650</td>
-                                    </tr>
-                                    <tr class="text-[16px] font-regular">
-                                        <td>5-10</td>
-                                        <td class="text-right">1600</td>
-                                    </tr>
-                                    <tr class="text-[16px] font-regular">
-                                        <td>10-20</td>
-                                        <td class="text-right">1550</td>
-                                    </tr>
-                                    <tr class="text-[16px] font-regular">
-                                        <td>20+</td>
-                                        <td class="text-right">1400</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <!-- Trip Cost Calculator -->
+                    <div class="mb-[32px] lg:hidden">
+                        <div class="bg-white p-[24px] md:p-[32px] border border-[#E0E0E0] rounded-[12px]">
+                            <!-- Title -->
+                            <h2 class="font-extrabold text-[24px] md:text-[28px] mb-[24px] flex items-center gap-3">
+                                <i data-lucide="calculator" class="w-8 h-8 text-[#1E40FF]"></i>
+                                Trip Cost Calculator
+                            </h2>
 
-                        <button type="button" data-modal-target="book"
-                            class="bg-blue-600 w-full mb-3 text-white px-[18px] py-3 rounded-lg hover:bg-blue-700 text-[16px] font-medium flex justify-center items-center">
-                            Book Your Trip
-                        </button>
-                        <button type="button" data-modal-target="inquiry"
-                            class="bg-white w-full text-black border border-[#BCD5F0] px-[18px] py-3 rounded-lg hover:bg-blue-100 text-[16px] font-medium flex justify-center items-center">
-                            Send Inquiry
-                        </button>
+                            <!-- Select Trek Dropdown -->
+                            <div class="mb-[24px]">
+                                <label class="block text-[14px] md:text-[16px] font-semibold mb-[12px]">Select
+                                    Trek</label>
+                                <select id="trek-select"
+                                    class="w-full px-4 py-[12px] border border-[#D0D0D0] rounded-[8px] text-[14px] md:text-[16px] bg-white focus:outline-none focus:border-[#1E40FF]">
+                                    <option value="everest">Everest Base Camp Trek (14 Days)</option>
+                                    <option value="kilimanjaro">Kilimanjaro Trek (8 Days)</option>
+                                    <option value="annapurna">Annapurna Circuit (21 Days)</option>
+                                </select>
+                            </div>
+
+                            <!-- Group Size Slider -->
+                            <div class="mb-[32px]">
+                                <div class="flex items-baseline justify-between mb-[12px]">
+                                    <label class="text-[16px] md:text-[18px] font-semibold">
+                                        Group Size: <span id="group-size-value">2</span>
+                                        <span class="text-[#16A34A] text-[14px] ml-2">(Save $<span
+                                                id="group-savings">200</span>/pp)</span>
+                                    </label>
+                                </div>
+                                <input type="range" id="group-size-slider" min="1" max="12" value="2"
+                                    class="w-full h-2 bg-[#E0E0E0] rounded-lg appearance-none cursor-pointer slider-thumb">
+                                <div class="flex justify-between text-[12px] md:text-[14px] text-[#666] mt-[12px]">
+                                    <span>1</span>
+                                    <span>6</span>
+                                    <span>12</span>
+                                </div>
+                            </div>
+
+                            <!-- Group Pricing -->
+                            <div class="mb-[32px]">
+                                <h3 class="font-semibold text-[16px] md:text-[18px] mb-[16px]">Group Pricing</h3>
+                                <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+                                    <div class="p-[12px] text-center">
+                                        <p class="text-[12px] md:text-[14px] text-[#666] mb-[8px]">1 person</p>
+                                        <p class="font-semibold text-[16px] md:text-[18px]">$1550</p>
+                                    </div>
+                                    <div class="p-[12px] text-center bg-[#EBF2FF] border border-[#1E40FF] rounded-[8px] pricing-tier pricing-tier-2-3"
+                                        data-tier="2-3">
+                                        <p class="text-[12px] md:text-[14px] text-[#666] mb-[8px]">2-3 people</p>
+                                        <p class="font-semibold text-[16px] md:text-[18px] text-[#1E40FF]">$1350</p>
+                                    </div>
+                                    <div class="p-[12px] text-center pricing-tier pricing-tier-4-5" data-tier="4-5">
+                                        <p class="text-[12px] md:text-[14px] text-[#666] mb-[8px]">4-5 people</p>
+                                        <p class="font-semibold text-[16px] md:text-[18px]">$1250</p>
+                                    </div>
+                                    <div class="p-[12px] text-center pricing-tier pricing-tier-6-12" data-tier="6-12">
+                                        <p class="text-[12px] md:text-[14px] text-[#666] mb-[8px]">6-12 people</p>
+                                        <p class="font-semibold text-[16px] md:text-[18px]">$1150</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cost Summary -->
+                            <div class="bg-[#F4F9FE] p-[24px] rounded-[12px] mb-[32px]">
+                                <div
+                                    class="flex justify-between items-center mb-[20px] pb-[20px] border-b border-[#BCD5F0]">
+                                    <p class="text-[16px] text-[#666]">Per person</p>
+                                    <p class="text-[28px] md:text-[32px] font-bold text-black">$<span
+                                            id="per-person-price">1350</span></p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-[16px] text-[#666]">Total (<span id="total-people">2</span> people)
+                                    </p>
+                                    <p class="text-[28px] md:text-[32px] font-bold text-[#1E40FF]">$<span
+                                            id="total-price">2700</span></p>
+                                </div>
+                            </div>
+
+                            <!-- What's Included / Excluded Accordion -->
+                            <div class="mb-[24px]">
+                                <button type="button" id="included-excluded-btn"
+                                    class="w-full flex justify-between items-center p-[16px] bg-[#F9F9F9] border border-[#E0E0E0] rounded-[8px] hover:bg-[#F0F0F0] text-left">
+                                    <span class="font-semibold text-[16px]">What's Included / Excluded</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                                </button>
+                                <div id="included-excluded-content" class="hidden mt-[16px]">
+                                    <div class="grid md:grid-cols-2 gap-[24px]">
+                                        <div>
+                                            <h4 class="font-semibold text-[16px] mb-[12px] text-[#16A34A]">Included</h4>
+                                            <ul class="space-y-[8px] text-[14px] text-[#666]">
+                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span>
+                                                    Professional guides</li>
+                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> All
+                                                    accommodations</li>
+                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> Meals as
+                                                    per itinerary</li>
+                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> Porter
+                                                    services</li>
+                                                <li class="flex gap-2"><span class="text-[#16A34A]">✓</span> Equipment
+                                                    provided</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-[16px] mb-[12px] text-[#DC2626]">Not Included
+                                            </h4>
+                                            <ul class="space-y-[8px] text-[14px] text-[#666]">
+                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span>
+                                                    International flights</li>
+                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Travel
+                                                    insurance</li>
+                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Personal
+                                                    expenses</li>
+                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Tips &
+                                                    gratuities</li>
+                                                <li class="flex gap-2"><span class="text-[#DC2626]">✕</span> Optional
+                                                    activities</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="flex gap-[12px] flex-col sm:flex-row">
+                                <button type="button" data-modal-target="book"
+                                    class="flex-1 bg-[#1E40FF] text-white px-[18px] py-[12px] rounded-lg hover:bg-[#1530CC] text-[16px] font-medium flex justify-center items-center">
+                                    Book Your Trip
+                                </button>
+                                <button type="button" data-modal-target="inquiry"
+                                    class="flex-1 bg-white text-black border border-[#BCD5F0] px-[18px] py-[12px] rounded-lg hover:bg-[#F4F9FE] text-[16px] font-medium flex justify-center items-center">
+                                    Send Inquiry
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <!-- highlights start -->
                     <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">Hightlights</h2>
@@ -767,46 +857,69 @@ jf <search></search>
             <div class="lg:w-2/6 ">
                 <div class="sticky top-[40px]">
                     <!-- price start-->
-                    <div
-                        class="hidden lg:block bg-[#F4F9FE] p-[32px] border border-[#BCD5F0] min-h-[300px] rounded-[12px] mb-[16px]">
+                    <div class="hidden lg:block bg-white p-[24px] border border-[#E0E0E0] rounded-[12px] mb-[16px]">
 
-                        <h2 class="font-extrabold text-[24px] mb-[8px]">Price</h2>
-                        <p class="flex items-center gap-3 text-lg mb-[16px] font-medium">
-                            <span class="font-light text-[14px] line-through">$1800</span>
-                            <span class="text-[#1E40FF] text-[24px] font-semibold">$1700</span>
-                            <span class="font-regular text-[16px]">per person</span>
-                        </p>
-                        <p class="font-semibold text-[28px]">Group Price</p>
-                        <table class="w-full border-separate border-spacing-y-3">
-                            <thead>
-                                <tr class="text-[20px] font-medium">
-                                    <th class="text-left">No. of Travellers</th>
-                                    <th class="text-right">Per Travellers</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-[16px] font-regular">
-                                    <td>1</td>
-                                    <td class="text-right">1700</td>
-                                </tr>
-                                <tr class="text-[16px] font-regular">
-                                    <td>2-5</td>
-                                    <td class="text-right">1650</td>
-                                </tr>
-                                <tr class="text-[16px] font-regular">
-                                    <td>5-10</td>
-                                    <td class="text-right">1600</td>
-                                </tr>
-                                <tr class="text-[16px] font-regular">
-                                    <td>10-20</td>
-                                    <td class="text-right">1550</td>
-                                </tr>
-                                <tr>
-                                    <td>20+</td>
-                                    <td class="text-right">1500</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Title -->
+                        <h2 class="font-extrabold text-[20px] mb-[16px] flex items-center gap-2">
+                            <i data-lucide="calculator" class="w-6 h-6 text-[#1E40FF]"></i>
+                            Trip Cost
+                        </h2>
+
+                        <!-- Group Size Slider -->
+                        <div class="mb-[20px]">
+                            <div class="flex items-baseline justify-between mb-[8px]">
+                                <label class="text-[14px] font-semibold">
+                                    Group Size: <span id="group-size-value-sidebar">2</span>
+                                </label>
+                            </div>
+                            <input type="range" id="group-size-slider-sidebar" min="1" max="12" value="2"
+                                class="w-full h-2 bg-[#E0E0E0] rounded-lg appearance-none cursor-pointer slider-thumb">
+                            <div class="flex justify-between text-[11px] text-[#666] mt-[8px]">
+                                <span>1</span>
+                                <span>6</span>
+                                <span>12</span>
+                            </div>
+                        </div>
+
+                        <!-- Group Pricing -->
+                        <div class="mb-[20px]">
+                            <h3 class="font-semibold text-[13px] mb-[12px]">Group Pricing</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="p-[10px] text-center text-center">
+                                    <p class="text-[11px] text-[#666] mb-[4px]">1 person</p>
+                                    <p class="font-semibold text-[14px]">$1550</p>
+                                </div>
+                                <div class="p-[10px] text-center bg-[#EBF2FF] border border-[#1E40FF] rounded-[6px] pricing-tier-sidebar pricing-tier-2-3-sidebar"
+                                    data-tier="2-3">
+                                    <p class="text-[11px] text-[#666] mb-[4px]">2-3 people</p>
+                                    <p class="font-semibold text-[14px] text-[#1E40FF]">$1350</p>
+                                </div>
+                                <div class="p-[10px] text-center pricing-tier-sidebar pricing-tier-4-5-sidebar"
+                                    data-tier="4-5">
+                                    <p class="text-[11px] text-[#666] mb-[4px]">4-5</p>
+                                    <p class="font-semibold text-[14px]">$1250</p>
+                                </div>
+                                <div class="p-[10px] text-center pricing-tier-sidebar pricing-tier-6-12-sidebar"
+                                    data-tier="6-12">
+                                    <p class="text-[11px] text-[#666] mb-[4px]">6-12</p>
+                                    <p class="font-semibold text-[14px]">$1150</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cost Summary -->
+                        <div class="bg-[#F4F9FE] p-[16px] rounded-[8px]">
+                            <div
+                                class="flex justify-between items-center mb-[12px] pb-[12px] border-b border-[#BCD5F0]">
+                                <p class="text-[12px] text-[#666]">Per person</p>
+                                <p class="text-[18px] font-bold">$<span id="per-person-price-sidebar">1350</span></p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[12px] text-[#666]">Total</p>
+                                <p class="text-[18px] font-bold text-[#1E40FF]">$<span
+                                        id="total-price-sidebar">2700</span></p>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- price end -->
@@ -1819,41 +1932,79 @@ jf <search></search>
         const heroCarousel = document.querySelector('.hero-carousel');
         const heroPrevBtn = document.getElementById('hero-prev');
         const heroNextBtn = document.getElementById('hero-next');
-        let heroIndex = 0;
+        const heroSlideTransition = 'transform 500ms ease';
+        const heroOriginalSlides = heroCarousel ? Array.from(heroCarousel.children) : [];
+        const heroSlideCount = heroOriginalSlides.length;
+        let heroIndex = heroSlideCount > 1 ? 1 : 0;
+        let heroAnimating = false;
 
-        function updateHeroCarousel() {
-            if (heroCarousel) {
-                heroCarousel.style.transform = `translateX(-${heroIndex * 100}%)`;
+        function setHeroPosition(animate = true) {
+            if (!heroCarousel) {
+                return;
+            }
+
+            heroCarousel.style.transition = animate ? heroSlideTransition : 'none';
+            heroCarousel.style.transform = `translateX(-${heroIndex * 100}%)`;
+
+            if (!animate) {
+                heroCarousel.offsetHeight;
+                heroCarousel.style.transition = heroSlideTransition;
             }
         }
 
-        if (heroPrevBtn) {
-            heroPrevBtn.addEventListener('click', () => {
-                const totalSlides = heroCarousel.querySelectorAll('img').length;
-                heroIndex = (heroIndex - 1 + totalSlides) % totalSlides;
-                updateHeroCarousel();
+        if (heroSlideCount > 1 && heroCarousel) {
+            const firstHeroClone = heroOriginalSlides[0].cloneNode(true);
+            const lastHeroClone = heroOriginalSlides[heroSlideCount - 1].cloneNode(true);
+
+            heroCarousel.insertBefore(lastHeroClone, heroOriginalSlides[0]);
+            heroCarousel.appendChild(firstHeroClone);
+
+            setHeroPosition(false);
+
+            heroCarousel.addEventListener('transitionend', () => {
+                heroAnimating = false;
+
+                if (heroIndex === 0) {
+                    heroIndex = heroSlideCount;
+                    setHeroPosition(false);
+                } else if (heroIndex === heroSlideCount + 1) {
+                    heroIndex = 1;
+                    setHeroPosition(false);
+                }
             });
         }
 
+        function moveHero(direction) {
+            if (!heroCarousel || heroSlideCount <= 1) {
+                return;
+            }
+
+            if (heroAnimating) {
+                return;
+            }
+
+            heroAnimating = true;
+            heroIndex += direction;
+            setHeroPosition();
+        }
+
+        if (heroPrevBtn) {
+            heroPrevBtn.addEventListener('click', () => moveHero(-1));
+        }
+
         if (heroNextBtn) {
-            heroNextBtn.addEventListener('click', () => {
-                const totalSlides = heroCarousel.querySelectorAll('img').length;
-                heroIndex = (heroIndex + 1) % totalSlides;
-                updateHeroCarousel();
-            });
+            heroNextBtn.addEventListener('click', () => moveHero(1));
         }
 
         let heroAutoplayTimer = null;
 
         function startHeroAutoplay() {
-            if (!heroCarousel) {
+            if (!heroCarousel || heroSlideCount <= 1) {
                 return;
             }
 
             heroAutoplayTimer = window.setInterval(() => {
-                const totalSlides = heroCarousel.querySelectorAll('img').length;
-                heroIndex = (heroIndex + 1) % totalSlides;
-                updateHeroCarousel();
+                moveHero(1);
             }, 5000);
         }
 
@@ -1863,7 +2014,53 @@ jf <search></search>
         const packagesCarousel = document.querySelector('.packages-carousel');
         const packagesPrevBtn = document.getElementById('packages-prev');
         const packagesNextBtn = document.getElementById('packages-next');
-        let packagesIndex = 0;
+        const packagesSlideTransition = 'transform 500ms ease';
+        const packagesOriginalSlides = packagesCarousel ? Array.from(packagesCarousel.children) : [];
+        const packagesSlideCount = packagesOriginalSlides.length;
+        const packagesCloneCount = Math.min(3, packagesSlideCount);
+        let packagesIndex = packagesSlideCount > 1 ? packagesCloneCount : 0;
+        let packagesAnimating = false;
+
+        function setPackagesPosition(animate = true) {
+            if (!packagesCarousel) {
+                return;
+            }
+
+            packagesCarousel.style.transition = animate ? packagesSlideTransition : 'none';
+            packagesCarousel.style.transform = `translateX(-${packagesIndex * getPackagesSlideDistance()}px)`;
+
+            if (!animate) {
+                packagesCarousel.offsetHeight;
+                packagesCarousel.style.transition = packagesSlideTransition;
+            }
+        }
+
+        if (packagesSlideCount > 1 && packagesCarousel) {
+            const startClones = packagesOriginalSlides.slice(-packagesCloneCount).map((slide) => slide.cloneNode(true));
+            const endClones = packagesOriginalSlides.slice(0, packagesCloneCount).map((slide) => slide.cloneNode(true));
+
+            startClones.forEach((slide) => {
+                packagesCarousel.insertBefore(slide, packagesCarousel.firstChild);
+            });
+
+            endClones.forEach((slide) => {
+                packagesCarousel.appendChild(slide);
+            });
+
+            setPackagesPosition(false);
+
+            packagesCarousel.addEventListener('transitionend', () => {
+                packagesAnimating = false;
+
+                if (packagesIndex >= packagesSlideCount + packagesCloneCount) {
+                    packagesIndex = packagesCloneCount;
+                    setPackagesPosition(false);
+                } else if (packagesIndex < packagesCloneCount) {
+                    packagesIndex = packagesSlideCount + packagesCloneCount - 1;
+                    setPackagesPosition(false);
+                }
+            });
+        }
 
         function getPackagesSlideDistance() {
             if (!packagesCarousel || !packagesCarousel.children.length) {
@@ -1875,46 +2072,41 @@ jf <search></search>
             return firstSlide.getBoundingClientRect().width + (Number.parseFloat(gap) || 0);
         }
 
-        function updatePackagesCarousel() {
-            if (packagesCarousel) {
-                packagesCarousel.style.transform = `translateX(-${packagesIndex * getPackagesSlideDistance()}px)`;
-            }
-        }
-
-        function getMaxPackagesIndex() {
-            if (!packagesCarousel) {
-                return 0;
+        function movePackages(direction) {
+            if (!packagesCarousel || packagesSlideCount <= 1) {
+                return;
             }
 
-            return Math.max(0, packagesCarousel.children.length - 3);
+            if (packagesAnimating) {
+                return;
+            }
+
+            packagesAnimating = true;
+            packagesIndex += direction;
+            setPackagesPosition();
         }
 
         if (packagesPrevBtn) {
             packagesPrevBtn.addEventListener('click', () => {
-                packagesIndex = Math.max(0, packagesIndex - 1);
-                updatePackagesCarousel();
+                movePackages(-1);
             });
         }
 
         if (packagesNextBtn) {
             packagesNextBtn.addEventListener('click', () => {
-                const maxIndex = getMaxPackagesIndex();
-                packagesIndex = packagesIndex >= maxIndex ? 0 : packagesIndex + 1;
-                updatePackagesCarousel();
+                movePackages(1);
             });
         }
 
         let packagesAutoplayTimer = null;
 
         function startPackagesAutoplay() {
-            if (!packagesCarousel) {
+            if (!packagesCarousel || packagesSlideCount <= 1) {
                 return;
             }
 
             packagesAutoplayTimer = window.setInterval(() => {
-                const maxIndex = getMaxPackagesIndex();
-                packagesIndex = packagesIndex >= maxIndex ? 0 : packagesIndex + 1;
-                updatePackagesCarousel();
+                movePackages(1);
             }, 5000);
         }
 
@@ -1922,11 +2114,139 @@ jf <search></search>
 
         // Handle window resize for packages carousel
         window.addEventListener('resize', () => {
-            packagesIndex = Math.min(packagesIndex, getMaxPackagesIndex());
-            updatePackagesCarousel();
+            packagesAnimating = false;
+            setPackagesPosition(false);
         });
 
-        updatePackagesCarousel();
+        setHeroPosition(false);
+        setPackagesPosition(false);
+
+        // Trip Cost Calculator Logic
+        const groupSizeSlider = document.getElementById('group-size-slider');
+        const groupSizeValue = document.getElementById('group-size-value');
+        const groupSavings = document.getElementById('group-savings');
+        const perPersonPrice = document.getElementById('per-person-price');
+        const totalPrice = document.getElementById('total-price');
+        const totalPeople = document.getElementById('total-people');
+        const includedExcludedBtn = document.getElementById('included-excluded-btn');
+        const includedExcludedContent = document.getElementById('included-excluded-content');
+
+        // Pricing tiers
+        const pricingTiers = {
+            1: { price: 1550, savings: 0 },
+            2: { price: 1350, savings: 200 },
+            3: { price: 1350, savings: 200 },
+            4: { price: 1250, savings: 300 },
+            5: { price: 1250, savings: 300 },
+            6: { price: 1150, savings: 400 },
+            7: { price: 1150, savings: 400 },
+            8: { price: 1150, savings: 400 },
+            9: { price: 1150, savings: 400 },
+            10: { price: 1150, savings: 400 },
+            11: { price: 1150, savings: 400 },
+            12: { price: 1150, savings: 400 }
+        };
+
+        function updateCalculator() {
+            const groupSize = parseInt(groupSizeSlider.value);
+            const tier = pricingTiers[groupSize];
+            const price = tier.price;
+            const savings = tier.savings;
+
+            // Update display values
+            groupSizeValue.textContent = groupSize;
+            groupSavings.textContent = savings;
+            perPersonPrice.textContent = price;
+            totalPrice.textContent = price * groupSize;
+            totalPeople.textContent = groupSize;
+
+            // Update pricing tier highlighting
+            document.querySelectorAll('.pricing-tier').forEach(tier => tier.classList.remove('bg-[#EBF2FF]', 'border-[#1E40FF]', 'text-[#1E40FF]'));
+
+            if (groupSize === 1) {
+                // 1 person - no highlighting
+            } else if (groupSize <= 3) {
+                document.querySelector('.pricing-tier-2-3').classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                document.querySelector('.pricing-tier-2-3 p:last-child').classList.add('text-[#1E40FF]');
+            } else if (groupSize <= 5) {
+                document.querySelector('.pricing-tier-4-5').classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                document.querySelector('.pricing-tier-4-5 p:last-child').classList.add('text-[#1E40FF]');
+            } else {
+                document.querySelector('.pricing-tier-6-12').classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                document.querySelector('.pricing-tier-6-12 p:last-child').classList.add('text-[#1E40FF]');
+            }
+
+            // Update slider background
+            const percent = (groupSize - 1) / (12 - 1) * 100;
+            groupSizeSlider.style.background = `linear-gradient(to right, #1E40FF 0%, #1E40FF ${percent}%, #E0E0E0 ${percent}%, #E0E0E0 100%)`;
+        }
+
+        // Event listeners
+        groupSizeSlider.addEventListener('input', updateCalculator);
+
+        includedExcludedBtn.addEventListener('click', () => {
+            includedExcludedContent.classList.toggle('hidden');
+            const icon = includedExcludedBtn.querySelector('[data-lucide="chevron-down"]');
+            icon.style.transform = includedExcludedContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            icon.style.transition = 'transform 0.3s ease';
+        });
+
+        // Initialize calculator
+        updateCalculator();
+
+        // Sidebar Trip Cost Calculator Logic
+        const groupSizeSliderSidebar = document.getElementById('group-size-slider-sidebar');
+        const groupSizeValueSidebar = document.getElementById('group-size-value-sidebar');
+        const perPersonPriceSidebar = document.getElementById('per-person-price-sidebar');
+        const totalPriceSidebar = document.getElementById('total-price-sidebar');
+
+        function updateCalculatorSidebar() {
+            if (!groupSizeSliderSidebar) return;
+
+            const groupSize = parseInt(groupSizeSliderSidebar.value);
+            const tier = pricingTiers[groupSize];
+            const price = tier.price;
+
+            // Update display values
+            groupSizeValueSidebar.textContent = groupSize;
+            perPersonPriceSidebar.textContent = price;
+            totalPriceSidebar.textContent = price * groupSize;
+
+            // Update pricing tier highlighting
+            document.querySelectorAll('.pricing-tier-sidebar').forEach(tier => tier.classList.remove('bg-[#EBF2FF]', 'border-[#1E40FF]'));
+            document.querySelectorAll('.pricing-tier-sidebar p:last-child').forEach(p => p.classList.remove('text-[#1E40FF]'));
+
+            if (groupSize === 1) {
+                // 1 person - no highlighting
+            } else if (groupSize <= 3) {
+                const tier = document.querySelector('.pricing-tier-2-3-sidebar');
+                if (tier) {
+                    tier.classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                    tier.querySelector('p:last-child').classList.add('text-[#1E40FF]');
+                }
+            } else if (groupSize <= 5) {
+                const tier = document.querySelector('.pricing-tier-4-5-sidebar');
+                if (tier) {
+                    tier.classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                    tier.querySelector('p:last-child').classList.add('text-[#1E40FF]');
+                }
+            } else {
+                const tier = document.querySelector('.pricing-tier-6-12-sidebar');
+                if (tier) {
+                    tier.classList.add('bg-[#EBF2FF]', 'border', 'border-[#1E40FF]');
+                    tier.querySelector('p:last-child').classList.add('text-[#1E40FF]');
+                }
+            }
+
+            // Update slider background
+            const percent = (groupSize - 1) / (12 - 1) * 100;
+            groupSizeSliderSidebar.style.background = `linear-gradient(to right, #1E40FF 0%, #1E40FF ${percent}%, #E0E0E0 ${percent}%, #E0E0E0 100%)`;
+        }
+
+        if (groupSizeSliderSidebar) {
+            groupSizeSliderSidebar.addEventListener('input', updateCalculatorSidebar);
+            updateCalculatorSidebar();
+        }
 
     </script>
 

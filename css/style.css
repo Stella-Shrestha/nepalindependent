@@ -68,3 +68,53 @@ canvas {
 .packages-carousel-container {
   overflow: hidden;
 }
+
+/* Slider styling */
+.slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    #1e40ff 0%,
+    #1e40ff 50%,
+    #e0e0e0 50%,
+    #e0e0e0 100%
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1e40ff;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(30, 64, 255, 0.3);
+}
+
+.slider-thumb::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1e40ff;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(30, 64, 255, 0.3);
+}
+
+.slider-thumb::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+}
+
+.slider-thumb::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+}

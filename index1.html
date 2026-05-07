@@ -1,0 +1,475 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepal Trekking</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: #fff;
+        }
+
+        .slider-track {
+            width: max-content;
+            animation: scroll 25s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/10">
+
+        <div class="max-w-[1340px] mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+
+            <img src="images/Home/logo.png" class="h-[60px] object-contain">
+
+            <ul class="hidden lg:flex items-center gap-10 text-white font-medium">
+                <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+                <li><a href="#treks" class="hover:text-blue-400 transition">Treks</a></li>
+                <li><a href="#gallery" class="hover:text-blue-400 transition">Gallery</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+            </ul>
+
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl shadow-xl transition hover:scale-105 hidden lg:flex">
+                Book Now
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+        <img src="images/Home/background.png" class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/70"></div>
+
+        <div class="absolute top-20 left-10 w-[350px] h-[350px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+
+        <div class="relative z-20 max-w-[1340px] mx-auto px-4 text-center">
+
+            <p class="uppercase tracking-[6px] text-blue-400 font-semibold mb-6" data-aos="fade-up">
+                Explore Nepal
+            </p>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-8" data-aos="fade-up">
+                Discover The Beauty <br>
+                Of The Himalayas
+            </h1>
+
+            <p class="text-gray-300 max-w-3xl mx-auto text-lg lg:text-xl mb-10 leading-relaxed" data-aos="fade-up">
+                Experience breathtaking trekking adventures, majestic mountain landscapes,
+                and unforgettable memories.
+            </p>
+
+            <div class="relative max-w-[700px] mx-auto mb-10" data-aos="zoom-in">
+
+                <input type="text" placeholder="Search your dream trek..."
+                    class="w-full h-[72px] rounded-full px-8 text-lg outline-none shadow-2xl">
+
+                <button
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition">
+                    Search
+                </button>
+
+            </div>
+
+            <div class="flex items-center justify-center gap-6 flex-wrap" data-aos="fade-up">
+
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition shadow-2xl">
+                    Explore Treks
+                </button>
+
+                <button
+                    class="border border-white/30 backdrop-blur-xl text-white px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition">
+                    Watch Video
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-[120px] bg-white">
+
+        <div class="max-w-[1340px] mx-auto px-4 lg:px-8 text-center">
+
+            <p class="uppercase tracking-[6px] text-blue-600 font-semibold mb-4" data-aos="fade-up">
+                About Us
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-black mb-8" data-aos="fade-up">
+                Welcome To Nepal Trekking
+            </h2>
+
+            <p class="text-gray-500 max-w-4xl mx-auto text-lg leading-relaxed" data-aos="fade-up">
+                We are a trusted locally owned trekking agency with years of experience creating unforgettable Himalayan adventures.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-20">
+
+                <div
+                    class="bg-white rounded-[28px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 p-8 text-left">
+                    <h3 class="text-4xl font-black text-blue-600 mb-3">1500+</h3>
+                    <p class="text-gray-500 text-lg">Satisfied Clients</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-[28px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 p-8 text-left">
+                    <h3 class="text-4xl font-black text-blue-600 mb-3">10+</h3>
+                    <p class="text-gray-500 text-lg">Years Experience</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-[28px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 p-8 text-left">
+                    <h3 class="text-4xl font-black text-blue-600 mb-3">100%</h3>
+                    <p class="text-gray-500 text-lg">Private Treks</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-[28px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 p-8 text-left">
+                    <h3 class="text-4xl font-black text-blue-600 mb-3">24/7</h3>
+                    <p class="text-gray-500 text-lg">Customer Support</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TREKS -->
+    <section id="treks" class="py-[120px] bg-[#F7FAFF]">
+
+        <div class="max-w-[1340px] mx-auto px-4 lg:px-8">
+
+            <div class="text-center mb-20">
+                <p class="uppercase tracking-[6px] text-blue-600 font-semibold mb-4">Popular Treks</p>
+                <h2 class="text-4xl lg:text-6xl font-black">Best Selling Treks</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                <div
+                    class="group bg-white rounded-[28px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.16)] hover:-translate-y-3 transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/Home/everest.png"
+                            class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <span class="absolute top-5 left-5 bg-blue-600 text-white text-sm px-4 py-2 rounded-full">
+                            Best Seller
+                        </span>
+
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="flex items-center gap-2 mb-4 text-yellow-500">
+                            ⭐⭐⭐⭐⭐
+                            <span class="text-black font-semibold">5.0</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">
+                            Everest Base Camp Trek
+                        </h3>
+
+                        <div class="flex justify-between items-center">
+
+                            <div>
+                                <p class="text-gray-400 text-sm">Starting From</p>
+                                <h4 class="text-blue-600 text-2xl font-bold">US $1450</h4>
+                            </div>
+
+                            <div class="text-right">
+                                <p class="text-gray-400 text-sm">Duration</p>
+                                <h4 class="font-semibold">14 Days</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div
+                    class="group bg-white rounded-[28px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.16)] hover:-translate-y-3 transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/Home/everest.png"
+                            class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <span class="absolute top-5 left-5 bg-blue-600 text-white text-sm px-4 py-2 rounded-full">
+                            Best Seller
+                        </span>
+
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="flex items-center gap-2 mb-4 text-yellow-500">
+                            ⭐⭐⭐⭐⭐
+                            <span class="text-black font-semibold">5.0</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">
+                            Everest Base Camp Trek
+                        </h3>
+
+                        <div class="flex justify-between items-center">
+
+                            <div>
+                                <p class="text-gray-400 text-sm">Starting From</p>
+                                <h4 class="text-blue-600 text-2xl font-bold">US $1450</h4>
+                            </div>
+
+                            <div class="text-right">
+                                <p class="text-gray-400 text-sm">Duration</p>
+                                <h4 class="font-semibold">14 Days</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div
+                    class="group bg-white rounded-[28px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.16)] hover:-translate-y-3 transition-all duration-500">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/Home/everest.png"
+                            class="w-full h-[280px] object-cover group-hover:scale-110 transition duration-700">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <span class="absolute top-5 left-5 bg-blue-600 text-white text-sm px-4 py-2 rounded-full">
+                            Best Seller
+                        </span>
+
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="flex items-center gap-2 mb-4 text-yellow-500">
+                            ⭐⭐⭐⭐⭐
+                            <span class="text-black font-semibold">5.0</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">
+                            Everest Base Camp Trek
+                        </h3>
+
+                        <div class="flex justify-between items-center">
+
+                            <div>
+                                <p class="text-gray-400 text-sm">Starting From</p>
+                                <h4 class="text-blue-600 text-2xl font-bold">US $1450</h4>
+                            </div>
+
+                            <div class="text-right">
+                                <p class="text-gray-400 text-sm">Duration</p>
+                                <h4 class="font-semibold">14 Days</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-[120px] bg-white overflow-hidden">
+
+        <div class="max-w-[1340px] mx-auto px-4 lg:px-8">
+
+            <div class="text-center mb-20">
+                <p class="uppercase tracking-[6px] text-blue-600 font-semibold mb-4">Gallery</p>
+                <h2 class="text-4xl lg:text-6xl font-black">Moments From Himalayas</h2>
+            </div>
+
+            <div class="overflow-hidden">
+
+                <div class="slider-track flex gap-6">
+
+                    <img src="images/Home/sideimg3 1.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 2.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 3.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 4.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 5.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 1.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 2.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                    <img src="images/Home/sideimg3 3.png"
+                        class="w-[340px] h-[440px] object-cover rounded-[32px] hover:scale-105 transition duration-500 flex-shrink-0">
+
+                </div>
+
+            </div>
+
+            <button
+                class="mt-16 mx-auto flex bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl shadow-xl hover:scale-105 transition">
+                Explore More
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="py-[120px] relative overflow-hidden">
+
+        <img src="images/Home/background.png" class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <div class="relative z-20 max-w-5xl mx-auto text-center text-white px-4">
+
+            <p class="uppercase tracking-[6px] text-orange-400 font-semibold mb-6">
+                Your Adventure Awaits
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-black leading-tight mb-8">
+                Ready For Your Himalayan Journey?
+            </h2>
+
+            <p class="text-gray-300 text-lg max-w-3xl mx-auto mb-10">
+                Trek through breathtaking mountain landscapes with trusted local guides.
+            </p>
+
+            <button
+                class="bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl text-lg font-semibold hover:scale-105 transition shadow-2xl">
+                Start Adventure
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-gradient-to-b from-[#07111f] to-black text-white py-[100px]">
+
+        <div class="max-w-[1340px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <div>
+                <img src="images/Home/logo.png" class="h-[70px] mb-6">
+
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Experience Nepal with trusted local guides and unforgettable trekking adventures.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+
+                <ul class="space-y-4 text-gray-400">
+                    <li>About Us</li>
+                    <li>Treks</li>
+                    <li>Gallery</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-6">Popular Treks</h3>
+
+                <ul class="space-y-4 text-gray-400">
+                    <li>Everest Base Camp</li>
+                    <li>Annapurna Circuit</li>
+                    <li>Langtang Valley</li>
+                    <li>Manaslu Trek</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-6">Contact</h3>
+
+                <div class="space-y-4 text-gray-400">
+                    <p>📍 Kathmandu, Nepal</p>
+                    <p>📞 +977 9800000000</p>
+                    <p>✉️ info@trekking.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10 mt-16 pt-8 text-center text-gray-500 px-4">
+            Copyright © 2026 Nepal Trekking. All Rights Reserved.
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
+```

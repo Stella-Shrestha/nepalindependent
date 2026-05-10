@@ -16,12 +16,15 @@
         }
 
         body {
-            background: #ffffff;
+            background:
+                radial-gradient(circle at top left, rgba(191, 219, 254, 0.35), transparent 30%),
+                radial-gradient(circle at top right, rgba(219, 234, 254, 0.45), transparent 28%),
+                #f8fafc;
         }
     </style>
 </head>
 
-<body class="min-h-screen">
+<body class="min-h-screen bg-slate-50 text-slate-900">
     <!-- header start -->
     <header
         class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 flex items-center justify-between gap-36">
@@ -101,153 +104,326 @@
     </nav>
     <!-- nav end -->
 
+    <!-- Hero -->
+    <section class="mx-auto max-w-[1340px] px-4 pb-10 lg:pb-14 pt-6 lg:pt-10">
+        <div
+            class="overflow-hidden rounded-[32px] border border-white/70 bg-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur">
+            <div class="grid lg:grid-cols-[1.25fr_0.75fr] gap-0">
+                <div class="p-6 md:p-8 lg:p-10 bg-gradient-to-br from-slate-900 via-blue-900 to-blue-700 text-white">
+                    <p
+                        class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-blue-100">
+                        Booking Form
+                    </p>
+                    <h1 class="text-3xl font-bold leading-tight md:text-4xl lg:text-[56px]">
+                        Reserve Your Adventure
+                    </h1>
+                    <p class="mt-4 max-w-2xl text-sm leading-7 text-blue-100 md:text-base">
+                        Complete the form and our travel expert will contact you with the next steps, availability, and
+                        trip confirmation details.
+                    </p>
+
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                        <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
+                            <p class="text-xs uppercase tracking-[0.18em] text-blue-100/80">Trip</p>
+                            <p class="mt-1 font-semibold">Everest Base Camp Trek</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
+                            <p class="text-xs uppercase tracking-[0.18em] text-blue-100/80">Duration</p>
+                            <p class="mt-1 font-semibold">12-14 Days</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
+                            <p class="text-xs uppercase tracking-[0.18em] text-blue-100/80">Support</p>
+                            <p class="mt-1 font-semibold">24/7 Assistance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-8 lg:p-10 bg-slate-50/80">
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <div class="flex items-center gap-3 text-slate-900">
+                                <i data-lucide="shield-check" class="h-5 w-5 text-blue-600"></i>
+                                <p class="font-semibold">Secure booking</p>
+                            </div>
+                            <p class="mt-2 text-sm text-slate-500">Easy reservation flow with clear next steps.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                            <div class="flex items-center gap-3 text-slate-900">
+                                <i data-lucide="badge-check" class="h-5 w-5 text-blue-600"></i>
+                                <p class="font-semibold">Expert support</p>
+                            </div>
+                            <p class="mt-2 text-sm text-slate-500">Get trip help from our travel team any time.</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:col-span-2">
+                            <div class="flex items-center gap-3 text-slate-900">
+                                <i data-lucide="map-pin" class="h-5 w-5 text-blue-600"></i>
+                                <p class="font-semibold">Why this page feels better</p>
+                            </div>
+                            <p class="mt-2 text-sm leading-6 text-slate-500">
+                                The layout is now responsive, the key trip details are visible up front, and the form is
+                                easier to scan on mobile and desktop.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Heading -->
-    <div class="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
-        <p class="mb-3 text-sm font-bold uppercase text-blue-600">
+    <div class="mx-auto mb-10 max-w-4xl px-4 text-center lg:mb-14">
+        <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
             Booking Form
         </p>
 
-        <h1 class="mb-5 text-3xl font-bold tleading-tight text-slate-950 md:text-4xl lg:text-[56px]">
-            Reserve Your Adventure
-        </h1>
+        <h2 class="mb-4 text-2xl font-bold leading-tight text-slate-950 md:text-3xl lg:text-4xl">
+            Plan the details before you arrive in Nepal
+        </h2>
 
-        <p class="mt-3 text-[15px] text-slate-500 max-w-[600px] mx-auto">
-            Complete the booking form below and our travel expert will
-            contact you shortly with trip confirmation details.
+        <p class="mx-auto max-w-[640px] text-[15px] leading-7 text-slate-500">
+            Share your traveler details, preferred payment method, and any special requests so we can prepare the right
+            trip package for you.
         </p>
     </div>
+
     <!-- Main Booking Container -->
     <main class="px-4 pb-16 lg:pb-24">
-        <div>
-            <div class="mx-auto w-full max-w-[950px]">
-                <!-- Form -->
-                <form class="space-y-6">
+        <div class="mx-auto w-full max-w-[1340px]">
+            <!-- Form -->
+            <form class="grid grid-cols-1 lg:grid-cols-6 gap-8 mb-[52px]">
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-                        <!-- Name -->
-                        <div class="group">
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Full Name
-                            </label>
-
-                            <input type="text" placeholder="Enter your full name"
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
-                        </div>
-
-                        <!-- Email -->
-                        <div class="group">
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Email Address
-                            </label>
-
-                            <input type="email" placeholder="Enter your email"
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
-                        </div>
-
-                        <!-- Trip Name -->
-                        <div>
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Trip Name
-                            </label>
-
-                            <select
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
-
-                                <option>Everest Base Camp Trek</option>
-                                <option>Annapurna Circuit Trek</option>
-                                <option>Mardi Himal Trek</option>
-                                <option>Godavari Trek</option>
-                                <option>Langtang Villages</option>
-
-                            </select>
-                        </div>
-
-                        <!-- Date -->
-                        <div>
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Trip Date
-                            </label>
-
-                            <input type="text" value="August 16, 2026"
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
-                        </div>
-
-                        <!-- Travellers -->
-                        <div>
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Number Of Travellers
-                            </label>
-
-                            <input type="number" placeholder="Number of travellers"
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
-                        </div>
-
-                        <!-- Country -->
-                        <div>
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Select Country
-                            </label>
-
-                            <select
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
-
-                                <option>Select Your Country</option>
-                                <option>Nepal</option>
-                                <option>India</option>
-                                <option>United States</option>
-                                <option>United Kingdom</option>
-
-                            </select>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="lg:col-span-2">
-                            <label class="mb-2 block text-[14px] font-semibold text-slate-700">
-                                Your Message
-                            </label>
-
-                            <textarea rows="7" placeholder="Write your message here..."
-                                class="w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] p-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Recaptcha -->
+                <!-- Form Fields Section (4/6 width) -->
+                <div class="lg:col-span-4">
                     <div
-                        class="flex h-[74px] w-[300px] items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 shadow-sm">
-
-                        <div class="flex items-center gap-4">
-                            <div class="h-6 w-6 rounded border border-slate-400 bg-white"></div>
-
+                        class="rounded-[32px] border border-slate-200 bg-white p-5 md:p-7 lg:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+                        <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                             <div>
-                                <p class="text-[14px] text-slate-800">
-                                    I'm not a robot
-                                </p>
+                                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">Traveler
+                                    details</p>
+                                <h3 class="mt-1 text-2xl font-bold text-slate-950">Tell us about your trip</h3>
+                            </div>
+                            <p class="text-sm text-slate-500">Fields marked by your selections will expand when needed.
+                            </p>
+                        </div>
 
-                                <p class="mt-1 text-[10px] text-slate-400">
-                                    reCAPTCHA Privacy - Terms
-                                </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            <!-- Name -->
+                            <div class="group">
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Full Name
+                                </label>
+
+                                <input type="text" placeholder="Enter your full name"
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="group">
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Email Address
+                                </label>
+
+                                <input type="email" placeholder="Enter your email"
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
+                            </div>
+
+                            <!-- Gender -->
+                            <div>
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">Gender</label>
+                                <select name="gender"
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer_not">Prefer not to say</option>
+                                </select>
+                            </div>
+                            <!-- Nationality (main contact) -->
+                            <div>
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">Nationality</label>
+                                <select name="nationality"
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white">
+                                    <option value="">Select Nationality</option>
+                                    <option value="Nepal">Nepal</option>
+                                    <option value="India">India</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Bhutan">Bhutan</option>
+                                    <option value="China">China</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Trip Name -->
+                            <div>
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Trip Name
+                                </label>
+
+                                <select
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
+
+                                    <option>Everest Base Camp Trek</option>
+                                    <option>Annapurna Circuit Trek</option>
+                                    <option>Mardi Himal Trek</option>
+                                    <option>Godavari Trek</option>
+                                    <option>Langtang Villages</option>
+
+                                </select>
+                            </div>
+
+                            <!-- Date -->
+                            <div>
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Trip Date
+                                </label>
+
+                                <input type="text" value="August 16, 2026"
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
+                            </div>
+
+                            <!-- Travellers -->
+                            <div>
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Number Of Travellers
+                                </label>
+
+                                <input id="pax-count" name="pax" type="number" min="1" value="1"
+                                    placeholder="Number of travellers"
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
+                            </div>
+
+                            <!-- Country -->
+                            <div>
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Select Country
+                                </label>
+
+                                <select
+                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] px-5 text-[15px] outline-none transition-all duration-300 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]">
+
+                                    <option>Select Your Country</option>
+                                    <option>Nepal</option>
+                                    <option>India</option>
+                                    <option>United States</option>
+                                    <option>United Kingdom</option>
+
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="md:col-span-2 mb-4">
+                                <label class="mb-2 block text-[14px] font-semibold text-slate-700">
+                                    Your Message
+                                </label>
+
+                                <textarea rows="7" placeholder="Write your message here..."
+                                    class="w-full rounded-2xl border border-slate-200 bg-[#FBFBFB] p-5 text-[15px] outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#BCD5F0] focus:bg-white focus:shadow-[0_0_0_5px_rgba(59,130,246,0.12)]"></textarea>
                             </div>
                         </div>
 
-                        <div class="text-[11px] font-bold text-slate-400">
-                            reCAPTCHA
+                        <!-- Other travelers container (populated dynamically) -->
+                        <div id="other-travelers-container" class="space-y-4 md:col-span-2"></div>
+                    </div>
+                </div>
+
+                <!-- Payment Method Section (2/6 width) -->
+                <div class="lg:col-span-2 lg:self-start lg:sticky lg:top-[120px]">
+                    <section
+                        class="rounded-[32px] border border-slate-200 bg-white p-5 md:p-6 h-fit shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+                        <h2 class="mb-2 text-[20px] font-bold leading-tight text-slate-900">Payment Method</h2>
+                        <p class="mb-5 text-sm leading-6 text-slate-500">Choose how you want to complete the payment for
+                            your booking.</p>
+
+                        <div class="space-y-3">
+                            <label for="payment-online"
+                                class="flex cursor-pointer gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white">
+                                <input id="payment-online" name="payment_method" type="radio" value="online" checked
+                                    class="mt-1 h-5 w-5 accent-blue-600">
+                                <span class="block">
+                                    <span class="block text-[18px] font-bold leading-tight text-slate-800">Online
+                                        Payment</span>
+                                    <span class="mt-1.5 block text-[13px] leading-snug text-slate-600">Make your payment
+                                        directly into our bank account</span>
+                                </span>
+                            </label>
+
+                            <label for="payment-cod"
+                                class="flex cursor-pointer gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white">
+                                <input id="payment-cod" name="payment_method" type="radio" value="cod"
+                                    class="mt-1 h-5 w-5 accent-blue-600">
+                                <span class="block">
+                                    <span class="block text-[18px] font-bold leading-tight text-slate-800">Cash on
+                                        Arrival</span>
+                                    <span class="mt-1.5 block text-[13px] leading-snug text-slate-600">Pay when you
+                                        arrive in Nepal</span>
+                                </span>
+                            </label>
+
+                            <label for="payment-card"
+                                class="flex cursor-pointer gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white">
+                                <input id="payment-card" name="payment_method" type="radio" value="credit_card"
+                                    class="mt-1 h-5 w-5 accent-blue-600">
+                                <span class="block">
+                                    <span class="block text-[18px] font-bold leading-tight text-slate-800">Credit
+                                        Card</span>
+                                    <span class="mt-1.5 block text-[13px] leading-snug text-slate-600">Pay securely with
+                                        your credit card</span>
+                                </span>
+                            </label>
                         </div>
+                    </section>
+                </div>
+
+
+
+            </form>
+            <div class="lg:col-span-6">
+                <div
+                    class="mt-2 rounded-[28px] border border-slate-200 bg-white p-5 md:p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+                    <div class="mb-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                        <!-- Recaptcha -->
+                        <div
+                            class="flex h-[74px] w-full max-w-[300px] items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 px-4">
+                            <div class="flex items-center gap-4">
+                                <div class="h-6 w-6 rounded border border-slate-400 bg-white"></div>
+
+                                <div>
+                                    <p class="text-[14px] text-slate-800">
+                                        I'm not a robot
+                                    </p>
+
+                                    <p class="mt-1 text-[10px] text-slate-400">
+                                        reCAPTCHA Privacy - Terms
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="text-[11px] font-bold text-slate-400">
+                                reCAPTCHA
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-slate-500 max-w-xl">
+                            Review your booking details before sending. After booking, our team will reach out with
+                            confirmation and payment guidance.
+                        </p>
                     </div>
 
                     <!-- Button -->
-                    <div class="pt-2 flex justify-between">
+                    <div class="flex flex-col sm:flex-row gap-4">
                         <button type="submit"
-                            class="flex h-[58px] w-full max-w-[440px] items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 text-[16px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_15px_35px_rgba(37,99,235,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,99,235,0.35)]">
+                            class="flex h-[58px] flex-1 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 text-[16px] font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,99,235,0.35)]">
                             Book Your Trip
                         </button>
                         <a href="trek.html"
-                            class="flex h-[58px] w-full max-w-[440px] items-center justify-center rounded-2xl border border-[#BCD5F0] bg-white text-[16px] font-medium uppercase tracking-[0.12em] text-black  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,99,235,0.35)]">
+                            class="flex h-[58px] flex-1 items-center justify-center rounded-2xl border border-slate-200 bg-white text-[16px] font-medium uppercase tracking-[0.12em] text-black transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:text-blue-700">
                             Back to your Trip
                         </a>
                     </div>
-
-                </form>
+                </div>
             </div>
         </div>
     </main>
@@ -387,6 +563,85 @@
 
     <script>
         lucide.createIcons();
+    </script>
+    <script>
+        (function () {
+            const paxInput = document.getElementById('pax-count');
+            const container = document.getElementById('other-travelers-container');
+
+            if (!paxInput || !container) return;
+
+            function makeTravelerCard(index) {
+                const displayIndex = index + 1; // traveler number (1-based)
+                const wrapper = document.createElement('div');
+                wrapper.className = 'rounded-2xl border border-slate-200 bg-slate-50 p-5 md:p-6';
+
+                wrapper.innerHTML = `
+                    <h3 class="mb-4 text-lg font-semibold text-slate-900">Traveler ${displayIndex}</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div>
+                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Full Name</label>
+                            <input name="traveler_${displayIndex}_name" type="text" placeholder="Full name"
+                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Email</label>
+                            <input name="traveler_${displayIndex}_email" type="email" placeholder="Email"
+                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Phone Number</label>
+                            <input name="traveler_${displayIndex}_phone" type="tel" placeholder="Phone number"
+                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Gender</label>
+                            <select name="traveler_${displayIndex}_gender" class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer_not">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Nationality</label>
+                            <select name="traveler_${displayIndex}_nationality" class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                                <option value="">Select Nationality</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="India">India</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Bhutan">Bhutan</option>
+                                <option value="China">China</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>`;
+
+                return wrapper;
+            }
+
+            function render() {
+                const pax = Math.max(1, parseInt(paxInput.value || '1'));
+                const others = Math.max(0, pax - 1);
+
+                // clear existing
+                container.innerHTML = '';
+                container.classList.toggle('hidden', others === 0);
+
+                // primary contact is traveler 1 (already in top fields)
+                for (let i = 1; i <= others; i++) {
+                    // create traveler blocks for traveler 2..pax
+                    const card = makeTravelerCard(i);
+                    container.appendChild(card);
+                }
+            }
+
+            paxInput.addEventListener('input', render);
+            // initialize
+            render();
+        })();
     </script>
 </body>
 

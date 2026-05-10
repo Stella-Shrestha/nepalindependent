@@ -19,6 +19,122 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet" />
+    <style>
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition:
+                opacity 700ms ease,
+                transform 700ms ease,
+                box-shadow 300ms ease;
+            transition-delay: var(--scroll-delay, 0ms);
+            will-change: opacity, transform;
+        }
+
+        .scroll-reveal-left {
+            transform: translateX(-36px);
+        }
+
+        .scroll-reveal-right {
+            transform: translateX(36px);
+        }
+
+        .scroll-reveal.is-visible {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .video-card,
+        .package-card {
+            transition:
+                transform 300ms ease,
+                box-shadow 300ms ease,
+                border-color 300ms ease;
+        }
+
+        .video-card:hover,
+        .package-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(30, 64, 255, 0.24);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .scroll-reveal,
+            .video-card,
+            .package-card {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        /* Hero image hover zoom */
+        .hero-carousel img,
+        .hero-side {
+            transition: transform 400ms ease, filter 300ms ease;
+            transform-origin: center center;
+            will-change: transform;
+        }
+
+        /* Zoom on pointer hover (desktop) */
+        @media (hover: hover) and (pointer: fine) {
+
+            .hero-carousel img:hover,
+            .hero-side:hover {
+                transform: scale(1.06);
+                cursor: zoom-in;
+            }
+        }
+
+        /* Active subnav link styling */
+        #subnav a {
+            transition: color 300ms ease, border-bottom 300ms ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        #subnav a.active {
+            color: #1E40FF;
+            font-weight: 600;
+            border-bottom-color: #1E40FF;
+        }
+
+        /* Sidebar slide-in animation from right */
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .sidebar-slide-in {
+            animation: slideInFromRight 800ms ease-out forwards;
+        }
+
+        /* Delay for staggered effect on tablet+ */
+        @media (min-width: 1024px) {
+            .sidebar-animate {
+                animation: slideInFromRight 2000ms ease-out;
+            }
+        }
+
+        /* Review carousel slide sizing */
+        .review-slide {
+            min-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .review-slide {
+                min-width: calc(33.3333% - 1rem);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -100,18 +216,25 @@
         </div>
     </nav>
 
+
+    <!-- <nav class="sticky top-0 z-50 hidden lg:flex bg-black py-2 items-center justify-center">
+        <div class="flex w-full max-w-[1340px] mx-auto items-center justify-between px-4 md:px-8 lg:px-0 gap-4">
+            <ul class="hidden lg:flex gap-16 py-2 text-16 text-white"> -->
+
     <!-- subnav start: appears when main navbar scrolls out -->
-    <div id="subnav" class="hidden overflow-auto bg-[#BCD5F0] border-b border-[#F0F3F7]">
+    <div id="subnav"
+        class="hidden overflow-x-auto overflow-y-hidden bg-[#BCD5F0] border-b border-[#F0F3F7] scroll-smooth">
         <div class="max-w-[1340px] mx-auto">
-            <ul class="flex gap-6 py-3 text-sm text-slate-700 px-4 justify-start">
+            <ul class="flex min-w-max gap-12 py-4 text-16 text-slate-700 px-4 justify-start">
                 <li><a href="#overview" class="hover:text-blue-600">Overview</a></li>
                 <li><a href="#itinerary" class="hover:text-blue-600">Itinerary</a></li>
                 <li><a href="#services" class="hover:text-blue-600">Services</a></li>
                 <li><a href="#departures" class="hover:text-blue-600">Departures</a></li>
                 <li><a href="#routes" class="hover:text-blue-600">Routes</a></li>
+                <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
                 <li><a href="#videos" class="hover:text-blue-600">Videos</a></li>
                 <li><a href="#reviews" class="hover:text-blue-600">Reviews</a></li>
-                <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+
             </ul>
         </div>
     </div>
@@ -124,20 +247,20 @@
             <h1 class="font-bold text-xl md:text-2xl lg:text-4xl font-bold mb-8 md:mb-[16px] mb-[32px] text-black ">
                 Everest Base
                 Camp Trek</h1>
-            <div class="flex flex-col lg:flex-row gap-[16px]">
+            <div class="flex flex-col lg:flex-row lg:items-stretch gap-[16px]">
                 <div class="w-full lg:w-4/6 relative overflow-hidden">
                     <!-- hero carousel -->
-                    <div class="relative overflow-hidden rounded-[8px]">
+                    <div class="relative overflow-hidden rounded-[8px] h-[260px] md:h-[420px] lg:h-[520px]">
                         <div class="hero-carousel flex h-full transition-transform duration-500">
-                            <img src="Images/trek/everest1.jpg" loading="eager" fetchpriority="high" decoding="async"
-                                class="min-w-full h-full object-cover">
+                            <img src="images/trek/everest1.jpg" loading="eager" fetchpriority="high" decoding="async"
+                                class="min-w-full w-full shrink-0 h-full object-cover">
                             <img src="images/trek/everest2.jpg" loading="eager" decoding="async"
-                                class="min-w-full h-full object-cover">
+                                class="min-w-full w-full shrink-0 h-full object-cover">
                             <img src="images/trek/everest.jpg" loading="eager" decoding="async"
-                                class="min-w-full h-full object-cover">
+                                class="min-w-full w-full shrink-0 h-full object-cover">
                         </div>
                         <div
-                            class="flex gap-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 justify-center items-center">
+                            class="z-10 flex gap-2 absolute bottom-5 left-1/2 transform -translate-x-1/2 justify-center items-center">
                             <button id="hero-prev"
                                 class="lg:w-12 lg:h-12 w-6 h-6 bg-gray-200 hover:bg-gray-300 py-2 rounded-full flex items-center justify-center transition cursor-pointer">
                                 <i data-lucide="arrow-left" class="lg:w-6 lg:h-6 w-4 h-4"></i>
@@ -150,9 +273,9 @@
                     </div>
                 </div>
                 <!-- side images -->
-                <div class="flex flex-col lg:w-2/6 gap-[16px] overflow-hidden hidden lg:flex">
-                    <img src="images/trek/img1.png" class="w-full h-full rounded-[8px] object-cover">
-                    <img src="images/trek/img2.png" class="w-full h-full rounded-[8px] object-cover">
+                <div class="hidden lg:flex flex-col lg:w-2/6 h-[520px] gap-[16px] overflow-hidden">
+                    <img src="images/trek/img1.png" class="hero-side w-full flex-1 min-h-0 rounded-[8px] object-cover">
+                    <img src="images/trek/img2.png" class="hero-side w-full flex-1 min-h-0 rounded-[8px] object-cover">
                 </div>
             </div>
 
@@ -168,7 +291,7 @@
             <div class="w-full lg:w-4/6 px-4 lg:px-0">
 
                 <!-- facts start -->
-                <div
+                <div id="facts"
                     class="bg-[#F4F9FE] p-[32px] lg:p-[32px] border border-[#BCD5F0]/60 rounded-[12px] mb-[32px] lg:mb-[52px]">
                     <div class="grid grid-cols-3 lg:grid-row-3 gap-x-[32px] gap-y-[32px]">
                         <div class="flex gap-[12px] lg:gap-[16px]">
@@ -245,6 +368,7 @@
                     <div class="mb-[32px] lg:hidden">
                         <div class="bg-white p-[24px] md:p-[32px] border border-[#E0E0E0] rounded-[12px]">
                             <!-- Title -->
+
                             <h2 class="font-extrabold text-[24px] md:text-[28px] mb-[24px] flex items-center gap-3">
                                 <i data-lucide="calculator" class="w-8 h-8  text-black text-[#1E40FF]"></i>
                                 Travel Cost Calculator
@@ -307,19 +431,21 @@
                                     <p class="text-[28px] md:text-[32px] font-bold text-[#1E40FF]">$<span
                                             id="total-price">2700</span></p>
                                 </div>
+
+                                <!-- Action Buttons -->
+                                <div class="flex gap-[12px] flex-col sm:flex-row">
+                                    <a href="booking.html"
+                                        class="flex-1 bg-[#1E40FF] text-white px-[18px] py-[12px] rounded-lg hover:bg-[#1530CC] text-[16px] font-medium flex justify-center items-center">
+                                        Book Your Trip
+                                    </a>
+                                    <button type="button" data-modal-target="inquiry"
+                                        class="flex-1 bg-white text-black border border-[#BCD5F0] px-[18px] py-[12px] rounded-lg hover:bg-[#F4F9FE] text-[16px] font-medium flex justify-center items-center">
+                                        Send Inquiry
+                                    </button>
+                                </div>
                             </div>
 
-                            <!-- Action Buttons -->
-                            <div class="flex gap-[12px] flex-col sm:flex-row">
-                                <a href="booking.html"
-                                    class="flex-1 bg-[#1E40FF] text-white px-[18px] py-[12px] rounded-lg hover:bg-[#1530CC] text-[16px] font-medium flex justify-center items-center">
-                                    Book Your Trip
-                                </a>
-                                <button type="button" data-modal-target="inquiry"
-                                    class="flex-1 bg-white text-black border border-[#BCD5F0] px-[18px] py-[12px] rounded-lg hover:bg-[#F4F9FE] text-[16px] font-medium flex justify-center items-center">
-                                    Send Inquiry
-                                </button>
-                            </div>
+
                         </div>
                     </div>
                     <!-- highlights start -->
@@ -594,7 +720,7 @@
                         <!-- item13 start -->
                         <button
                             class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
-                            Day 13 : Fly back to Kathmandy
+                            Day 13 : Fly back to Kathmandu
                             <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
                         </button>
 
@@ -704,12 +830,7 @@
                     </h2>
                     <div class="bg-[#FBFBFB] rounded-xl border border-[#E0E0E0] p-4 md:p-6 lg:p-[36px]">
                         <div class="flex flex-col sm:flex-row gap-[12px] rounded-[12px] mb-[28px]">
-                            <select
-                                class="bg-white text-black px-[18px] lg:px-[20px] w-full sm:w-[180px] gap-4 lg:ml-0 py-3 rounded-lg flex justify-between items-center transition border border-gray-200 ">
 
-                                <option>2026</option>
-                                <option>2027</option>
-                            </select>
                             <select
                                 class="bg-white text-black px-[18px] lg:px-[20px] w-full sm:w-[180px] gap-4 lg:ml-0 py-3 rounded-lg flex justify-between items-center transition border border-gray-200 ">
 
@@ -799,7 +920,7 @@
                 <!-- routes end -->
 
                 <!-- altitude start -->
-                <div class="">
+                <div class="mb-[32px] lg:mb-[64px]">
                     <h2 class="font-extrabold text-[20px] lg:text-[24px] mb-[12px] lg:mb-[20px]">
                         Altitude
                     </h2>
@@ -821,6 +942,155 @@
 
                 <!-- altitude end -->
 
+                <!-- FAQ start -->
+                <div id="faq" class="scroll-mt-24 lg:scroll-mt-28">
+                    <h2 class="font-extrabold text-[20px] text-black lg:text-[24px] mb-[12px] lg:mb-[16px]">
+                        Frequently Asked Question
+                    </h2>
+                    <p class="text-gray-400 mb-10 text-sm font-light lg:text-[16px]">
+                        If you cannot find answer to your question in our FAQ, you can always contact us. We will answer
+                        to you shortly!!
+                    </p>
+
+                    <div class="overflow-hidden flex flex-col gap-1">
+
+                        <!-- item1 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Do I need prior trekking experience?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item1 end -->
+
+                        <!-- item2 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border  border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Is altitude sickness a concern?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item2 end -->
+
+                        <!-- item3 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border  border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            What is the best time to go?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item3 end -->
+
+                        <!-- item4 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border  border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            How difficult is the trek?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item4 end -->
+
+                        <!-- item5 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            What kind of accomodation is provided?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item5 end -->
+
+                        <!-- item6 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0]  rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Is WiFi available?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item6 end -->
+
+                        <!-- item7 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            What should I peek?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item7 end -->
+
+                        <!-- item8 start -->
+                        <button
+                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-base text-black font-normal border border-[#E0E0E0] rounded-[10px] bg-white hover:bg-[#FBFBFB] transition">
+                            Can beginners do this trek?
+                            <span class="transition-transform -mt-2 duration-300 text-[24px]">⌄</span>
+                        </button>
+
+                        <div
+                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-600 text-sm lg:text-base transition-all duration-300 ease-in-out">
+                            <div class="py-4">
+                                Yes, for most treks in Nepal, hiring a licensed guide is
+                                recommended and sometimes mandatory. A porter can help carry your
+                                सामान, making your trek more comfortable.
+                            </div>
+                        </div>
+                        <!-- item8 end -->
+                    </div>
+                </div> <!-- FAQ end -->
 
             </div>
             <!-- left section end -->
@@ -828,9 +1098,10 @@
 
             <!-- right section start -->
             <div class="lg:w-2/6 ">
-                <div class="sticky top-[80px]">
+                <div class="sticky top-[80px] sidebar">
                     <!-- price start-->
                     <div class="hidden lg:block bg-white p-[24px] border border-[#E0E0E0] rounded-[12px] mb-[16px]">
+
 
                         <!-- Title -->
                         <h2 class="font-extrabold text-[20px] mb-[16px] flex items-center gap-2">
@@ -882,35 +1153,40 @@
                         </div>
 
                         <!-- Cost Summary -->
-                        <div class="">
-                            <div
-                                class="flex justify-between items-center mb-[12px] pb-[12px] border-b border-[#E0E0E0]">
+                        <div class="flex justify-between items-center mb-[12px] pb-[12px] border-b border-[#E0E0E0]">
+                            <div class="flex gap-2">
+                                <i data-lucide="user" class="w-4 h-4 text-[#666]"></i>
                                 <p class="text-[12px] text-[#666]">Per person</p>
-                                <p class="text-[18px] font-bold">$<span id="per-person-price-sidebar">1350</span></p>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <p class="text-[12px] text-[#666]">Total</p>
-                                <p class="text-[18px] font-bold text-[#1E40FF]">$<span
-                                        id="total-price-sidebar">2700</span></p>
-                            </div>
+                            <p class="text-[18px] font-bold">$<span id="per-person-price-sidebar">1350</span></p>
                         </div>
-
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-[#666]"></i>
+                                <p class="text-[12px] text-[#666]">Total</p>
+                            </div>
+                            <p class="text-[18px] font-bold text-[#1E40FF]">$<span id="total-price-sidebar">2700</span>
+                            </p>
+                        </div>
                     </div>
-                    <!-- price end -->
-
                     <!-- btn start -->
                     <a href="booking.html"
-                        class="hidden lg:flex bg-blue-600 w-full mb-[16px] text-white px-[18px] lg:px-6 lg:ml-0  py-3 rounded-lg hover:bg-blue-700 text-[20px] font-medium justify-center items-center transition shadow">
-                        Book Your Trip
+                        class="hidden lg:flex bg-blue-600 w-full mb-[16px] text-white gap-3 px-[18px] lg:px-6 lg:ml-0  py-3 rounded-lg hover:bg-blue-700 text-[20px] font-medium justify-center items-center transition shadow">
+                        <i data-lucide="bookmark" class="w-5 h-5"></i> Book Your Trip
                     </a>
                     <button type="button" data-modal-target="inquiry"
-                        class="hidden lg:flex bg-white w-full text-black border border-[#BCD5F0] px-[18px] lg:px-6 lg:ml-0 mb-[32px] py-3 rounded-lg hover:bg-blue-100 text-[20px] font-medium justify-center items-center transition">
-                        Send Inquiry
+                        class="hidden lg:flex bg-white w-full text-black border border-[#E0E0E0] gap-3 px-[18px] lg:px-6 lg:ml-0 py-3 rounded-lg hover:bg-blue-100 text-[20px] font-medium justify-center items-center transition">
+                        <i data-lucide="send" class="w-5 h-5"></i>Send Inquiry
                     </button>
                     <!-- btn end -->
 
-                    <!-- recommended start -->
-                    <!-- <div
+                </div>
+                <!-- price end -->
+
+
+
+                <!-- recommended start -->
+                <!-- <div
                         class="flex flex-col justify-center border border-[#A8A5A5] rounded-[12px] overflow-hidden hidden lg:flex items-center">
                         <p
                             class="bg-gradient-to-r from-[#376903] to-[#83A468] w-full text-white px-[18px] lg:px-6 lg:ml-0 mb-[32px] py-3  rounded-t-lg text-[24px] font-medium flex justify-center items-center transition">
@@ -923,8 +1199,8 @@
                         </div>
 
                     </div> -->
-                    <!-- recommended end -->
-                </div>
+                <!-- recommended end -->
+            </div>
 
             </div>
 
@@ -936,12 +1212,11 @@
 
         <section class="w-full mx-auto">
             <!-- videos start -->
-            <div id="videos"
-                class="py-[52px] lg:py-[100px] bg-[#F0F7FF] px-4 lg:px-0 mb-[64px] lg:mb-[110px] scroll-mt-24 lg:scroll-mt-28">
-                <div class="max-w-[1340px] w-full mx-auto">
+            <div id="videos" class="py-[52px] lg:py-[100px] bg-[#F0F7FF] px-4 lg:px-0 scroll-mt-24 lg:scroll-mt-28">
+                <div class="max-w-[1340px] w-full mx-auto scroll-araise">
                     <!-- Header -->
                     <div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6 mb-12 md:mb-18">
-                        <div class="">
+                        <div class="scroll-reveal">
                             <h2 class="text-xl md:text-2xl lg:text-4xl font-extrabold mb-2 lg:mb-[16px]">Experience
                                 the Everest Base Camp Journey</h2>
                             <p class="text-gray-500 text-normal lg:text-[16px] mb-4">
@@ -950,7 +1225,7 @@
                         </div>
 
 
-                        <div class="">
+                        <div class="scroll-reveal" style="--scroll-delay: 120ms;">
                             <button
                                 class="bg-blue-600 text-white px-[18px] lg:px-6 py-3 rounded-lg hover:bg-blue-700 flex justify-end items-end transition shadow">
                                 Explore More
@@ -961,8 +1236,9 @@
 
                     <div class="flex flex-col lg:flex-row gap-[32px]">
                         <!-- VIDEO 1 -->
-                        <div class="w-full lg:w-1/2">
-                            <div class="rounded-xl overflow-hidden border border-[#E8E8E8] bg-white shadow-sm">
+                        <div class="w-full lg:w-1/2 scroll-reveal scroll-reveal-left" style="--scroll-delay: 80ms;">
+                            <div
+                                class="video-card rounded-xl overflow-hidden border border-[#E8E8E8] bg-white shadow-sm">
                                 <div class="aspect-video w-full">
                                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/bFy6jTEHlzQ"
                                         title="Everest Base Camp Journey Video 1"
@@ -979,8 +1255,9 @@
                         </div>
 
                         <!-- VIDEO 2 -->
-                        <div class="w-full lg:w-1/2">
-                            <div class="rounded-xl overflow-hidden border border-[#E8E8E8] bg-white shadow-sm">
+                        <div class="w-full lg:w-1/2 scroll-reveal scroll-reveal-right" style="--scroll-delay: 180ms;">
+                            <div
+                                class="video-card rounded-xl overflow-hidden border border-[#E8E8E8] bg-white shadow-sm">
                                 <div class="aspect-video w-full">
                                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/NbY_B3n5jgc"
                                         title="Everest Base Camp Journey Video 2"
@@ -1002,219 +1279,209 @@
 
             <!--review start  -->
             <div id="reviews"
-                class="max-w-[1340px] w-full mx-auto flex flex-col lg:px-0 px-4 items-center justify-center mb-[10px]  px-4">
-                <h2 class="font-extrabold text-xl md:text-2xl lg:text-4xl  mb-[16px]">Everest Base Camp Trek Review
-                </h2>
-                <p class="font-regular text-[16px] mb-[40px]">Hear it from our travelers</p>
-
-                <div class="flex grid md:grid-cols-2 
-                lg:grid-cols-3 gap-[12px] lg:gap-[32px]">
-                    <!-- card1 start -->
-                    <div class="border border-[#E8E8E8] p-[14px] lg:p-[32px] rounded-[20px]">
-                        <div class="flex gap-[10px] mb-[12px]">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                class="w-[40px] h-[40px] rounded-full">
-                            <div class="flex flex-col gap-[4px]">
-                                <h6 class="font-semibold text-[14px]">Sarah M.,</h6>
-                                <p class="text-[12px]">USA</p>
+                class="max-w-[1340px] w-full mx-auto flex flex-col lg:px-0 px-4 items-center justify-center mb-[10px]  py-[110px]">
+                <div class="w-full flex flex-col items-center">
+                    <div class="flex w-full flex-col lg:flex-row lg:justify-between gap-4 lg:gap-0">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6 mb-4 w-full">
+                            <div class="flex flex-col items-center">
+                                <div class="text-4xl font-extrabold">4.9<span class="text-sm font-medium">/5</span>
+                                </div>
+                                <div class="text-sm text-gray-500">Average rating</div>
+                            </div>
+                            <div class="hidden sm:block border-l h-12"></div>
+                            <div class="text-left">
+                                <h2 class="font-extrabold text-xl md:text-2xl lg:text-4xl mb-1">Everest Base Camp Trek
+                                    Reviews</h2>
+                                <p class="text-gray-600">Hear it from our travelers <span class="font-semibold">123
+                                        reviews</span></p>
                             </div>
                         </div>
-
-                        <h3 class="text-[16px] font-semibold mb-[24px]">"A life-changing experience"</h3>
-                        <p class="font-light text-[12px]"> Trekking to Mount Everest Base Camp was something I had
-                            dreamed about for years, and it
-                            exceeded every expectation. The views, the people, and the journey itself were
-                            unforgettable. Our guide was incredibly supportive and made sure we felt safe throughout.
-                        </p>
-                    </div>
-                    <!-- card1 end -->
-
-                    <!-- card2 start -->
-                    <div class="border border-[#E8E8E8] p-[14px] lg:p-[32px] rounded-[20px]">
-                        <div class="flex gap-[10px] mb-[12px]">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                class="w-[40px] h-[40px] rounded-full">
-                            <div class="flex flex-col gap-[4px]">
-                                <h6 class="font-semibold text-[14px]">Sarah M.,</h6>
-                                <p class="text-[12px]">USA</p>
-                            </div>
+                        <div class="flex justify-center lg:justify-end mt-2 lg:mt-6 gap-2">
+                            <button id="reviews-prev"
+                                class="bg-white text-black rounded-full shadow-xl w-10 h-10 p-2 hover:cursor-pointer hover:bg-gray-100 transition flex items-center justify-center">
+                                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                            </button>
+                            <button id="reviews-next"
+                                class="bg-white text-black rounded-full shadow-xl w-10 h-10 p-2 hover:cursor-pointer hover:bg-gray-100 transition flex items-center justify-center">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
                         </div>
-
-                        <h3 class="text-[16px] font-semibold mb-[24px]">"Challenging but absolutely worth it"</h3>
-                        <p class="font-light text-[12px]"> The trek pushed me physically, especially near Kala Patthar,
-                            but the sunrise view of Everest made it all worth it. The guides were knowledgeable and
-                            always encouraging. This is truly a once-in-a-lifetime adventure.
-                        </p>
                     </div>
-                    <!-- card2 end -->
 
-                    <!-- card3 start -->
-                    <div class="border border-[#E8E8E8] p-[14px] lg:p-[32px] rounded-[20px]">
-                        <div class="flex gap-[10px] mb-[12px]">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                class="w-[40px] h-[40px] rounded-full">
-                            <div class="flex flex-col gap-[4px]">
-                                <h6 class="font-semibold text-[14px]">Sarah M.,</h6>
-                                <p class="text-[12px]">USA</p>
+
+                    <div class="w-full mt-8">
+                        <div class="relative">
+                            <div class="overflow-hidden">
+                                <div class="review-carousel flex gap-6 will-change-transform">
+
+                                    <!-- review slide 1 -->
+                                    <div class="review-slide">
+                                        <div
+                                            class="review-card scroll-reveal border border-[#E8E8E8] p-6 lg:p-8 rounded-2xl bg-white h-full">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center gap-3">
+                                                    <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                                        class="w-12 h-12 rounded-full">
+                                                    <div>
+                                                        <div class="font-semibold">Sarah M.</div>
+                                                        <div class="text-xs text-gray-500">USA · Apr 2026</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-sm text-yellow-500">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <h3 class="font-semibold mb-2">A life-changing experience</h3>
+                                            <p class="review-text text-sm text-gray-700">Trekking to Mount Everest Base
+                                                Camp was
+                                                something I had dreamed about for years, and it exceeded every
+                                                expectation. The views,
+                                                the people, and the journey itself were unforgettable. Our guide was
+                                                incredibly
+                                                supportive and made sure we felt safe throughout.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- review slide 2 -->
+                                    <div class="review-slide">
+                                        <div
+                                            class="review-card scroll-reveal border border-[#E8E8E8] p-6 lg:p-8 rounded-2xl bg-white h-full">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center gap-3">
+                                                    <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                        class="w-12 h-12 rounded-full">
+                                                    <div>
+                                                        <div class="font-semibold">Liam R.</div>
+                                                        <div class="text-xs text-gray-500">UK · Mar 2026</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-sm text-yellow-500">⭐⭐⭐⭐☆</div>
+                                            </div>
+                                            <h3 class="font-semibold mb-2">Challenging but worth it</h3>
+                                            <p class="review-text text-sm text-gray-700">The trek pushed me physically,
+                                                especially near
+                                                Kala Patthar, but the sunrise view of Everest made it all worth it. The
+                                                guides were
+                                                knowledgeable and always encouraging. This is truly a once-in-a-lifetime
+                                                adventure.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- review slide 3 -->
+                                    <div class="review-slide">
+                                        <div
+                                            class="review-card scroll-reveal border border-[#E8E8E8] p-6 lg:p-8 rounded-2xl bg-white h-full">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center gap-3">
+                                                    <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                                        class="w-12 h-12 rounded-full">
+                                                    <div>
+                                                        <div class="font-semibold">Maya P.</div>
+                                                        <div class="text-xs text-gray-500">Nepal · Feb 2026</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-sm text-yellow-500">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <h3 class="font-semibold mb-2">Incredible culture and scenery</h3>
+                                            <p class="review-text text-sm text-gray-700">Walking through Namche Bazaar
+                                                and experiencing
+                                                the Sherpa culture was just as amazing as reaching base camp. The
+                                                mountains,
+                                                monasteries, and people made this journey unforgettable. I’d do it again
+                                                in a heartbeat.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- review slide 4 (new) -->
+                                    <div class="review-slide">
+                                        <div
+                                            class="review-card scroll-reveal border border-[#E8E8E8] p-6 lg:p-8 rounded-2xl bg-white h-full">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center gap-3">
+                                                    <img src="https://randomuser.me/api/portraits/men/12.jpg"
+                                                        class="w-12 h-12 rounded-full">
+                                                    <div>
+                                                        <div class="font-semibold">Daniel K.</div>
+                                                        <div class="text-xs text-gray-500">Australia · Jan 2026</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-sm text-yellow-500">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <h3 class="font-semibold mb-2">Excellent guides and support</h3>
+                                            <p class="review-text text-sm text-gray-700">The support from our guides was
+                                                exceptional — they
+                                                managed the pace well and provided great local insights. Logistics were
+                                                smooth throughout
+                                                the trip.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- review slide 5 (new) -->
+                                    <div class="review-slide">
+                                        <div
+                                            class="review-card scroll-reveal border border-[#E8E8E8] p-6 lg:p-8 rounded-2xl bg-white h-full">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center gap-3">
+                                                    <img src="https://randomuser.me/api/portraits/women/25.jpg"
+                                                        class="w-12 h-12 rounded-full">
+                                                    <div>
+                                                        <div class="font-semibold">Olivia S.</div>
+                                                        <div class="text-xs text-gray-500">Canada · Dec 2025</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-sm text-yellow-500">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <h3 class="font-semibold mb-2">Memorable and well-organised</h3>
+                                            <p class="review-text text-sm text-gray-700">Everything from permits to
+                                                teahouse bookings
+                                                was handled professionally. The whole experience felt safe and well
+                                                organised.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- review slide 6 (new) -->
+                                    <div class="review-slide">
+                                        <div
+                                            class="review-card scroll-reveal border border-[#E8E8E8] p-6 lg:p-8 rounded-2xl bg-white h-full">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center gap-3">
+                                                    <img src="https://randomuser.me/api/portraits/men/77.jpg"
+                                                        class="w-12 h-12 rounded-full">
+                                                    <div>
+                                                        <div class="font-semibold">Hideo T.</div>
+                                                        <div class="text-xs text-gray-500">Japan · Nov 2025</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-sm text-yellow-500">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <h3 class="font-semibold mb-2">Highly recommended</h3>
+                                            <p class="review-text text-sm text-gray-700">The views were spectacular and
+                                                the team
+                                                ensured we acclimatised properly. A highly recommended provider for EBC
+                                                treks.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <h3 class="text-[16px] font-semibold mb-[24px]">"Incredible culture and scenery"</h3>
-                        <p class="font-light text-[12px]"> Walking through Namche Bazaar and experiencing the Sherpa
-                            culture was just as amazing as reaching base camp. The mountains, monasteries, and people
-                            made this journey unforgettable. I’d do it again in a heartbeat.
-                        </p>
+
+                        </div>
                     </div>
-                    <!-- card3 end -->
                 </div>
             </div>
             <!--review end  -->
 
-            <!-- Faq start -->
-            <div id="faq"
-                class="bg-white  w-full mx-auto relative overflow-hidden py-[52px] lg:py-[100px] px-8 mb-0 scroll-mt-24 lg:scroll-mt-28">
-                <img src="images/trek/FAQ.png"
-                    class="absolute md:-bottom-12 md:-left-2 lg:-bottom-52 lg:-left-72 hidden lg:block" />
-                <div class="max-w-3xl mx-auto px-4 lg:px-0 flex flex-col">
-                    <h2 class="text-xl md:text-2xl lg:text-4xl  font-extrabold mb-[16px]">Frequently Asked Questions
-                    </h2>
-                    <p class="text-gray-400 mb-10 text-sm font-medium lg:text-[16px]">
-                        If you cannot find answer to your question in our FAQ, you can always contact us. We will answer
-                        to you shortly!!
-                    </p>
-                </div>
 
-                <!-- FAQ items -->
-                <div class="max-w-3xl mx-auto space-y-4 text-left">
-                    <!-- ITEM1 -->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            Do I need prior trekking experience?
-                            <span class="transition-transform">⌄</span>
-                        </button>
 
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all durati on-300">
-                            Yes, for most treks in Nepal, hiring a licensed guide is
-                            recommended and sometimes mandatory. A porter can help carry your
-                            सामान, making your trek more comfortable.
-                        </div>
-                    </div>
-                    <!-- ITEM3 -->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            Is altitude sickness a concern?
-                            <span class="transition-transform">⌄</span>
-                        </button>
+            <!-- Testimonials -->
 
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Yes, altitude sickness can occur above 2,500 meters. Proper
-                            acclimatization, hydration, and a gradual ascent are important to
-                            prevent it.
-                        </div>
-                    </div>
-                    <!-- ITEM4 -->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            What is the best time to go?
-                            <span class="transition-transform">⌄</span>
-                        </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Yes, most trekking packages include meals and accommodation in tea
-                            houses or lodges along the route, depending on the package you
-                            choose.
-                        </div>
-                    </div>
-                    <!-- ITEM5 -->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            How difficult is the trek?
-                            <span class="transition-transform">⌄</span>
-                        </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Trek difficulty ranges from easy to very challenging. You can
-                            choose based on your fitness level, time, and experience.
-                        </div>
-                    </div>
-                    <!-- ITEM 6-->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            What kind of accomodation is provided?
-                            <span class="transition-transform">⌄</span>
-                        </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Yes, most tea houses offer charging facilities, but it may cost
-                            extra. Carrying a power bank is highly recommended.
-                        </div>
-                    </div>
-                    <!-- ITEM 7-->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            Is WiFi available?
-                            <span class="transition-transform">⌄</span>
-                        </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Yes, most tea houses offer charging facilities, but it may cost
-                            extra. Carrying a power bank is highly recommended.
-                        </div>
-                    </div>
-                    <!-- ITEM 8-->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            What should I peek?
-                            <span class="transition-transform">⌄</span>
-                        </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Yes, most tea houses offer charging facilities, but it may cost
-                            extra. Carrying a power bank is highly recommended.
-                        </div>
-                    </div>
-                    <!-- ITEM 9-->
-                    <div class="bg-white border rounded-lg overflow-hidden">
-                        <button
-                            class="faq-btn w-full flex justify-between items-center px-6 py-4 text-lg font-semibold">
-                            Can beginners do this trek?
-                            <span class="transition-transform">⌄</span>
-                        </button>
-
-                        <div
-                            class="faq-content max-h-0 overflow-hidden px-6 text-gray-500 text-base transition-all duration-300">
-                            Yes, most tea houses offer charging facilities, but it may cost
-                            extra. Carrying a power bank is highly recommended.
-                        </div>
-                    </div>
-                    <!-- BUTTON -->
-                    <button
-                        class="mt-10 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow">
-                        View All FAQs
-                    </button>
-                </div>
-            </div>
-            <!-- faq end -->
             <div class="w-full h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-900"></div>
             <!-- best seller start -->
             <section class="w-full flex justify-center items-center py-[72px] lg:py-[100px] bg-[#F0F7FF]">
-                <div class="w-full max-w-[1340px] mx-auto px-4 md:px-8">
+                <div class="w-full max-w-[1340px] mx-auto px-4 lg:px-0">
                     <!-- heading start-->
-                    <div class="flex flex-col sm:flex-row justify-start mb-6 items-start sm:items-center gap-4">
+                    <div
+                        class="flex flex-col sm:flex-row justify-start mb-6 items-start sm:items-center gap-4 scroll-reveal">
                         <h2 class="text-xl md:text-2xl lg:text-4xl  font-extrabold mb-4">
                             Similar Packages
                         </h2>
@@ -1233,15 +1500,16 @@
                     <!-- heading end-->
 
                     <!-- cards start -->
-                    <div class="packages-carousel-container relative overflow-hidden">
+                    <div class="packages-carousel-container relative overflow-hidden py-3 -my-3 scroll-reveal"
+                        style="--scroll-delay: 120ms;">
                         <div
                             class="packages-carousel flex flex-nowrap transition-transform duration-500 gap-6 md:gap-8 will-change-transform">
                             <!-- card1 start -->
-                            <div class="packages-slide relative z-10">
+                            <div class="packages-slide package-card relative z-10">
                                 <img src="images/Home/makalu.png" class="w-full h-64 object-cover rounded-t-2xl">
                                 <!-- content -->
                                 <div
-                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start shadow-lg">
+                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start">
                                     <p class="flex items-center gap-2 mb-4 text-black text-sm">
                                         <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
                                         5.0
@@ -1261,12 +1529,12 @@
                             <!-- card1 end -->
 
                             <!-- card2 start -->
-                            <div class="packages-slide relative z-10">
+                            <div class="packages-slide package-card relative z-10">
                                 <img src="images/Home/annapurna.png" class="w-full h-64 object-cover rounded-t-2xl">
 
                                 <!-- content -->
                                 <div
-                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start shadow-lg">
+                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start">
                                     <p class="flex items-center gap-2 mb-4 text-black text-sm">
                                         <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
                                         5.0
@@ -1286,13 +1554,13 @@
                             <!-- card2 end -->
 
                             <!-- card3 start -->
-                            <div class="packages-slide relative z-10">
+                            <div class="packages-slide package-card relative z-10">
                                 <img src="images/Home/everest.png" class="w-full h-64 object-cover rounded-t-2xl">
 
 
                                 <!-- content -->
                                 <div
-                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start shadow-lg">
+                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start">
                                     <p class="flex items-center gap-2 mb-4 text-black text-sm">
                                         <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
                                         5.0
@@ -1312,10 +1580,10 @@
                             <!-- card3 end -->
 
                             <!-- card4 start -->
-                            <div class="packages-slide relative z-10">
+                            <div class="packages-slide package-card relative z-10">
                                 <img src="images/Home/makalu.png" class="w-full h-64 object-cover rounded-t-2xl">
                                 <div
-                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start shadow-lg">
+                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start">
                                     <p class="flex items-center gap-2 mb-4 text-black text-sm">
                                         <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
                                         5.0
@@ -1335,10 +1603,10 @@
                             <!-- card4 end -->
 
                             <!-- card5 start -->
-                            <div class="packages-slide relative z-10">
+                            <div class="packages-slide package-card relative z-10">
                                 <img src="images/Home/annapurna.png" class="w-full h-64 object-cover rounded-t-2xl">
                                 <div
-                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start shadow-lg">
+                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start">
                                     <p class="flex items-center gap-2 mb-4 text-black text-sm">
                                         <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
                                         5.0
@@ -1358,10 +1626,10 @@
                             <!-- card5 end -->
 
                             <!-- card6 start -->
-                            <div class="packages-slide relative z-10">
+                            <div class="packages-slide package-card relative z-10">
                                 <img src="images/Home/everest.png" class="w-full h-64 object-cover rounded-t-2xl">
                                 <div
-                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start shadow-lg">
+                                    class="p-4 bg-white w-full mx-auto -mt-16 relative z-30 flex flex-col rounded-2xl items-start">
                                     <p class="flex items-center gap-2 mb-4 text-black text-sm">
                                         <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
                                         5.0
@@ -1521,6 +1789,8 @@
             <!--footer ends -->
         </section>
 
+
+
         <!-- booking modals start -->
         <div id="inquiry-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 px-4 py-8">
             <div class="relative w-full max-w-xl rounded-2xl bg-white p-6 md:p-8 shadow-2xl">
@@ -1529,17 +1799,61 @@
                 <h3 class="text-2xl font-extrabold mb-2">Send Inquiry</h3>
                 <p class="text-sm text-gray-500 mb-6">Tell us what you need and we will get back to you.</p>
                 <form class="space-y-4">
-                    <input type="text" placeholder="Full name"
-                        class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
-                    <input type="email" placeholder="Email address"
-                        class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
-                    <input type="tel" placeholder="Phone number"
-                        class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
-                    <textarea rows="4" placeholder="Your inquiry"
-                        class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"></textarea>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm text-gray-600 mb-1 block">Full Name</label>
+                            <input type="text" name="full_name" placeholder="Full Name"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-sm text-gray-600 mb-1 block">Phone number</label>
+                            <input type="tel" name="phone" placeholder="Phone number"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="text-sm text-gray-600 mb-1 block">Name of a Trip</label>
+                            <input type="text" name="trip_name" placeholder="Name of a Trip"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                        </div>
+
+                        <div>
+                            <label class="text-sm text-gray-600 mb-1 block">Email</label>
+                            <input type="email" name="email" placeholder="Email"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-sm text-gray-600 mb-1 block">No. of Pax</label>
+                            <input type="number" name="pax" min="1" placeholder="No. of Pax"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                        </div>
+
+                        <div>
+                            <label class="text-sm text-gray-600 mb-1 block">Trip Cost</label>
+                            <input type="text" name="trip_cost" placeholder="Trip Cost"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-sm text-gray-600 mb-1 block">Select Country</label>
+                            <select name="country"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500">
+                                <option value="Nepal">Nepal</option>
+                                <option value="India">India</option>
+                                <option value="Bhutan">Bhutan</option>
+                                <option value="Tibet">Tibet</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="text-sm text-gray-600 mb-1 block">Message</label>
+                            <textarea name="message" rows="6" placeholder="Message"
+                                class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"></textarea>
+                        </div>
+                    </div>
+
                     <button type="submit"
-                        class="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700 transition">Submit
-                        Inquiry</button>
+                        class="w-full rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 px-4 py-3 font-semibold text-white hover:from-blue-700 hover:to-blue-500 transition">Send</button>
                 </form>
             </div>
         </div>
@@ -1689,6 +2003,38 @@
 
             obs.observe(heroSection);
         })();
+    </script>
+
+    <script>
+        // Read-more toggle for review cards
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.review-text').forEach((el) => {
+                const full = el.textContent.trim();
+                const max = 140;
+                if (full.length > max) {
+                    const short = full.slice(0, max).trim();
+                    el.dataset.full = full;
+                    el.textContent = short + '...';
+
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'text-blue-600 mt-3 text-sm';
+                    btn.textContent = 'Read more';
+
+                    btn.addEventListener('click', () => {
+                        if (btn.textContent === 'Read more') {
+                            el.textContent = el.dataset.full;
+                            btn.textContent = 'Show less';
+                        } else {
+                            el.textContent = el.dataset.full.slice(0, max).trim() + '...';
+                            btn.textContent = 'Read more';
+                        }
+                    });
+
+                    el.after(btn);
+                }
+            });
+        });
     </script>
 
     <script> document.querySelectorAll(".faq-btn").forEach((btn) => {
@@ -1988,6 +2334,114 @@
 
         startHeroAutoplay();
 
+        // Reviews Carousel Logic
+        const reviewsCarousel = document.querySelector('.review-carousel');
+        const reviewsPrevBtn = document.getElementById('reviews-prev');
+        const reviewsNextBtn = document.getElementById('reviews-next');
+        const reviewsSlideTransition = 'transform 500ms ease';
+        const reviewsSlideCount = reviewsCarousel ? reviewsCarousel.children.length : 0;
+        let reviewsAnimating = false;
+        let reviewsDirection = 1;
+
+        function resetReviewsPosition() {
+            if (!reviewsCarousel) {
+                return;
+            }
+
+            reviewsCarousel.style.transition = 'none';
+            reviewsCarousel.style.transform = 'translateX(0)';
+            reviewsCarousel.offsetHeight;
+            reviewsCarousel.style.transition = reviewsSlideTransition;
+        }
+
+        function getReviewsSlideDistance() {
+            if (!reviewsCarousel || !reviewsCarousel.children.length) {
+                return 0;
+            }
+
+            const firstSlide = reviewsCarousel.children[0];
+            const gap = window.getComputedStyle(reviewsCarousel).columnGap || window.getComputedStyle(reviewsCarousel).gap || '0px';
+            return firstSlide.getBoundingClientRect().width + (Number.parseFloat(gap) || 0);
+        }
+
+        function moveReviews(direction) {
+            if (!reviewsCarousel || reviewsSlideCount <= 1) {
+                return;
+            }
+
+            if (reviewsAnimating) {
+                return;
+            }
+
+            const distance = getReviewsSlideDistance();
+            if (!distance) {
+                return;
+            }
+
+            reviewsAnimating = true;
+            reviewsDirection = direction;
+
+            if (direction > 0) {
+                reviewsCarousel.style.transition = reviewsSlideTransition;
+                reviewsCarousel.style.transform = `translateX(-${distance}px)`;
+            } else {
+                const lastSlide = reviewsCarousel.lastElementChild;
+                if (lastSlide) {
+                    reviewsCarousel.insertBefore(lastSlide, reviewsCarousel.firstElementChild);
+                }
+
+                reviewsCarousel.style.transition = 'none';
+                reviewsCarousel.style.transform = `translateX(-${distance}px)`;
+                reviewsCarousel.offsetHeight;
+                reviewsCarousel.style.transition = reviewsSlideTransition;
+                reviewsCarousel.style.transform = 'translateX(0)';
+            }
+        }
+
+        if (reviewsCarousel && reviewsSlideCount > 1) {
+            reviewsCarousel.addEventListener('transitionend', () => {
+                if (!reviewsAnimating) {
+                    return;
+                }
+
+                if (reviewsDirection > 0) {
+                    const firstSlide = reviewsCarousel.firstElementChild;
+                    if (firstSlide) {
+                        reviewsCarousel.appendChild(firstSlide);
+                    }
+                }
+
+                resetReviewsPosition();
+                reviewsAnimating = false;
+            });
+        }
+
+        if (reviewsPrevBtn) {
+            reviewsPrevBtn.addEventListener('click', () => {
+                moveReviews(-1);
+            });
+        }
+
+        if (reviewsNextBtn) {
+            reviewsNextBtn.addEventListener('click', () => {
+                moveReviews(1);
+            });
+        }
+
+        let reviewsAutoplayTimer = null;
+
+        function startReviewsAutoplay() {
+            if (!reviewsCarousel || reviewsSlideCount <= 1) {
+                return;
+            }
+
+            reviewsAutoplayTimer = window.setInterval(() => {
+                moveReviews(1);
+            }, 8000);
+        }
+
+        startReviewsAutoplay();
+
         // Packages Carousel Logic
         const packagesCarousel = document.querySelector('.packages-carousel');
         const packagesPrevBtn = document.getElementById('packages-prev');
@@ -2090,14 +2544,64 @@
 
         startPackagesAutoplay();
 
-        // Handle window resize for packages carousel
+        // Handle window resize for carousels
         window.addEventListener('resize', () => {
+            reviewsAnimating = false;
+            resetReviewsPosition();
             packagesAnimating = false;
             setPackagesPosition(false);
         });
 
         setHeroPosition(false);
+        resetReviewsPosition();
         setPackagesPosition(false);
+
+        // Scroll reveal animations for video, sidebar and similar package sections
+        const scrollRevealItems = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+
+        if (scrollRevealItems.length) {
+            if ('IntersectionObserver' in window) {
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                        } else {
+                            // remove so animation can replay when re-entering
+                            entry.target.classList.remove('is-visible');
+                        }
+                    });
+                }, {
+                    root: null,
+                    threshold: 0.16,
+                    rootMargin: '0px 0px -60px 0px'
+                });
+
+                scrollRevealItems.forEach((item) => {
+                    revealObserver.observe(item);
+                });
+            } else {
+                scrollRevealItems.forEach((item) => {
+                    item.classList.add('is-visible');
+                });
+            }
+        }
+
+        // Toggle sidebar slide-in when the facts section is reached so it animates on entry
+        const sidebarEl = document.querySelector('.sidebar');
+        const factsEl = document.getElementById('facts');
+        if (sidebarEl && factsEl && 'IntersectionObserver' in window) {
+            const sideObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        sidebarEl.classList.add('sidebar-slide-in');
+                    } else {
+                        sidebarEl.classList.remove('sidebar-slide-in');
+                    }
+                });
+            }, { root: null, threshold: 0.12, rootMargin: '0px 0px -20% 0px' });
+
+            sideObserver.observe(factsEl);
+        }
 
         // Trip Cost Calculator Logic
         const groupSizeSlider = document.getElementById('group-size-slider');
@@ -2237,7 +2741,51 @@
             updateCalculatorSidebar();
         }
 
+        // Subnav highlighting on scroll
+        (function () {
+            const sections = ['overview', 'itinerary', 'services', 'departures', 'routes', 'faq', 'videos', 'reviews'];
+            const subnavLinks = document.querySelectorAll('#subnav a');
+            const subnav = document.getElementById('subnav');
+
+            if ('IntersectionObserver' in window && subnavLinks.length > 0) {
+                const sectionObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            // Remove active class from all links
+                            subnavLinks.forEach(link => link.classList.remove('active'));
+
+                            // Add active class to matching link
+                            const matchingLink = document.querySelector(`#subnav a[href="#${entry.target.id}"]`);
+                            if (matchingLink) {
+                                matchingLink.classList.add('active');
+
+                                if (subnav && window.matchMedia('(max-width: 1023px)').matches) {
+                                    matchingLink.scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'nearest',
+                                        inline: 'center'
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }, {
+                    root: null,
+                    threshold: 0.1,
+                    rootMargin: '-50px 0px -50% 0px'
+                });
+
+                // Observe all sections
+                sections.forEach((sectionId) => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        sectionObserver.observe(section);
+                    }
+                });
+            }
+        })();
     </script>
+
 
 </body>
 

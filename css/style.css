@@ -68,6 +68,31 @@ canvas {
 .packages-carousel-container {
   overflow: hidden;
 }
+
+.review-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  .review-slide {
+    flex-basis: calc(50% - 6px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .review-slide {
+    flex-basis: calc(33.333% - 22px);
+  }
+}
+
+.review-carousel-container {
+  overflow: hidden;
+}
 /* Slider styling */
 .slider-thumb {
   -webkit-appearance: none;
@@ -121,4 +146,25 @@ canvas {
   cursor: pointer;
   border: 3px solid white;
   box-shadow: 0 2px 8px rgba(30, 64, 255, 0.3);
+}
+
+
+
+
+.scroll-araise::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-araise::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 999px;
+}
+
+.scroll-araise::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 999px;
+}
+
+.scroll-araise::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
 }

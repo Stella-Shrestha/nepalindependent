@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
   font:
     16px/1.5 "Inter",
     sans-serif;
@@ -147,9 +148,6 @@ canvas {
   border: 3px solid white;
   box-shadow: 0 2px 8px rgba(30, 64, 255, 0.3);
 }
-
-
-
 
 .scroll-araise::-webkit-scrollbar {
   height: 6px;

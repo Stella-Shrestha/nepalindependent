@@ -496,64 +496,78 @@
         <!-- Private Treks end -->
 
         <!-- gallery start -->
-        <section class="min-h-[200px] lg:mb-[64px] bg-white w-full py-[52px] overflow-hidden">
-            <div class="w-[1340px] mx-auto">
+         <section class="min-h-[200px] lg:mb-[64px] bg-white w-full py-[40px] md:py-[52px] overflow-hidden">
+            <!-- Changed w-[1340px] to w-full with max-w and padding for mobile safety -->
+            <div class="max-w-[1340px] w-full mx-auto px-4 md:px-0">
+
                 <h2
-                    class="text-2xl md:text-4xl lg:text-[56px] flex items-center justify-center relative mb-[32px] font-bold z-50">
+                    class="text-3xl md:text-4xl lg:text-[56px] flex items-center justify-center relative mb-[24px] md:mb-[32px] font-bold z-50">
                     Our Gallery
                 </h2>
 
                 <div class="relative w-full flex justify-center items-center">
-                    <!-- Top Blur -->
-                    <img src="images/Home/Ellipse 5.png" class="absolute z-20 -top-[120px]" alt="">
 
-                    <!-- Slider -->
+                    <!-- Responsive Top Blur (Scaled down on mobile/tablet) -->
+                    <img src="images/Home/Ellipse 5.png"
+                        class="absolute z-20 -top-[20px] md:-top-[56px] lg:-top-[120px] w-[500px] md:w-[800px] lg:w-auto"
+                        alt="">
+
+                    <!-- Slider Container -->
                     <div class="slider-container overflow-hidden w-full z-10">
-                        <div class="slider-track flex gap-[20px]">
-                            <!-- Images -->
+                        <div class="slider-track flex gap-[12px] md:gap-[20px]">
+
+                            <!-- Images (Responsive sizes using h- and w-) -->
+                            <!-- Desktop: Original size | Tablet: h-[300px] | Mobile: h-[200px] -->
                             <img src="images/Home/sideimg3 1.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
                             <img src="images/Home/sideimg3 2.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
                             <img src="images/Home/sideimg3 3.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
-                            <img src="images/sideimg3 4.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
-                            <img src="images/Home/sideimg3 5.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
-                            <!-- Duplicate Images for Infinite Effect -->
-                            <img src="images/Home/sideimg3 1.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
-                            <img src="images/Home/sideimg3 2.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
-                            <img src="images/Home/sideimg3 3.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
                             <img src="images/Home/sideimg3 4.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
-
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
                             <img src="images/Home/sideimg3 5.png"
-                                class="hover:scale-105 transition-transform duration-300 rounded-xl" alt="">
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
+
+                            <!-- Duplicates for Infinite Effect -->
+                            <img src="images/Home/sideimg3 1.png"
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
+                            <img src="images/Home/sideimg3 2.png"
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
+                            <img src="images/Home/sideimg3 3.png"
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
+                            <img src="images/Home/sideimg3 4.png"
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
+                            <img src="images/Home/sideimg3 5.png"
+                                class="h-[200px] md:h-[300px] lg:h-auto w-auto hover:scale-105 transition-transform duration-300 rounded-xl object-cover"
+                                alt="">
                         </div>
                     </div>
 
-                    <!-- Bottom Blur -->
-                    <img src="images/Home/Ellipse 5.png" class="absolute z-20 -bottom-[120px]" alt="">
+                    <!-- Responsive Bottom Blur (Scaled down on mobile/tablet) -->
+                    <img src="images/Home/Ellipse 5.png"
+                        class="absolute z-20 -bottom-[20px] md:-bottom-[56px] lg:-bottom-[120px] w-[500px] md:w-[800px] lg:w-auto"
+                        alt="">
                 </div>
+
                 <button
-                    class="bg-blue-600 text-white px-[18px] lg:px-6 py-3 relative rounded-lg hover:bg-blue-700 z-30 flex justify-center items-center transition shadow mx-auto">
+                    class="mt-8 bg-blue-600 text-white px-6 py-3 relative rounded-lg hover:bg-blue-700 z-30 flex justify-center items-center transition shadow mx-auto">
                     Explore More
                 </button>
             </div>
         </section>
         <!-- gallery end -->
+
+
 
         <!-- popular trips start -->
         <section class="w-full bg-[#F0F7FF] py-12 relative z-30 lg:py-[120px] mb-[40px]">

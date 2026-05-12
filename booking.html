@@ -29,8 +29,9 @@
     <header
         class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 flex items-center justify-between gap-36">
         <div class="flex items-center gap-6 justify-between w-full">
-            <img src="images/Home/logo.png" alt="not found" class="lg:h-[84px] h-[42px] object-contain" />
-
+            <a href="index.html">
+                <img src="images/Home/logo.png" alt="not found" class="lg:h-[84px] h-[36px] object-contain" />
+            </a>
             <button id="mobile-menu-button"
                 class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
                 aria-expanded="false" aria-controls="mobile-menu" arisa-label="Toggle navigation menu">
@@ -413,16 +414,21 @@
                     </div>
 
                     <!-- Button -->
-                    <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Buttons -->
+                    <div class="flex flex-col gap-4 sm:flex-row">
+
                         <button type="submit"
-                            class="flex h-[58px] flex-1 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 text-[16px] font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,99,235,0.35)]">
+                            class="flex w-full sm:flex-1 h-[58px] items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 text-center text-[15px] sm:text-[16px] font-bold uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(37,99,235,0.35)]">
                             Book Your Trip
                         </button>
+
                         <a href="trek.html"
-                            class="flex h-[58px] flex-1 items-center justify-center rounded-2xl border border-slate-200 bg-white text-[16px] font-medium uppercase tracking-[0.12em] text-black transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:text-blue-700">
-                            Back to your Trip
+                            class="flex w-full sm:flex-1 h-[58px] items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 text-center text-[15px] sm:text-[16px] font-medium uppercase tracking-[0.08em] sm:tracking-[0.12em] text-black transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:text-blue-700">
+                            Back to Your Trip
                         </a>
+
                     </div>
+
                 </div>
             </div>
         </div>

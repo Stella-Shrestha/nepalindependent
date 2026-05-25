@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Listing | Nepal Independent Guide</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        body {
+            min-height: 100vh;
+            font-family: "Inter", sans-serif;
+            color: #0f172a;
+            background: #ffffff;
+        }
+
+        .page-shell {
+            max-width: 960px;
+        }
+
+        .soft-card {
+            box-shadow: 0 14px 32px rgba(15, 42, 68, 0.08);
+        }
+
+        .post-image {
+            aspect-ratio: 16 / 9;
+        }
+
+        .small-feature-image {
+            aspect-ratio: 1 / 1;
+        }
+
+        @media (max-width: 767px) {
+            .page-shell {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <main class="px-4 py-10 sm:py-14 lg:py-20">
+        <div class="page-shell max-w-[1340px] mx-auto">
+            <!-- <section class="mb-12">
+                <h1 class="mb-7 text-3xl font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">Featured Post</h1>
+
+                <div class="grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
+                    <article class="soft-card overflow-hidden rounded-lg bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/Home/background.png" alt="Popular Treks Blog"
+                                class="h-[236px] w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-5">
+                            <h2 class="text-xl font-semibold text-black sm:text-xl md:text-2xl lg:text-3xl">
+                                Popular Treks Blog:
+                            </h2>
+                            <h2 class="text-xl font-semibold text-black sm:text-xl md:text-2xl lg:text-3xl">
+                                Best Himalayan Routes in Nepal </h2>
+                            <div
+                                class="mt-5 flex items-center gap-3 text-[12px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>21 May, 2025</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span>7 Min Ago</span>
+                            </div>
+                            <div class="mt-5 flex items-center gap-3">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f26a21] text-xs font-black text-white">NI</span>
+                                <span class="text-sm font-normal text-black">Nepal Independent Guide</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="grid gap-5">
+                        <article class="soft-card grid grid-cols-[112px_1fr] gap-4 rounded-lg bg-white p-3">
+                            <a href="blog.html" class="block overflow-hidden rounded-md">
+                                <img src="images/Home/everest.png" alt="Everest Base Camp Trek"
+                                    class="small-feature-image h-full w-full object-cover" />
+                            </a>
+                            <div class="flex min-w-0 flex-col justify-center">
+                                <h3 class="text-sm font-semibold leading-snug text-black md:text-base lg:text-lg">
+                                    Popular Treks Blog: Everest
+                                    Base Camp Trek Guide</h3>
+                                <div
+                                    class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                    <span>21 May, 2025</span>
+                                    <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                    <span>7 Min Ago</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="soft-card grid grid-cols-[112px_1fr] gap-4 rounded-lg bg-white p-3">
+                            <a href="blog.html" class="block overflow-hidden rounded-md">
+                                <img src="images/Home/langtang.png" alt="Langtang Valley Trek"
+                                    class="small-feature-image h-full w-full object-cover" />
+                            </a>
+                            <div class="flex min-w-0 flex-col justify-center">
+                                <h3 class="text-sm font-semibold leading-snug text-black md:text-base lg:text-lg">
+                                    Popular Treks Blog: Langtang
+                                    Valley Trek Highlights</h3>
+                                <div
+                                    class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                    <span>21 May, 2025</span>
+                                    <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                    <span>7 Min Ago</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="soft-card grid grid-cols-[112px_1fr] gap-4 rounded-lg bg-white p-3">
+                            <a href="blog.html" class="block overflow-hidden rounded-md">
+                                <img src="images/Home/manaslu.png" alt="Manaslu Circuit Trek"
+                                    class="small-feature-image h-full w-full object-cover" />
+                            </a>
+                            <div class="flex min-w-0 flex-col justify-center">
+                                <h3 class="text-sm font-semibold leading-snug text-black md:text-base lg:text-lg">
+                                    Popular Treks Blog: Manaslu
+                                    Circuit Trek Tips</h3>
+                                <div
+                                    class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                    <span>21 May, 2025</span>
+                                    <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                    <span>7 Min Ago</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <section class="mb-12 rounded-md border border-[#dbeafe] bg-[#F0F7FF] p-5">
+                <div class="grid gap-5 md:grid-cols-2">
+                    <label class="relative block">
+                        <select
+                            class="h-12 w-full appearance-none rounded border border-[#dbeafe] bg-white px-5 pr-12 text-base font-semibold text-[#0f172a] outline-none">
+                            <option>All Categories</option>
+                            <option>Popular Treks</option>
+                            <option>Everest Region</option>
+                            <option>Langtang Region</option>
+                            <option>Manaslu Region</option>
+                        </select>
+                        <i data-lucide="chevron-down"
+                            class="pointer-events-none absolute right-5 top-1/2 h-5 w-5 -translate-y-1/2 text-[#0f172a]"></i>
+                    </label>
+
+                    <label class="relative block">
+                        <i data-lucide="search"
+                            class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i>
+                        <input type="search" placeholder="Search blog"
+                            class="h-12 w-full rounded border border-[#dbeafe] bg-white px-12 text-base font-semibold text-[#0f172a] outline-none placeholder:text-slate-500" />
+                    </label>
+                </div>
+            </section> -->
+
+            <section>
+                <div class="flex mb-8 justify-between">
+                    <h2 class="text-xl font-semibold tracking-tight text-black sm:text-xl md:text-2xl lg:text-3xl">
+                        All Blogs</h2>
+                    <label class="relative block">
+                        <select
+                            class="h-12 w-full appearance-none rounded border border-[#dbeafe] bg-[#F0F7FF] px-5 pr-20 text-base font-semibold text-[#0f172a] outline-none">
+                            <option>All Categories</option>
+                            <option>Popular Treks</option>
+                            <option>Everest Region</option>
+                            <option>Langtang Region</option>
+                            <option>Manaslu Region</option>
+                        </select>
+                        <i data-lucide="chevron-down"
+                            class="pointer-events-none absolute right-5 top-6 h-5 w-5 -translate-y-1/2 text-[#0f172a]"></i>
+                    </label>
+                </div>
+
+
+                <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/Home/gokyo.png" alt="Shey Phoksundo National Park"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4 ">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Shey
+                                Phoksundo National Park</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 20, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Shey Phoksundo National Park is one
+                                of the most breathtaking and least explored regions in the regions in theregions in the...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/Home/mardi.png" alt="Best Time for Mardi Himal Trek"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Best Time
+                                for Mardi Himal Trek
+                            </h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 20, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Best Time for Mardi Himal Trek –
+                                Complete Guide with Viewpoints, Places & Mardi Himal Peak. The Mardi Himal Trek is one
+                                of Nepal's...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/Home/manaslu.png" alt="Safety Tips for Manaslu Circuit Trek"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Safety
+                                Tips for Manaslu Circuit
+                                Trek</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 19, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Safety Tips for Manaslu Circuit Trek.
+                                Complete Guide for a Safe Himalayan Journey Safety is a critical aspect of planning the
+                                Manaslu Circuit...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/Home/langtang.png" alt="Kyanjin Ri Viewpoint"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Kyanjin
+                                Ri Viewpoint</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 19, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Kyanjin Ri Viewpoint. Panorama in
+                                Langtang Valley The Kyanjin Ri viewpoint is one of the most breathtaking highlights...
+                            </p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/trek/img1.png" alt="Mu Gompa in Tsum Valley"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Mu Gompa
+                                in Tsum Valley</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 17, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Mu Gompa in Tsum Valley. A Haven of
+                                Culture, Spirituality, and Timeless Beauty featured in one of Nepal's most remote...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/trek/everestbg.png" alt="Where is Everest Located"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Where is
+                                Everest Located</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 10, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Where is Everest Located. If you're
+                                ever wondered where Everest is located, you're not alone. This question is the most
+                                searched for trekkers...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/trek/everest1.jpg" alt="Kanchenjunga"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">
+                                Kanchenjunga</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Apr 01, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Kanchenjunga. The third-highest
+                                mountain in the world. Kanchenjunga is one of the most explored regions in theregions in theregions in theregions in the...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl shadow-lg transition-shadow duration-300 group-hover:shadow-2xl bg-white">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/Home/annapurna.png" alt="Best time to Visit the Langtang Valley Trek"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Best time
+                                to Visit the Langtang
+                                Valley Trek</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Mar 27, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Best Time to Visit the Langtang
+                                Valley Trek is during spring (March to May) and autumn (September to November), when the
+                                weather...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="soft-card overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow duration-300 group-hover:shadow-2xl">
+                        <a href="blog.html" class="block overflow-hidden">
+                            <img src="images/trek/everest2.jpg" alt="Best Time for Manaslu Circuit Trek"
+                                class="post-image w-full object-cover transition duration-500 hover:scale-105" />
+                        </a>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold leading-snug text-black md:text-base lg:text-lg">Best Time
+                                for Manaslu Circuit
+                                Trek</h3>
+                            <div
+                                class="mt-4 flex items-center gap-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                                <span>Mar 25, 2026</span>
+                                <span class="h-1 w-1 rounded-full bg-slate-400"></span>
+                                <span class="rounded bg-white px-3 py-1 text-orange-600">Uncategorized</span>
+                            </div>
+                            <p class="mt-4 text-sm leading-relaxed text-slate-600">Best Time for Manaslu Circuit Trek is
+                                during spring (March to May) and autumn (September to November), when the weather
+                                remains...</p>
+                            <a href="blog.html"
+                                class="mt-4 inline-block text-base font-bold text-blue-600 hover:text-blue-800">Read
+                                More</a>
+                        </div>
+                    </article>
+                </div>
+
+                <nav class="mt-12 flex items-center justify-center gap-2.5 sm:gap-4" aria-label="Blog pagination">
+                    <a href="#"
+                        class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2f65e7] text-base font-black text-white shadow-[0_8px_16px_rgba(47,101,231,0.22)] ring-2 ring-[#d7e6ff] sm:h-11 sm:w-11 sm:text-lg"
+                        aria-current="page">1</a>
+                    <a href="#"
+                        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#d7e6ff] bg-white text-base font-black text-[#2f65e7] transition hover:bg-[#F0F7FF] sm:h-11 sm:w-11 sm:text-lg">2</a>
+                    <a href="#"
+                        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#d7e6ff] bg-white text-base font-black text-[#2f65e7] transition hover:bg-[#F0F7FF] sm:h-11 sm:w-11 sm:text-lg">3</a>
+                    <span
+                        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#d7e6ff] bg-white text-base font-black text-[#2f65e7] sm:h-11 sm:w-11 sm:text-lg">...</span>
+                    <a href="#"
+                        class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#d7e6ff] bg-white text-base font-black text-[#2f65e7] transition hover:bg-[#F0F7FF] sm:h-11 sm:w-11 sm:text-lg">14</a>
+                    <a href="#"
+                        class="flex h-10 items-center justify-center rounded-lg border border-[#d7e6ff] bg-white px-4 text-base font-black text-[#2f65e7] transition hover:bg-[#F0F7FF] sm:h-11 sm:px-5 sm:text-lg">Next</a>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

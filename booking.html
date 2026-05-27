@@ -16,104 +16,60 @@
       * {
         font-family: "Inter", sans-serif;
       }
-
-      body {
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(191, 219, 254, 0.35),
-            transparent 30%
-          ),
-          radial-gradient(
-            circle at top right,
-            rgba(219, 234, 254, 0.45),
-            transparent 28%
-          ),
-          #f8fafc;
-      }
     </style>
   </head>
 
   <body class="min-h-screen bg-slate-50 text-slate-900">
     <!-- header start -->
     <header
-      class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 flex items-center justify-between gap-4 lg:gap-36"
-    >
-      <div class="flex items-center gap-6 justify-between w-full">
-        <a href="index.html">
-          <img
-            src="images/Home/logo.png"
-            alt="not found"
-            class="lg:h-[84px] h-[36px] object-contain"
-          />
-        </a>
-        <button
-          id="mobile-menu-button"
-          class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </div>
+        class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 mb-[4px] md:mb-[52px] lg:mb-0  flex items-center justify-between gap-36">
+        <div class="flex items-center gap-6 justify-between w-full">
+            <a href="index.html">
+                <img src="images/Home/logo.png" alt="not found" class="lg:h-[84px] h-[36px] object-contain" />
+            </a>
 
-      <div class="hidden lg:flex gap-8 w-full">
-        <div class="flex items-center gap-4">
-          <i
-            data-lucide="mail"
-            class="bg-black text-white rounded-full h-12 w-12 py-2"
-          ></i>
-          <div>
-            <span class="text-black font-bold text-sm xl:text-base"
-              >+info@nepalindependentguide.com</span
-            ><br />
-            <p class="text-xs xl:text-sm">Quick Questions? Email Us</p>
-          </div>
+            <button id="mobile-menu-button"
+                class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
+                aria-expanded="false" aria-controls="mobile-menu" arisa-label="Toggle navigation menu">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
         </div>
-        <div class="flex items-center gap-4">
-          <i
-            data-lucide="phone"
-            class="bg-black text-white rounded-full h-11 w-11 py-2"
-          ></i>
-          <div>
-            <span class="text-blue-800 font-bold text-sm xl:text-base"
-              >+977 9807654321</span
-            ><br />
-            <p class="text-xs xl:text-sm">24hrs customer support</p>
-          </div>
-        </div>
-      </div>
 
-      <div
-        id="mobile-menu"
-        class="hidden lg:hidden absolute left-0 top-full z-50 w-full bg-gray-700 shadow-lg"
-      >
-        <div
-          class="mx-auto flex max-w-[1340px] flex-col px-4 md:px-8 py-4 text-white"
-        >
-          <a href="#" class="border-b border-white/10 py-3">Home</a>
-          <a href="#aboutus" class="border-b border-white/10 py-3">About Us</a>
-          <a href="#country" class="border-b border-white/10 py-3">Nepal</a>
-          <a href="#dayTours" class="border-b border-white/10 py-3"
-            >Day Tours</a
-          >
-          <a href="#testimonials" class="border-b border-white/10 py-3"
-            >Testimonials</a
-          >
-          <a href="#blog" class="border-b border-white/10 py-3">Our Blog</a>
-          <a href="#contact" class="py-3">Contact Us</a>
-          <a href="#top-destinations" class="lg:hidden py-3"
-            >Top 10 Destinations</a
-          >
+        <div class="hidden lg:flex gap-8 w-full">
+            <div class="flex items-center gap-4">
+                <i data-lucide="mail" class="bg-black text-white rounded-full h-12 w-12 py-2"></i>
+                <div>
+                    <span class="text-black font-bold text-sm xl:text-base">+info@nepalindependentguide.com</span><br />
+                    <p class="text-xs xl:text-sm">Quick Questions? Email Us</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <i data-lucide="phone" class="bg-black text-white rounded-full h-11 w-11 py-2"></i>
+                <div>
+                    <span class="text-blue-800 font-bold text-sm xl:text-base">+977 9807654321</span><br />
+                    <p class="text-xs xl:text-sm">24hrs customer support</p>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden absolute left-0 top-full z-50 w-full bg-gray-700 shadow-lg">
+            <div class="mx-auto flex max-w-[1340px] flex-col px-4 md:px-8 py-4 text-white">
+                <a href="#" class="border-b border-white/10 py-3">Home</a>
+                <a href="#aboutus" class="border-b border-white/10 py-3">About Us</a>
+                <a href="#country" class="border-b border-white/10 py-3">Nepal</a>
+                <a href="#dayTours" class="border-b border-white/10 py-3">Day Tours</a>
+                <a href="#testimonials" class="border-b border-white/10 py-3">Testimonials</a>
+                <a href="#blog" class="border-b border-white/10 py-3">Our Blog</a>
+                <a href="#contact" class="py-3">Contact Us</a>
+                <a href="#top-destinations" class="lg:hidden py-3">Top 10 Destinations</a>
+            </div>
+        </div>
     </header>
     <!-- header end -->
 
     <!-- nav start -->
     <nav
-      class="sticky top-0 z-50 hidden lg:flex bg-black py-2 items-center lg:mb-20 mb-16 justify-center"
+      class="sticky top-0 z-50 hidden lg:flex bg-black py-2 items-center justify-center"
     >
       <div
         class="flex w-full max-w-[1340px] mx-auto items-center justify-between px-4 md:px-8 lg:px-0 gap-4"
@@ -151,97 +107,17 @@
     </nav>
     <!-- nav end -->
 
-    <!-- Hero -->
-    <!-- <section class="mx-auto max-w-[1340px] px-4 pb-10 lg:pb-14">
-        <div
-            class="overflow-hidden lg:flex hidden rounded-[32px] border border-white/70 bg-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur">
-            <div class="grid lg:grid-cols-[1.25fr_0.75fr] gap-0">
-                <div class="p-6 md:p-8 lg:p-10 bg-gradient-to-br from-slate-900 via-blue-900 to-blue-700 text-white">
-                    <p
-                        class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-blue-100">
-                        Booking Form
-                    </p>
-                    <h1 class="text-3xl font-bold leading-tight md:text-4xl lg:text-[56px]">
-                        Reserve Your Adventure
-                    </h1>
-                    <p class="mt-4 max-w-2xl text-sm leading-7 text-blue-100 md:text-base">
-                        Complete the form and our travel expert will contact you with the next steps, availability, and
-                        trip confirmation details.
-                    </p>
-
-                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                        <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
-                            <p class="text-xs uppercase tracking-[0.18em] text-blue-100/80">Trip</p>
-                            <p class="mt-1 font-semibold">Everest Base Camp Trek</p>
-                        </div>
-                        <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
-                            <p class="text-xs uppercase tracking-[0.18em] text-blue-100/80">Duration</p>
-                            <p class="mt-1 font-semibold">12-14 Days</p>
-                        </div>
-                        <div class="rounded-2xl border border-white/15 bg-white/10 p-4">
-                            <p class="text-xs uppercase tracking-[0.18em] text-blue-100/80">Support</p>
-                            <p class="mt-1 font-semibold">24/7 Assistance</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-6 md:p-8 lg:p-10 bg-slate-50/80">
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
-                            <div class="flex items-center gap-3 text-slate-900">
-                                <i data-lucide="shield-check" class="h-5 w-5 text-blue-600"></i>
-                                <p class="font-semibold">Secure booking</p>
-                            </div>
-                            <p class="mt-2 text-sm text-slate-500">Easy reservation flow with clear next steps.</p>
-                        </div>
-                        <div class="rounded-2xl border border-slate-200 bg-white p-4">
-                            <div class="flex items-center gap-3 text-slate-900">
-                                <i data-lucide="badge-check" class="h-5 w-5 text-blue-600"></i>
-                                <p class="font-semibold">Expert support</p>
-                            </div>
-                            <p class="mt-2 text-sm text-slate-500">Get trip help from our travel team any time.</p>
-                        </div>
-                        <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:col-span-2">
-                            <div class="flex items-center gap-3 text-slate-900">
-                                <i data-lucide="map-pin" class="h-5 w-5 text-blue-600"></i>
-                                <p class="font-semibold">Why this page feels better</p>
-                            </div>
-                            <p class="mt-2 text-sm leading-6 text-slate-500">
-                                The layout is now responsive, the key trip details are visible up front, and the form is
-                                easier to scan on mobile and desktop.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Heading -->
-    <!-- <div class="mx-auto mb-10 max-w-4xl px-4 text-center lg:mb-14">
-        <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
-            Booking Form
-        </p>
-
-        <h2 class="mb-4 text-2xl font-bold leading-tight text-slate-950 md:text-3xl lg:text-4xl">
-            Plan the details before you arrive in Nepal
-        </h2>
-
-        <p class="mx-auto max-w-[640px] text-[15px] leading-7 text-slate-500">
-            Share your traveler details, preferred payment method, and any special requests so we can prepare the right
-            trip package for you.
-        </p>
-    </div> -->
+ 
 
     <!-- Main Booking Container -->
-    <main class="px-4 w-full max-w-[1340px] mx-auto pb-[32px]">
+    <main class=" w-full lg:py-20 py-6  mx-auto pb-[32px]" style="background-image: url('images/trek/shape.jpeg'); background-position: right top; background-size: auto;">
       <div class="mx-auto w-full max-w-[1340px] mb-[32px]">
         <!-- Form -->
         <form class="grid grid-cols-1 lg:grid-cols-6 gap-8">
           <!-- Form Fields Section (4/6 width) -->
           <div class="lg:col-span-4">
             <div
-              class="rounded-[32px] border border-slate-200 bg-white p-5 md:p-7 lg:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+              class="lg:rounded-[32px] border border-slate-200 bg-white p-5 md:p-7 lg:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
             >
               <div
                 class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"
@@ -504,11 +380,59 @@
 
           <!-- Payment Method Section (2/6 width) -->
           <div
-            class="lg:col-span-2 lg:self-start lg:sticky lg:top-[96px] flex flex-col gap-3"
+            class="lg:col-span-2 lg:self-start lg:sticky lg:top-[96px] flex flex-col lg:gap-3"
           >
+            <!-- Price Summary Section -->
+            <section
+              id="price-summary-section"
+              class="lg:rounded-[32px] border border-slate-200 bg-white p-5 md:p-6 h-fit shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+            >
+              <div class="flex gap-2 mb-4 items-center flex-wrap">
+                <i
+                  data-lucide="receipt"
+                  class="h-6 md:h-8 w-6 md:w-8 text-blue-600"
+                ></i>
+                <h2
+                  class="text-base md:text-[20px] font-bold leading-tight text-slate-900"
+                >
+                  Trip Summary
+                </h2>
+              </div>
+
+              <div class="space-y-3 pb-4 border-b border-slate-200">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600 text-sm"
+                    >Number of Travelers:</span
+                  >
+                  <span id="summary-pax" class="font-semibold text-slate-900"
+                    >1</span
+                  >
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600 text-sm">Price per Person:</span>
+                  <span
+                    id="summary-price-per-person"
+                    class="font-semibold text-slate-900"
+                    >$1,500</span
+                  >
+                </div>
+              </div>
+
+              <div class="mt-4 flex justify-between items-center">
+                <span class="text-slate-900 font-semibold text-base"
+                  >Total Price:</span
+                >
+                <span
+                  id="summary-total-price"
+                  class="text-2xl md:text-3xl font-bold text-blue-600"
+                  >$1,500</span
+                >
+              </div>
+            </section>
+
             <!-- Payment Method -->
             <section
-              class="rounded-[32px] border border-slate-200 bg-white p-5 md:p-6 h-fit shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+              class="lg:rounded-[32px] border border-slate-200 bg-white p-5 md:p-6 h-fit shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
             >
               <div class="flex gap-2 mb-2 items-center flex-wrap">
                 <i
@@ -806,6 +730,13 @@
       (function () {
         const paxInput = document.getElementById("pax-count");
         const container = document.getElementById("other-travelers-container");
+        const summaryPax = document.getElementById("summary-pax");
+        const summaryPricePerPerson = document.getElementById(
+          "summary-price-per-person",
+        );
+        const summaryTotalPrice = document.getElementById(
+          "summary-total-price",
+        );
 
         if (!paxInput || !container) return;
 
@@ -883,6 +814,35 @@
           return wrapper;
         }
 
+        function formatCurrency(value) {
+          return (
+            "$" +
+            parseFloat(value).toLocaleString("en-US", {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })
+          );
+        }
+
+        function getDiscountedPrice(pax) {
+          const basePrice = 1500;
+          if (pax >= 10) return basePrice * 0.7; // 30% discount
+          if (pax >= 6) return basePrice * 0.8; // 20% discount
+          if (pax >= 3) return basePrice * 0.9; // 10% discount
+          return basePrice; // No discount for 1-2 pax
+        }
+
+        function updatePriceSummary() {
+          const pax = Math.max(1, parseInt(paxInput.value || "1"));
+          const pricePerPerson = getDiscountedPrice(pax);
+          const totalPrice = pax * pricePerPerson;
+
+          // Update summary content
+          summaryPax.textContent = pax;
+          summaryPricePerPerson.textContent = formatCurrency(pricePerPerson);
+          summaryTotalPrice.textContent = formatCurrency(totalPrice);
+        }
+
         function render() {
           const pax = Math.max(1, parseInt(paxInput.value || "1"));
           const others = Math.max(0, pax - 1);
@@ -900,6 +860,9 @@
 
           // Re-initialize Lucide icons after adding new cards
           lucide.createIcons();
+
+          // Update price summary
+          updatePriceSummary();
         }
 
         paxInput.addEventListener("input", render);

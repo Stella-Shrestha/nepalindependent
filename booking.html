@@ -401,12 +401,13 @@
                   href="booking.html"
                   class="flex-1 bg-[#1E40FF] gap-2 text-white px-[18px] py-[12px] rounded-lg hover:bg-[#1530CC] text-sm md:text-[20px] font-medium flex justify-center items-center"
                   ><i data-lucide="bookmark" class="w-6 h-6"></i>
-                  Book Your Trip
+                  Proceed to Payment
                 </a>
                 <a
                   href="trek.html"
                   class="flex-1 bg-white text-black border gap-2 border-[#BCD5F0] px-[18px] py-[12px] rounded-lg hover:bg-[#F4F9FE] text-sm md:text-[20px] font-medium flex justify-center items-center"
-                  ><i data-lucide="arrow-left" class="w-6 h-6"></i>
+                  >
+                  <!-- <i data-lucide="arrow-left" class="w-6 h-6"></i> -->
                   Cancel
                 </a>
               </div>
@@ -498,72 +499,59 @@
                     <h3 class="text-xl font-bold text-slate-950">
                       Choose Payment
                     </h3>
-                    <p class="mt-1 text-sm leading-snug text-slate-500">
-                      Pay advance or complete full payment.
-                    </p>
                   </div>
-                  <span
-                    class="shrink-0 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-semibold text-orange-600"
-                    >Required</span
-                  >
+
                 </div>
                 <div class="mt-5 grid grid-cols-2 gap-3">
                   <button
                     type="button"
                     data-payment-rate="25"
-                    class="payment-rate-button rounded-2xl border-2 border-blue-600 bg-blue-50 px-2 py-5 text-center shadow-[0_0_0_3px_rgba(37,99,235,0.12)] transition"
+                    class="payment-rate-button rounded-2xl border-2 border-blue-600 bg-blue-50 px-2 py-3 text-center shadow-[0_0_0_3px_rgba(37,99,235,0.12)] transition"
                     aria-pressed="true"
                   >
-                    <span class="block text-3xl font-bold text-slate-900"
+                    <span class="block text-2xl font-bold text-slate-900"
                       >25%</span
                     >
                     <span class="mt-1 block text-sm text-slate-500"
                       >Advance Pay</span
                     >
-                    <span class="mt-2 block text-xs text-slate-400"
-                      >Reserve your booking</span
-                    >
+                  
                   </button>
                   <button
                     type="button"
                     data-payment-rate="100"
-                    class="payment-rate-button rounded-2xl border-2 border-slate-200 px-2 py-5 text-center transition hover:border-blue-300"
+                    class="payment-rate-button rounded-2xl border-2 border-slate-200 px-2 py-3 text-center transition hover:border-blue-300"
                     aria-pressed="false"
                   >
-                    <span class="block text-3xl font-bold text-slate-900"
+                    <span class="block text-2xl font-bold text-slate-900"
                       >100%</span
                     >
                     <span class="mt-1 block text-sm text-slate-500"
                       >Full Pay</span
                     >
-                    <span class="mt-2 block text-xs text-slate-400"
-                      >Complete payment</span
-                    >
                   </button>
                 </div>
               </div>
 
-              <div class="mt-6 rounded-[26px] bg-slate-50 p-5">
-                <div class="flex items-center justify-between gap-4">
+              <div class="mt-6 rounded-[26px] bg-slate-50 p-5 mb-6">
+                <div class="flex items-center mb-1 justify-between gap-4">
                   <span class="text-base font-medium text-slate-500"
                     >Total Trip Price</span
                   >
                   <span
                     id="payment-total-price"
-                    class="font-bold text-slate-950"
+                    class="font-bold text-base text-slate-950"
                     >$1,500</span
                   >
                 </div>
                 <div
-                  class="my-5 flex items-center justify-between gap-4 rounded-2xl border border-slate-100 bg-white p-4"
+                  class="flex items-center mb-1 justify-between gap-4"
                 >
                   <div>
                     <span class="block text-base font-medium text-slate-500"
                       >Pay Now</span
                     >
-                    <span class="mt-1 block text-sm text-slate-400"
-                      >Amount due today</span
-                    >
+                
                   </div>
                   <span
                     id="payment-pay-now"
@@ -571,36 +559,17 @@
                     >$375</span
                   >
                 </div>
-                <div class="flex items-center justify-between gap-4">
+                <div class="flex items-center mb-1 justify-between gap-4">
                   <span class="text-base font-medium text-slate-500"
                     >Remaining Balance</span
                   >
-                  <span id="payment-remaining" class="font-bold text-slate-950"
+                  <span id="payment-remaining" class="font-bold text-base text-slate-950"
                     >$1,125</span
                   >
                 </div>
               </div>
 
-              <div
-                class="mt-6 flex items-start gap-3 mb-8 rounded-[26px] border border-slate-200 p-5"
-              >
-                <div
-                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-50"
-                >
-                  <i
-                    data-lucide="shield-check"
-                    class="h-6 w-6 text-green-600"
-                  ></i>
-                </div>
-                <div>
-                  <h3 class="text-lg font-bold text-slate-950">
-                    Secure Online Payment
-                  </h3>
-                  <p class="mt-1 text-sm leading-relaxed text-slate-500">
-                    Make your payment directly into our bank account.
-                  </p>
-                </div>
-              </div>
+  
               <div class="flex items-center gap-8 justify-center">
                 <a href="#" class="inline-block">
                   <img

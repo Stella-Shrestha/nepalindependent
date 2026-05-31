@@ -22,48 +22,78 @@
   <body class="min-h-screen bg-slate-50 text-slate-900">
     <!-- header start -->
     <header
-        class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 mb-[4px] md:mb-[52px] lg:mb-0  flex items-center justify-between gap-36">
-        <div class="flex items-center gap-6 justify-between w-full">
-            <a href="index.html">
-                <img src="images/Home/logo.png" alt="not found" class="lg:h-[84px] h-[36px] object-contain" />
-            </a>
+      class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 mb-[4px] md:mb-[52px] lg:mb-0 flex items-center justify-between gap-36"
+    >
+      <div class="flex items-center gap-6 justify-between w-full">
+        <a href="index.html">
+          <img
+            src="images/Home/logo.png"
+            alt="not found"
+            class="lg:h-[84px] h-[36px] object-contain"
+          />
+        </a>
 
-            <button id="mobile-menu-button"
-                class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
-                aria-expanded="false" aria-controls="mobile-menu" arisa-label="Toggle navigation menu">
-                <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
-        </div>
+        <button
+          id="mobile-menu-button"
+          class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          arisa-label="Toggle navigation menu"
+        >
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
 
-        <div class="hidden lg:flex gap-8 w-full">
-            <div class="flex items-center gap-4">
-                <i data-lucide="mail" class="bg-black text-white rounded-full h-12 w-12 py-2"></i>
-                <div>
-                    <span class="text-black font-bold text-sm xl:text-base">+info@nepalindependentguide.com</span><br />
-                    <p class="text-xs xl:text-sm">Quick Questions? Email Us</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <i data-lucide="phone" class="bg-black text-white rounded-full h-11 w-11 py-2"></i>
-                <div>
-                    <span class="text-blue-800 font-bold text-sm xl:text-base">+977 9807654321</span><br />
-                    <p class="text-xs xl:text-sm">24hrs customer support</p>
-                </div>
-            </div>
+      <div class="hidden lg:flex gap-8 w-full">
+        <div class="flex items-center gap-4">
+          <i
+            data-lucide="mail"
+            class="bg-black text-white rounded-full h-12 w-12 py-2"
+          ></i>
+          <div>
+            <span class="text-black font-bold text-sm xl:text-base"
+              >+info@nepalindependentguide.com</span
+            ><br />
+            <p class="text-xs xl:text-sm">Quick Questions? Email Us</p>
+          </div>
         </div>
+        <div class="flex items-center gap-4">
+          <i
+            data-lucide="phone"
+            class="bg-black text-white rounded-full h-11 w-11 py-2"
+          ></i>
+          <div>
+            <span class="text-blue-800 font-bold text-sm xl:text-base"
+              >+977 9807654321</span
+            ><br />
+            <p class="text-xs xl:text-sm">24hrs customer support</p>
+          </div>
+        </div>
+      </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden absolute left-0 top-full z-50 w-full bg-gray-700 shadow-lg">
-            <div class="mx-auto flex max-w-[1340px] flex-col px-4 md:px-8 py-4 text-white">
-                <a href="#" class="border-b border-white/10 py-3">Home</a>
-                <a href="#aboutus" class="border-b border-white/10 py-3">About Us</a>
-                <a href="#country" class="border-b border-white/10 py-3">Nepal</a>
-                <a href="#dayTours" class="border-b border-white/10 py-3">Day Tours</a>
-                <a href="#testimonials" class="border-b border-white/10 py-3">Testimonials</a>
-                <a href="#blog" class="border-b border-white/10 py-3">Our Blog</a>
-                <a href="#contact" class="py-3">Contact Us</a>
-                <a href="#top-destinations" class="lg:hidden py-3">Top 10 Destinations</a>
-            </div>
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden absolute left-0 top-full z-50 w-full bg-gray-700 shadow-lg"
+      >
+        <div
+          class="mx-auto flex max-w-[1340px] flex-col px-4 md:px-8 py-4 text-white"
+        >
+          <a href="#" class="border-b border-white/10 py-3">Home</a>
+          <a href="#aboutus" class="border-b border-white/10 py-3">About Us</a>
+          <a href="#country" class="border-b border-white/10 py-3">Nepal</a>
+          <a href="#dayTours" class="border-b border-white/10 py-3"
+            >Day Tours</a
+          >
+          <a href="#testimonials" class="border-b border-white/10 py-3"
+            >Testimonials</a
+          >
+          <a href="#blog" class="border-b border-white/10 py-3">Our Blog</a>
+          <a href="#contact" class="py-3">Contact Us</a>
+          <a href="#top-destinations" class="lg:hidden py-3"
+            >Top 10 Destinations</a
+          >
         </div>
+      </div>
     </header>
     <!-- header end -->
 
@@ -107,17 +137,22 @@
     </nav>
     <!-- nav end -->
 
- 
-
     <!-- Main Booking Container -->
-    <main class=" w-full lg:py-20 py-6  mx-auto pb-[32px]" style="background-image: url('images/trek/shape.jpeg'); background-position: right top; background-size: auto;">
+    <main
+      class="w-full lg:py-20 py-6 mx-auto pb-[32px]"
+      style="
+        background-image: url(&quot;images/trek/shape.jpeg&quot;);
+        background-position: right top;
+        background-size: auto;
+      "
+    >
       <div class="mx-auto w-full max-w-[1340px] mb-[32px]">
         <!-- Form -->
         <form class="grid grid-cols-1 lg:grid-cols-6 gap-8">
           <!-- Form Fields Section (4/6 width) -->
           <div class="lg:col-span-4">
             <div
-              class="lg:rounded-[32px] border border-slate-200 bg-white p-5 md:p-7 lg:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+              class="lg:rounded-[32px] border border-slate-200 h-full bg-white p-5 md:p-7 lg:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
             >
               <div
                 class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"
@@ -341,7 +376,7 @@
               <!-- Other travelers container (populated dynamically) -->
               <div
                 id="other-travelers-container"
-                class="space-y-4 mb-4 lg:mb-8 md:col-span-2"
+                class="space-y-6 mb-4 lg:mb-8 md:col-span-2"
               ></div>
               <div
                 class="flex flex-col h-auto md:h-[80px] w-full md:w-2/5 items-start justify-center gap-4 md:gap-0 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 md:py-0 lg:mb-8 mb-4"
@@ -372,7 +407,7 @@
                   href="trek.html"
                   class="flex-1 bg-white text-black border gap-2 border-[#BCD5F0] px-[18px] py-[12px] rounded-lg hover:bg-[#F4F9FE] text-sm md:text-[20px] font-medium flex justify-center items-center"
                   ><i data-lucide="arrow-left" class="w-6 h-6"></i>
-                  Back To Your Trip
+                  Cancel
                 </a>
               </div>
             </div>
@@ -380,12 +415,12 @@
 
           <!-- Payment Method Section (2/6 width) -->
           <div
-            class="lg:col-span-2 lg:self-start lg:sticky lg:top-[96px] flex flex-col lg:gap-3"
+            class="lg:col-span-2 lg:self-start lg:sticky lg:top-[72px] flex flex-col lg:gap-3"
           >
             <!-- Price Summary Section -->
             <section
               id="price-summary-section"
-              class="lg:rounded-[32px] border border-slate-200 bg-white p-5 md:p-6 h-fit shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+              class="h-fit border border-slate-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] lg:rounded-[32px] md:p-6"
             >
               <div class="flex gap-2 mb-4 items-center flex-wrap">
                 <i
@@ -398,124 +433,203 @@
                   Trip Summary
                 </h2>
               </div>
-
-              <div class="space-y-3 pb-4 border-b border-slate-200">
-                <div class="flex justify-between items-center">
-                  <span class="text-slate-600 text-sm"
-                    >Number of Travelers:</span
+              <div class="grid grid-cols-2 gap-3">
+                <div
+                  class="rounded-2xl border border-slate-100 bg-slate-50 p-4"
+                >
+                  <span class="block text-sm font-semibold text-slate-500"
+                    >Travelers</span
                   >
-                  <span id="summary-pax" class="font-semibold text-slate-900"
-                    >1</span
-                  >
+                  <div class="mt-3 flex items-center gap-3">
+                    <i
+                      data-lucide="users-round"
+                      class="h-6 w-6 text-blue-600"
+                    ></i>
+                    <span
+                      id="summary-pax"
+                      class="text-3xl font-bold text-slate-950"
+                      >1</span
+                    >
+                  </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-slate-600 text-sm">Price per Person:</span>
+                <div
+                  class="rounded-2xl border border-slate-100 bg-slate-50 p-4"
+                >
+                  <span class="block text-sm font-semibold text-slate-500"
+                    >Per Person</span
+                  >
+                  <div class="mt-3 flex items-center gap-3">
+                    <i
+                      data-lucide="badge-dollar-sign"
+                      class="h-6 w-6 shrink-0 text-blue-600"
+                    ></i>
+                    <span
+                      id="summary-price-per-person"
+                      class="text-xl font-bold text-slate-950"
+                      >$1,500</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 flex items-center justify-between gap-4 rounded-2xl bg-blue-600 p-5 text-white shadow-[0_14px_24px_rgba(37,99,235,0.2)]"
+              >
+                <div>
+                  <span class="block text-base font-medium text-blue-100"
+                    >Total Trip Price</span
+                  >
                   <span
-                    id="summary-price-per-person"
-                    class="font-semibold text-slate-900"
+                    id="summary-total-price"
+                    class="mt-1 block text-4xl font-bold"
                     >$1,500</span
                   >
                 </div>
+                <div
+                  class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15"
+                >
+                  <i data-lucide="wallet-cards" class="h-8 w-8"></i>
+                </div>
               </div>
 
-              <div class="mt-4 flex justify-between items-center">
-                <span class="text-slate-900 font-semibold text-base"
-                  >Total Price:</span
-                >
-                <span
-                  id="summary-total-price"
-                  class="text-2xl md:text-3xl font-bold text-blue-600"
-                  >$1,500</span
-                >
+              <div class="mt-6 rounded-[26px] border border-slate-200 p-5">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 class="text-xl font-bold text-slate-950">
+                      Choose Payment
+                    </h3>
+                    <p class="mt-1 text-sm leading-snug text-slate-500">
+                      Pay advance or complete full payment.
+                    </p>
+                  </div>
+                  <span
+                    class="shrink-0 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-semibold text-orange-600"
+                    >Required</span
+                  >
+                </div>
+                <div class="mt-5 grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    data-payment-rate="25"
+                    class="payment-rate-button rounded-2xl border-2 border-blue-600 bg-blue-50 px-2 py-5 text-center shadow-[0_0_0_3px_rgba(37,99,235,0.12)] transition"
+                    aria-pressed="true"
+                  >
+                    <span class="block text-3xl font-bold text-slate-900"
+                      >25%</span
+                    >
+                    <span class="mt-1 block text-sm text-slate-500"
+                      >Advance Pay</span
+                    >
+                    <span class="mt-2 block text-xs text-slate-400"
+                      >Reserve your booking</span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    data-payment-rate="100"
+                    class="payment-rate-button rounded-2xl border-2 border-slate-200 px-2 py-5 text-center transition hover:border-blue-300"
+                    aria-pressed="false"
+                  >
+                    <span class="block text-3xl font-bold text-slate-900"
+                      >100%</span
+                    >
+                    <span class="mt-1 block text-sm text-slate-500"
+                      >Full Pay</span
+                    >
+                    <span class="mt-2 block text-xs text-slate-400"
+                      >Complete payment</span
+                    >
+                  </button>
+                </div>
               </div>
-            </section>
 
-            <!-- Payment Method -->
-            <section
-              class="lg:rounded-[32px] border border-slate-200 bg-white p-5 md:p-6 h-fit shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
-            >
-              <div class="flex gap-2 mb-2 items-center flex-wrap">
-                <i
-                  data-lucide="credit-card"
-                  class="h-6 md:h-8 w-6 md:w-8 text-blue-600"
-                ></i>
-                <h2
-                  class="text-base md:text-[20px] font-bold leading-tight text-slate-900"
+              <div class="mt-6 rounded-[26px] bg-slate-50 p-5">
+                <div class="flex items-center justify-between gap-4">
+                  <span class="text-base font-medium text-slate-500"
+                    >Total Trip Price</span
+                  >
+                  <span
+                    id="payment-total-price"
+                    class="font-bold text-slate-950"
+                    >$1,500</span
+                  >
+                </div>
+                <div
+                  class="my-5 flex items-center justify-between gap-4 rounded-2xl border border-slate-100 bg-white p-4"
                 >
-                  Payment Method
-                </h2>
+                  <div>
+                    <span class="block text-base font-medium text-slate-500"
+                      >Pay Now</span
+                    >
+                    <span class="mt-1 block text-sm text-slate-400"
+                      >Amount due today</span
+                    >
+                  </div>
+                  <span
+                    id="payment-pay-now"
+                    class="text-2xl font-bold text-blue-600"
+                    >$375</span
+                  >
+                </div>
+                <div class="flex items-center justify-between gap-4">
+                  <span class="text-base font-medium text-slate-500"
+                    >Remaining Balance</span
+                  >
+                  <span id="payment-remaining" class="font-bold text-slate-950"
+                    >$1,125</span
+                  >
+                </div>
               </div>
-              <p class="mb-5 text-sm text-slate-500">
-                Choose how you want to complete the payment for your booking.
-              </p>
 
-              <div class="space-y-2">
-                <label
-                  for="payment-online"
-                  class="flex cursor-pointer gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white"
+              <div
+                class="mt-6 flex items-start gap-3 mb-8 rounded-[26px] border border-slate-200 p-5"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-50"
                 >
-                  <input
-                    id="payment-online"
-                    name="payment_method"
-                    type="radio"
-                    value="online"
-                    checked
-                    class="mt-1 h-5 w-5 accent-blue-600"
+                  <i
+                    data-lucide="shield-check"
+                    class="h-6 w-6 text-green-600"
+                  ></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-slate-950">
+                    Secure Online Payment
+                  </h3>
+                  <p class="mt-1 text-sm leading-relaxed text-slate-500">
+                    Make your payment directly into our bank account.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-8 justify-center">
+                <a href="#" class="inline-block">
+                  <img
+                    src="images/payment/visa.png"
+                    alt="Visa Payment"
+                    class="w-auto h-10"
                   />
-                  <span class="block">
-                    <span class="block text-[18px] font-semibold text-slate-800"
-                      >Online Payment</span
-                    >
-                    <span
-                      class="mt-1.5 block text-[13px] leading-snug text-slate-600"
-                      >Make your payment directly into our bank account</span
-                    >
-                  </span>
-                </label>
-
-                <label
-                  for="payment-cod"
-                  class="flex cursor-pointer gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white"
-                >
-                  <input
-                    id="payment-cod"
-                    name="payment_method"
-                    type="radio"
-                    value="cod"
-                    class="mt-1 h-5 w-5 accent-blue-600"
+                </a>
+                <a href="#" class="inline-block">
+                  <img
+                    src="images/payment/master.png"
+                    alt="Visa Payment"
+                    class="h-10 w-auto"
                   />
-                  <span class="block">
-                    <span class="block text-[18px] font-semibold text-slate-800"
-                      >Cash on Arrival</span
-                    >
-                    <span
-                      class="mt-1.5 block text-[13px] leading-snug text-slate-600"
-                      >Pay when you arrive in Nepal</span
-                    >
-                  </span>
-                </label>
-
-                <label
-                  for="payment-card"
-                  class="flex cursor-pointer gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white"
-                >
-                  <input
-                    id="payment-card"
-                    name="payment_method"
-                    type="radio"
-                    value="credit_card"
-                    class="mt-1 h-5 w-5 accent-blue-600"
+                </a>
+                <a href="#" class="inline-block">
+                  <img
+                    src="images/payment/express.png"
+                    alt="Visa Payment"
+                    class="h-10 w-auto"
                   />
-                  <span class="block">
-                    <span class="block text-[18px] font-semibold text-slate-800"
-                      >Credit Card</span
-                    >
-                    <span
-                      class="mt-1.5 block text-[13px] leading-snug text-slate-600"
-                      >Pay securely with your credit card</span
-                    >
-                  </span>
-                </label>
+                </a>
+                <a href="#" class="inline-block">
+                  <img
+                    src="images/payment/discover.png"
+                    alt="Visa Payment"
+                    class="h-10 w-auto"
+                  />
+                </a>
               </div>
             </section>
           </div>
@@ -737,6 +851,15 @@
         const summaryTotalPrice = document.getElementById(
           "summary-total-price",
         );
+        const paymentTotalPrice = document.getElementById(
+          "payment-total-price",
+        );
+        const paymentPayNow = document.getElementById("payment-pay-now");
+        const paymentRemaining = document.getElementById("payment-remaining");
+        const paymentRateButtons = document.querySelectorAll(
+          ".payment-rate-button",
+        );
+        let selectedPaymentRate = 25;
 
         if (!paxInput || !container) return;
 
@@ -744,72 +867,77 @@
           const displayIndex = index + 1; // traveler number (1-based)
           const wrapper = document.createElement("div");
           wrapper.className =
-            "rounded-2xl border border-slate-200 bg-slate-50 p-5 md:p-6";
+            "rounded-[28px] border border-slate-200 bg-slate-50/60 p-5 md:p-8";
 
           wrapper.innerHTML = `
-                    <h3 class="mb-4 text-lg font-semibold text-slate-900">Traveler ${displayIndex}</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <div>
-                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Full Name</label>
-                       <div class="relative">
-    <i data-lucide="user-round"
-       class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-
-    <input name="traveler_${displayIndex}_name" type="text" placeholder="Full name"
-        class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white pl-14 pr-5 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
-</div>
-                        </div>
-                        <div>
-                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Email</label>
-                            <div class="relative">
-    <i data-lucide="mail"
-       class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-                            <input name="traveler_${displayIndex}_email" type="email" placeholder="Email"
-                                class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5  pl-12 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
-                        </div>
-                        </div>
-                        <div>
-                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Phone Number</label>
-                            <div class="relative">
-    <i data-lucide="phone"
-       class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-                                <input name="traveler_${displayIndex}_phone" type="tel" placeholder="Phone number"
-                                    class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5  pl-12 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
-                            </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Gender</label>
-                            <div class="relative">
-    <i data-lucide="venus-and-mars"
-       class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-                            <select name="traveler_${displayIndex}_gender" class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 pl-12 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
-                                <option value="">Select Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                                <option value="prefer_not">Prefer not to say</option>
-                            </select>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="mb-2 block text-[14px] font-medium text-slate-700">Nationality</label>
-                            <div class="relative">
-    <i data-lucide="flag"
-       class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
-                            <select name="traveler_${displayIndex}_nationality" class="h-[56px] w-full rounded-2xl border border-slate-200 bg-white px-5 pl-12 text-[15px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
-                                <option value="">Select Nationality</option>
-                                <option value="Nepal">Nepal</option>
-                                <option value="India">India</option>
-                                <option value="United States">United States</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Bhutan">Bhutan</option>
-                                <option value="China">China</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        </div>
-                    </div>`;
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+              <h3 class="text-xl font-bold text-slate-950">Traveler ${displayIndex}</h3>
+              <span class="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-600">
+                Additional Traveler
+              </span>
+            </div>
+            <div class="grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-2">
+              <div>
+                <label class="mb-2.5 block text-[15px] font-bold text-slate-700">Full Name</label>
+                <div class="relative">
+                  <i data-lucide="user-round"
+                    class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i>
+                  <input name="traveler_${displayIndex}_name" type="text" placeholder="Full name"
+                    class="h-[64px] w-full rounded-2xl border border-slate-200 bg-white pl-14 pr-5 text-[16px] outline-none transition placeholder:text-slate-400 focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                </div>
+              </div>
+              <div>
+                <label class="mb-2.5 block text-[15px] font-bold text-slate-700">Email</label>
+                <div class="relative">
+                  <i data-lucide="mail"
+                    class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i>
+                  <input name="traveler_${displayIndex}_email" type="email" placeholder="Email"
+                    class="h-[64px] w-full rounded-2xl border border-slate-200 bg-white pl-14 pr-5 text-[16px] outline-none transition placeholder:text-slate-400 focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                </div>
+              </div>
+              <div>
+                <label class="mb-2.5 block text-[15px] font-bold text-slate-700">Phone Number</label>
+                <div class="relative">
+                  <i data-lucide="phone"
+                    class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i>
+                  <input name="traveler_${displayIndex}_phone" type="tel" placeholder="Phone number"
+                    class="h-[64px] w-full rounded-2xl border border-slate-200 bg-white pl-14 pr-5 text-[16px] outline-none transition placeholder:text-slate-400 focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                </div>
+              </div>
+              <div>
+                <label class="mb-2.5 block text-[15px] font-bold text-slate-700">Gender</label>
+                <div class="relative">
+                  <i data-lucide="venus-and-mars"
+                    class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i>
+                  <select name="traveler_${displayIndex}_gender"
+                    class="h-[64px] w-full rounded-2xl border border-slate-200 bg-white px-5 pl-14 text-[16px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer_not">Prefer not to say</option>
+                  </select>
+                </div>
+              </div>
+              <div class="lg:col-span-2">
+                <label class="mb-2.5 block text-[15px] font-bold text-slate-700">Nationality</label>
+                <div class="relative">
+                  <i data-lucide="flag"
+                    class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"></i>
+                  <select name="traveler_${displayIndex}_nationality"
+                    class="h-[64px] w-full rounded-2xl border border-slate-200 bg-white px-5 pl-14 text-[16px] outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+                    <option value="">Select Nationality</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="China">China</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>`;
 
           return wrapper;
         }
@@ -836,11 +964,15 @@
           const pax = Math.max(1, parseInt(paxInput.value || "1"));
           const pricePerPerson = getDiscountedPrice(pax);
           const totalPrice = pax * pricePerPerson;
+          const payNow = totalPrice * (selectedPaymentRate / 100);
 
           // Update summary content
           summaryPax.textContent = pax;
           summaryPricePerPerson.textContent = formatCurrency(pricePerPerson);
           summaryTotalPrice.textContent = formatCurrency(totalPrice);
+          paymentTotalPrice.textContent = formatCurrency(totalPrice);
+          paymentPayNow.textContent = formatCurrency(payNow);
+          paymentRemaining.textContent = formatCurrency(totalPrice - payNow);
         }
 
         function render() {
@@ -864,6 +996,27 @@
           // Update price summary
           updatePriceSummary();
         }
+
+        paymentRateButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            selectedPaymentRate = parseInt(button.dataset.paymentRate);
+
+            paymentRateButtons.forEach((rateButton) => {
+              const isSelected = rateButton === button;
+
+              rateButton.setAttribute("aria-pressed", isSelected);
+              rateButton.classList.toggle("border-blue-600", isSelected);
+              rateButton.classList.toggle("bg-blue-50", isSelected);
+              rateButton.classList.toggle(
+                "shadow-[0_0_0_3px_rgba(37,99,235,0.12)]",
+                isSelected,
+              );
+              rateButton.classList.toggle("border-slate-200", !isSelected);
+            });
+
+            updatePriceSummary();
+          });
+        });
 
         paxInput.addEventListener("input", render);
         // initialize

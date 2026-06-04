@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procedure section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header start -->
+    <header
+      class="w-full relative max-w-[1340px] mx-auto py-3 h-[56px] lg:h-[114px] lg:px-0 px-4 flex items-center justify-between gap-36"
+    >
+      <div class="flex items-center gap-6 justify-between w-full">
+        <img
+          src="images/Home/logo.png"
+          alt="not found"
+          class="lg:h-[84px] h-[42px] object-contain"
+        />
+
+        <button
+          id="mobile-menu-button"
+          class="lg:hidden inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-black/80"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="hidden lg:flex gap-8 w-full">
+        <div class="flex items-center gap-4">
+          <i
+            data-lucide="mail"
+            class="bg-black text-white rounded-full h-12 w-12 py-2"
+          ></i>
+          <div>
+            <span class="text-black font-bold text-sm xl:text-base"
+              >+info@nepalindependentguide.com</span
+            ><br />
+            <p class="text-xs xl:text-sm">Quick Questions? Email Us</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <i
+            data-lucide="phone"
+            class="bg-black text-white rounded-full h-11 w-11 py-2"
+          ></i>
+          <div>
+            <span class="text-blue-800 font-bold text-sm xl:text-base"
+              >+977 9807654321</span
+            ><br />
+            <p class="text-xs xl:text-sm">24hrs customer support</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden absolute left-0 top-full z-50 w-full bg-gray-700 shadow-lg"
+      >
+        <div
+          class="mx-auto flex max-w-[1340px] flex-col px-4 md:px-8 py-4 text-white"
+        >
+          <a href="#" class="border-b border-white/10 py-3">Home</a>
+          <a href="#aboutus" class="border-b border-white/10 py-3">About Us</a>
+          <a href="#country" class="border-b border-white/10 py-3">Nepal</a>
+          <a href="#dayTours" class="border-b border-white/10 py-3"
+            >Day Tours</a
+          >
+          <a href="#testimonials" class="border-b border-white/10 py-3"
+            >Testimonials</a
+          >
+          <a href="#blog" class="border-b border-white/10 py-3">Our Blog</a>
+          <a href="#contact" class="py-3">Contact Us</a>
+          <a href="#top-destinations" class="lg:hidden py-3"
+            >Top 10 Destinations</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- hero section start -->
+    <section class="w-full lg:max-w-[1340px] mx-auto">
+      <!-- hero section start -->
+      <section
+        class="grid lg:grid-cols-2 py-[32px] lg:py-[110px] px-4 gap-[20px] lg:gap-[32px]"
+      >
+        <!-- left section start -->
+        <div class="flex flex-col lg:mb-0 mb-8">
+          <p
+            class="text-sm uppercase tracking-[0.25em] text-orange-600 font-extrabold mb-4"
+          >
+            Legal Information
+          </p>
+          <h1
+            class="lg:text-[60px] md:text-[40px] text-[30px] lg:mb-[12px] mb-[8px] font-bold text-black"
+          >
+            Terms & Conditions
+          </h1>
+          <p class="text-base text-gray-600">
+            Please read our booking conditions, payment policy, cancellation
+            terms, travel insurance requirements, and important trekking
+            guidelines before confirming your trip.
+          </p>
+        </div>
+        <!-- left section end -->
+
+        <!-- right section start -->
+        <div class="h-full relative w-full">
+          <div
+            class="absolute -top-6 -left-6 w-32 h-32 bg-orange-100 rounded-full"
+          ></div>
+          <div
+            class="absolute -bottom-6 -right-6 w-40 h-40 bg-green-100 rounded-full"
+          ></div>
+          <img
+            src="images/Home/background.png"
+            alt="Background"
+            class="w-full h-full relative rounded-lg object-cover"
+          />
+        </div>
+        <!-- right section end -->
+      </section>
+      <!-- hero section end -->
+
+      <!-- cards start -->
+    </section>
+    <!-- hero section end -->
+    <!--     <section class="w-full lg:max-w-[1340px] mx-auto">
+      hero section start
+      <section
+        class="grid lg:grid-cols-2 py-[32px] lg:py-[110px] px-4 gap-[20px] lg:gap-[32px]" -->
+    <main class="lg:max-w-[1340px] mx-auto px-5 mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-8 items-start">
+        <article
+          class="bg-white border border-slate-200 rounded-2xl p-6 md:p-10 shadow-sm"
+        >
+          <!-- Intro Box -->
+          <div
+            class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8"
+          >
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-950 mb-3">
+              Terms & Conditions
+            </h2>
+
+            <p class="text-orange-900 text-base leading-8 mb-4">
+              The Nepal Wilderness Trekking team is dedicated to providing the
+              most satisfying and safest service possible to its customers.
+              Also, it’s a Nepalese government-registered company. The main
+              objective of our company is to provide the best possible quality
+              for the customers so they can have the most memorable moments in
+              Nepal when they visit us. Please review the following requirements
+              and conditions carefully before booking your trip with us.
+            </p>
+            <p class="text-orange-900 text-base leading-8">
+              Thank you for considering Nepal Wilderness Trekking Pvt Ltd as
+              your travel partner. Before you book your trip, please read the
+              following terms and conditions carefully. By booking a trip with
+              us, you agree to these terms and conditions.
+            </p>
+          </div>
+
+          <!-- Section -->
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Travel Documents
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              It is your responsibility to obtain all the necessary travel
+              documents, such as passport Photocopies, visa Copies, and
+              passport-size photos, before the trip departure date. We will
+              provide you with information and assistance to obtain these
+              documents, but we cannot be held responsible if you fail to obtain
+              them.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              To Confirm the Trip
+            </h2>
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              Nepal Wilderness Trekking Pvt Ltd requires certain documents to
+              confirm the trip:
+            </p>
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              <strong class="text-slate-950 font-extrabold"
+                >Completed Trip Booking Form:</strong
+              >
+              You need to fill out and submit our booking form to confirm your
+              trip, including the trip starting date and month.
+            </p>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              <strong class="text-slate-950 font-extrabold"
+                >Passport Copy:</strong
+              >
+              You need to provide a clear copy of your passport. The passport
+              must be valid for at least 6 months from the date of your trip.
+              And a passport-size photo.
+            </p>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              <strong class="text-slate-950 font-extrabold"
+                >Travel Insurance:</strong
+              >
+              You need to provide a copy of your travel insurance policy that
+              covers emergency medical and evacuation expenses, trip
+              cancellation, and other unforeseen events.
+            </p>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              <strong class="text-slate-950 font-extrabold"
+                >Flight Details:</strong
+              >
+              You need to provide your flight details, including your arrival
+              and departure dates, flight numbers, and airline names.
+            </p>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              <strong class="text-slate-950 font-extrabold">Payment:</strong>
+              You need to make a 25% deposit of the total trip cost per person
+              to confirm your trip. The trip will be confirmed only after the
+              25% deposit. The remaining balance is due 10 days before the trip
+              departure date. You must visit our office to pay before the trip
+              starts
+            </p>
+            <p class="text-slate-600 text-base leading-8">
+              Once we receive all these documents and the deposit, we will send
+              you a confirmation email with details about your trip.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Liability
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              We do our best to ensure the safety and comfort of our clients
+              during our trips. However, we cannot be responsible for any
+              injury, loss, or damage to personal property that may occur during
+              the trip. We also reserve the right to cancel any trip at any time
+              if we deem it necessary for the safety or well-being of our
+              clients.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Booking Conditions
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              If you cancel the trip, there will be no refund of the 25%
+              deposit. However, if the client decides to spend 25% deposit on
+              another trekking trip within a period of one year after the
+              payment date, then Nepal Wilderness Trekking Pvt facilitate for
+              our valuable customers. And he or she can pay the rest when they
+              arrive at the destination. In addition, we accept last-minute
+              bookings. It is recommended that the client book their trip to
+              Nepal at least 2 weeks before the departure date of the trip.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Payment
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              We accept payment through wire transfers, online payment gateway,
+              and major credit cards. Please note that there is a 4% service
+              charge for credit card payments. All transactions cleared through
+              these media are fully the responsibility of the client.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Changes to the Itinerary
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              We reserve the right to change the itinerary due to unforeseen
+              circumstances, such as weather conditions, political instability,
+              and transportation problems. In such cases, we will make
+              alternative arrangements that are of equal or greater value. If
+              you decide to make any changes to the itinerary, you must inform
+              us in writing at least 30 days before the trip departure date. We
+              will do our best to accommodate your request, but we cannot
+              guarantee that it will be possible.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Risks and Liabilities
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              There are no exceptions to the laws and regulations of the Nepal
+              Tourism Board. In the case of unforeseen circumstances, such as
+              changes in the laws and regulations of the country, natural
+              disasters, political instability, cancellations of flights,
+              delays, sickness, etc. The Nepal Wilderness Trekking Pvt. will not
+              be responsible for any extra fees for the clients. In this
+              respect, travel insurance is highly recommended. Also, if the
+              client breaks any regulation or law during their tour, and they
+              are forced to leave Nepal, the tour fees are non-refundable.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Trip Cancellation Policy
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              The 25% deposit is non-refundable according to our terms and
+              conditions. Thus, we strongly recommend that the client postpone
+              their trip rather than cancel in case of the client’s non-interest
+              in the trek, health issues, political issues, natural disasters,
+              and early ending of the trip 100% no refund is done. Thus, we
+              strongly recommend that the client postpone their trip rather than
+              cancel.
+            </p>
+            <p class="text-slate-600 text-base leading-8">
+              Once the trek has been started, the trip cost is 100%
+              non-refundable after the payment if the client decides to cancel
+              in the middle of the trip for personal reasons. The reason behind
+              the nonrefundability is the full payment for processing of
+              documents, guide, porter, transportation, accommodation, guide and
+              porter insurance being insured, company service charges, and more
+              etc. Nevertheless, in the event that we have to cancel the tour
+              due to unexpected circumstances such as natural disasters, wars,
+              or unfavorable climate conditions, we will arrange another one for
+              them.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Travel Insurance
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              We strongly recommend purchasing comprehensive travel insurance
+              before starting your trip to Nepal. Your insurance should cover
+              emergency medical treatment, helicopter evacuation, trip
+              cancellation, lost or delayed luggage, and other unexpected
+              situations that may arise during your journey.
+            </p>
+
+            <p class="text-slate-600 text-base leading-8 mb-4">
+              For reliable and widely used coverage options, you may consider
+              the following insurance providers:
+            </p>
+
+            <ol
+              class="list-decimal pl-6 space-y-2 mb-4 text-slate-600 leading-8"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="text-orange-600 font-bold underline underline-offset-4"
+                >
+                  Allianz Travel Insurance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-orange-600 font-bold underline underline-offset-4"
+                >
+                  World Nomads
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-orange-600 font-bold underline underline-offset-4"
+                >
+                  Faye Travel Insurance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-orange-600 font-bold underline underline-offset-4"
+                >
+                  Global Assistance Italy
+                </a>
+              </li>
+            </ol>
+
+            <p class="text-slate-600 text-base leading-8">
+              Selecting a policy that includes high-altitude trekking and
+              helicopter rescue is essential, especially for treks above 4,000
+              tyo 6000 meters.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Health and Fitness
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              You must be in good health and physical condition to participate
+              in our trips. If you have any pre-existing medical conditions, you
+              must inform us before booking your trip. We reserve the right to
+              ask you to provide a doctor’s certificate of fitness before the
+              trip departure date.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Flight Delay or Cancellation
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              In many remote regions, such as the Everest region, Lukla, the
+              Annapurna region, the Dolpo, Simikot, and Jumla regions, bad
+              weather can cause flight delays or cancellations. Therefore, we
+              advise our clients to have additional money in order to pay for
+              their food and accommodation during their trip. In addition, the
+              Nepal wilderness trekking team is not responsible for any
+              additional expenses that may arise.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Governing Law
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+              These terms and conditions shall be governed by and construed in
+              accordance with the laws of Nepal. Any disputes arising out of or
+              in connection with these terms and conditions shall be subject to
+              the exclusive jurisdiction of the courts of Nepal.
+            </p>
+          </section>
+
+          <section class="mb-9">
+            <h2
+              class="text-[clamp(24px,3vw,32px)] font-extrabold text-slate-950 mb-4 pb-3 border-b border-slate-200"
+            >
+              Note
+            </h2>
+
+            <p class="text-slate-600 text-base leading-8">
+             Please note that our terms and conditions apply only if a client books their trip directly with us. Nevertheless, if they book their trip with us through any international agents or third parties, they are responsible for following the terms and conditions of those third parties.
+            </p>
+          </section>
+
+          <!-- Contact Box -->
+          <div class="mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 class="text-xl font-extrabold text-slate-950 mb-4">
+              For More Information
+            </h3>
+
+            <p class="text-slate-600 text-base leading-8 mb-3">
+              <strong class="text-slate-950 font-extrabold">Email:</strong>
+              <a
+                href="mailto:himaghale99@gmail.com"
+                class="text-orange-600 font-bold underline underline-offset-4"
+              >
+                himaghale99@gmail.com
+              </a>
+            </p>
+
+            <p class="text-slate-600 text-base leading-8 mb-3">
+              <strong class="text-slate-950 font-extrabold"
+                >WhatsApp / Call:</strong
+              >
+              <a
+                href="tel:+9779849693351"
+                class="text-orange-600 font-bold underline underline-offset-4"
+              >
+                +977 9849693351
+              </a>
+            </p>
+
+            <p class="text-slate-600 text-base leading-8">
+              <strong class="text-slate-950 font-extrabold">
+                Nepal Wilderness Trekking Pvt. Ltd. </strong
+              ><br />
+              P.O. Box: 1099, Street Thamel, Kathmandu, Nepal
+            </p>
+          </div>
+        </article>
+        <aside class="lg:sticky lg:top-8 space-y-6">
+          <div
+            class="bg-white border border-slate-200 rounded-[24px] p-6 shadow-sm"
+          >
+            <h3 class="text-xl font-extrabold text-slate-950 mb-5">
+              Page Sections
+            </h3>
+
+            <nav class="space-y-3">
+              <a
+                href="#travel-documents"
+                class="flex justify-between rounded-xl bg-slate-50 px-4 py-3 font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700"
+              >
+                Travel Documents 
+              </a>
+              <a
+                href="#confirm-trip"
+                class="flex justify-between rounded-xl bg-slate-50 px-4 py-3 font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700"
+              >
+                Confirm Trip
+              </a>
+              <a
+                href="#booking"
+                class="flex justify-between rounded-xl bg-slate-50 px-4 py-3 font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700"
+              >
+                Booking 
+              </a>
+              <a
+                href="#payment"
+                class="flex justify-between rounded-xl bg-slate-50 px-4 py-3 font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700"
+              >
+                Payment 
+              </a>
+              <a
+                href="#cancellation"
+                class="flex justify-between rounded-xl bg-slate-50 px-4 py-3 font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700"
+              >
+                Cancellation 
+              </a>
+              <a
+                href="#insurance"
+                class="flex justify-between rounded-xl bg-slate-50 px-4 py-3 font-bold text-slate-700 hover:bg-orange-50 hover:text-orange-700"
+              >
+                Insurance 
+              </a>
+            </nav>
+          </div>
+
+          <div class="bg-[#071827] text-white rounded-[24px] p-6 shadow-sm">
+            <p
+              class="text-sm uppercase tracking-[0.2em] text-orange-300 font-bold mb-3"
+            >
+              Need Help?
+            </p>
+
+            <h3 class="text-2xl font-extrabold mb-3">
+              Have Questions About Booking?
+            </h3>
+
+            <p class="text-slate-300 text-sm leading-7 mb-5">
+              Contact our team before confirming your trip. We will help you
+              understand the terms clearly.
+            </p>
+
+            <a
+              href="#contact-form"
+              class="inline-flex bg-blue-600 text-white px-5 py-3 text-sm rounded-lg font-bold hover:bg-blue-700 transition"
+            >
+              Contact Us
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- footer starts -->
+    <footer
+      class="bg-gradient-to-b from-[#0f2a44] to-black text-gray-300 py-16"
+    >
+      <div class="max-w-[1340px] mx-auto px-6">
+        <!-- Top Footer -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-white">Blog</a></li>
+              <li><a href="#" class="hover:text-white">Our Team</a></li>
+              <li><a href="#" class="hover:text-white">Testimonials</a></li>
+              <li><a href="#" class="hover:text-white">Director Message</a></li>
+              <li><a href="#" class="hover:text-white">Legal Documents</a></li>
+            </ul>
+          </div>
+
+          <!-- Nepal Trekking -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Nepal Trekking</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-white">Annapurna Region</a></li>
+              <li><a href="#" class="hover:text-white">Everest Region</a></li>
+              <li><a href="#" class="hover:text-white">Langtang Region</a></li>
+              <li>
+                <a href="#" class="hover:text-white">Wilderness Trekking</a>
+              </li>
+              <li><a href="#" class="hover:text-white">Homestay Trek</a></li>
+            </ul>
+          </div>
+
+          <!-- Other Activities -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Other Activities</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-white">Peak Climbing in Nepal</a>
+              </li>
+              <li><a href="#" class="hover:text-white">Nepal with Kids</a></li>
+              <li>
+                <a href="#" class="hover:text-white">Sight Seeing Tour</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white">Volunteering in Nepal</a>
+              </li>
+              <li><a href="#" class="hover:text-white">Adventure Sports</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+
+          <!-- <li><i data-lucide="phone" class="w-5 h-5">977-1-4212345</i></li>
+                        <li><i data-lucide="smartphone" class="w-5 h-5">+977-9849693351</i></li>
+                        <li><i data-lucide="mail" class="w-5 h-5">info@nepalindependentguide.com</i></li> -->
+          <div>
+            <h3 class="text-white font-semibold mb-4">Contact info</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex flex-row gap-3">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                +977-9807654321
+              </li>
+              <li class="flex flex-row gap-3">
+                <i data-lucide="smartphone" class="w-5 h-5"></i>
+                +977-9807654321
+              </li>
+              <li class="flex flex-row gap-3">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                info@nepalindependentguide.com
+              </li>
+            </ul>
+
+            <div class="flex gap-3 mt-4">
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center rounded-lg border border-white text-white hover:bg-white hover:text-black transition"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M13.5 8H16V5h-2.5C10.95 5 9 6.95 9 9.5V12H7v3h2v4h3v-4h2.4l.6-3H12V9.5c0-.83.67-1.5 1.5-1.5z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center rounded-lg border border-white text-white hover:bg-white hover:text-black transition"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.75 2H22l-7.1 8.11L23.25 22h-6.55l-5.13-6.73L5.62 22H2.36l7.6-8.69L1.5 2h6.72l4.63 6.12L18.75 2zM17.6 20h1.81L7.23 3.9H5.29L17.6 20z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center rounded-lg border border-white text-white hover:bg-white hover:text-black transition"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.94 8.5a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44zM5.5 10h2.9v8.5H5.5V10zM10.2 10h2.78v1.16h.04c.39-.74 1.35-1.52 2.78-1.52 2.98 0 3.53 1.96 3.53 4.5v4.36h-2.9v-3.87c0-.92-.01-2.1-1.28-2.1-1.28 0-1.48 1-1.48 2.04v3.93h-2.9V10z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center rounded-lg border border-white text-white hover:bg-white hover:text-black transition"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"
+                  />
+                  <path
+                    d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 my-10"></div>
+
+        <!-- Bottom Footer -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-sm"
+        >
+          <p class="mb-4">
+            Copyright © 2026 by Nepal Wilderness Trekking. All Rights Reserved.
+          </p>
+          <div
+            class="lg:flex flex-wrap lg:items-center justify-center items-center lg:gap-4 gap-8 mt-4 md:mt-0"
+          >
+            <p class="text-center mb-4">We Accept</p>
+            <div class="flex flex-row gap-2">
+              <img
+                src="images/payment/visa.png"
+                class="h-6"
+                alt="payment logo"
+              />
+              <img
+                src="images/payment/master.png"
+                class="h-6"
+                alt="payment logo"
+              />
+              <img
+                src="images/payment/express.png"
+                class="h-6"
+                alt="payment logo"
+              />
+              <img
+                src="images/payment/discover.png"
+                class="h-6"
+                alt="payment logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer ends -->
+
+    <!-- script -->
+    <script>
+      //// Lucide Icons Script Starts
+      lucide.createIcons();
+      //// Lucide Icons Script Ends
+
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          const isOpen = !mobileMenu.classList.contains("hidden");
+
+          mobileMenu.classList.toggle("hidden");
+          mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+        });
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
